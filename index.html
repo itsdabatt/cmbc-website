@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campbell Memorial Baptist Church | Smithers, WV</title>
+  <meta name="description" content="Campbell Memorial Baptist Church is an independent Baptist church in Smithers, WV offering biblical preaching, Bible study, music, and fellowship." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="#home">
+        <img src="images/logo.png" alt="Campbell Memorial Baptist Church logo" />
+        <span>CMBC</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#ministries">Ministries</a>
+        <a href="#visit">Visit</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <img class="hero-logo" src="images/logo.png" alt="CMBC logo" />
+        <p class="eyebrow">Smithers, West Virginia</p>
+        <h1>Campbell Memorial Baptist Church</h1>
+        <p class="hero-text">An independent Baptist church striving to be the Church God has called us to be.</p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="#visit">Plan Your Visit</a>
+          <a class="btn secondary" href="https://www.facebook.com/campbellmemorialbaptist" target="_blank" rel="noopener">Facebook Page</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section split">
+      <div>
+        <p class="eyebrow">Welcome Home</p>
+        <h2>Biblical preaching, Bible study, music, and fellowship.</h2>
+        <p>Campbell Memorial Baptist Church is an independent Baptist church located in Smithers, WV. We are focused on the Word of God, faithful worship, Christian fellowship, and serving our community with love.</p>
+      </div>
+      <div class="card scripture-card">
+        <h3>Our Heart</h3>
+        <p>We desire to honor God, grow in faith, encourage families, and share the hope of Jesus Christ with our neighbors.</p>
+      </div>
+    </section>
+
+    <section id="services" class="section alt">
+      <p class="eyebrow center">Join Us</p>
+      <h2 class="center">Weekly Services</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Sunday Bible Study</h3>
+          <p class="time">10:00 AM</p>
+          <p>Start Sunday morning with Bible teaching and fellowship.</p>
+        </div>
+        <div class="card featured">
+          <h3>Sunday Worship</h3>
+          <p class="time">11:00 AM</p>
+          <p>Worship with biblical preaching, music, and community.</p>
+        </div>
+        <div class="card">
+          <h3>Wednesday Bible Study</h3>
+          <p class="time">7:00 PM</p>
+          <p>Midweek Bible study for adults and families.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="ministries" class="section">
+      <p class="eyebrow center">Ministries</p>
+      <h2 class="center">Faith for the Whole Family</h2>
+      <div class="cards two">
+        <div class="card">
+          <h3>BYF Youth</h3>
+          <p>Helping young people grow in faith, friendship, and service.</p>
+        </div>
+        <div class="card">
+          <h3>Community Fellowship</h3>
+          <p>Encouraging families through worship, service, music, and church events.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="visit" class="section visit">
+      <div class="visit-box">
+        <p class="eyebrow">Come Visit</p>
+        <h2>We would love to worship with you.</h2>
+        <p><strong>Address:</strong> 115 Longacre Wy, Smithers, WV 25186</p>
+        <p><strong>Facebook:</strong> <a href="https://www.facebook.com/campbellmemorialbaptist" target="_blank" rel="noopener">Campbell Memorial Baptist Church</a></p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=115+Longacre+Wy+Smithers+WV+25186" target="_blank" rel="noopener">Get Directions</a>
+          <a class="btn secondary" href="https://www.facebook.com/campbellmemorialbaptist" target="_blank" rel="noopener">Message on Facebook</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Campbell Memorial Baptist Church. Smithers, WV.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
