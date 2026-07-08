@@ -1,23 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Campbell Memorial Baptist Church | Smithers, WV</title>
-  <meta name="description" content="Campbell Memorial Baptist Church is a Baptist church in Smithers, WV. Join us for Sunday worship, Sunday School, Wednesday BYF Youth Service, and Adult Bible Study." />
+  <meta name="description" content="Campbell Memorial Baptist Church in Smithers, WV. Join us Sunday for Bible Study at 10 AM and Morning Worship at 11 AM." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Campbell Memorial Baptist Church home">
-      <img src="images/logo.png" alt="CMBC logo" />
-      <div>
-        <strong>Campbell Memorial</strong>
-        <span>Baptist Church</span>
-      </div>
+    <a class="brand" href="#top" aria-label="Campbell Memorial Baptist Church Home">
+      <img src="images/logo.png" alt="Campbell Memorial Baptist Church logo" />
+      <span>Campbell Memorial Baptist Church</span>
     </a>
-
-    <nav class="top-nav" aria-label="Main navigation">
+    <nav aria-label="Main navigation">
       <a href="#times">Service Times</a>
       <a href="#vbs">VBS</a>
       <a href="#visit">Visit</a>
@@ -27,141 +26,94 @@
 
   <main id="top">
     <section class="hero">
-      <div class="hero-photo" role="img" aria-label="Campbell Memorial Baptist Church building"></div>
-      <div class="hero-overlay"></div>
-
-      <div class="hero-content">
-        <p class="eyebrow">A Baptist Church in Smithers, WV</p>
+      <div class="hero-image" role="img" aria-label="Campbell Memorial Baptist Church building"></div>
+      <div class="hero-card">
+        <img class="hero-logo" src="images/logo.png" alt="Campbell Memorial Baptist Church logo" />
+        <p class="eyebrow">Smithers, West Virginia</p>
         <h1>Welcome to Campbell Memorial Baptist Church</h1>
-        <p class="hero-text">
-          Campbell Memorial Baptist Church is striving to be the Church God has called us to be through biblical preaching, Bible study, music, fellowship, and service to our community.
-        </p>
-
+        <p class="lead">We are striving to be the Church God has called us to be through biblical preaching, Bible study, music, fellowship, and service to our community.</p>
         <div class="button-row">
-          <a class="button primary" href="#times">Service Times</a>
-          <a class="button secondary" href="https://www.facebook.com/campbellmemorialbaptist" target="_blank" rel="noopener">Follow on Facebook</a>
+          <a class="button primary" href="#times">Join Us This Week</a>
+          <a class="button secondary" href="https://maps.google.com/?q=115+Longacre+Way,+Smithers,+WV+25186" target="_blank" rel="noopener">Get Directions</a>
         </div>
+      </div>
+    </section>
+
+    <section class="section intro">
+      <div class="container narrow">
+        <p class="big-welcome">Whether you are new to the area, looking for a church home, or visiting for the first time, we would love to worship with you.</p>
       </div>
     </section>
 
     <section class="section" id="times">
-      <div class="section-heading">
-        <p class="eyebrow">Join Us</p>
+      <div class="container">
+        <p class="eyebrow">Weekly Schedule</p>
         <h2>Service Times</h2>
-        <p>Come as you are. We would love to worship with you.</p>
-      </div>
-
-      <div class="cards two">
-        <article class="card">
-          <span class="icon">☀️</span>
-          <h3>Sunday</h3>
-          <div class="time-line">
-            <strong>10:00 AM</strong>
-            <span>Sunday School</span>
-          </div>
-          <div class="time-line">
-            <strong>11:00 AM</strong>
-            <span>Morning Worship</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <span class="icon">✝️</span>
-          <h3>Wednesday</h3>
-          <div class="time-line">
-            <strong>6:25 – 7:45 PM</strong>
-            <span>BYF Youth Service</span>
-          </div>
-          <div class="time-line">
-            <strong>7:00 – 8:00 PM</strong>
-            <span>Adult Bible Study</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="vbs-section" id="vbs">
-      <div class="vbs-wrap">
-        <div class="vbs-copy">
-          <p class="eyebrow light">Upcoming Event</p>
-          <h2>Vacation Bible School is coming!</h2>
-          <p class="vbs-theme">
-            <strong>Turned Around</strong><br />
-            The Missionary Story: Ringu of India’s Forest
-          </p>
-
-          <div class="vbs-dates">
-            <div>
-              <strong>Blast Off Kick-Off Party</strong>
-              <span>Saturday, August 2 · 1:00 PM – 4:00 PM</span>
-            </div>
-            <div>
-              <strong>Vacation Bible School</strong>
-              <span>August 3–7, 2026 · 6:00 PM – 8:00 PM nightly</span>
-            </div>
-          </div>
-
-          <p>All children are welcome for Bible lessons, songs, crafts, snacks, games, stickers, and prizes.</p>
+        <div class="cards two">
+          <article class="card">
+            <h3>Sunday</h3>
+            <p><strong>Bible Study</strong><br><span>10:00 AM</span></p>
+            <p><strong>Morning Worship</strong><br><span>11:00 AM</span></p>
+          </article>
+          <article class="card">
+            <h3>Wednesday</h3>
+            <p><strong>BYF Youth</strong><br><span>6:25 PM – 7:45 PM</span></p>
+            <p><strong>Adult Bible Study</strong><br><span>7:00 PM – 8:00 PM</span></p>
+          </article>
         </div>
-
-        <img class="vbs-banner" src="images/vbs-banner.png" alt="Turned Around Vacation Bible School banner with dates and church location" />
       </div>
     </section>
 
-    <section class="section about">
-      <div class="about-grid">
+    <section class="section vbs" id="vbs">
+      <div class="container vbs-grid">
         <div>
-          <p class="eyebrow">About CMBC</p>
-          <h2>A church home for the community</h2>
-          <p>
-            We offer biblical preaching, Bible study, music, and fellowship. Whether you are new to the area or looking for a church home, we would love to see you this Sunday.
-          </p>
+          <p class="eyebrow">Coming Soon</p>
+          <h2>Vacation Bible School</h2>
+          <h3>Turned Around</h3>
+          <p class="lead small">The Missionary Story: Ringu of India’s Forest</p>
+          <div class="event-list">
+            <div class="event-item">
+              <strong>Blast Off Party</strong>
+              <span>Saturday, August 2 • 1:00 PM – 4:00 PM</span>
+            </div>
+            <div class="event-item">
+              <strong>Vacation Bible School</strong>
+              <span>August 3–7 • 6:00 PM – 8:00 PM nightly</span>
+            </div>
+          </div>
+          <p>Bring your family and help us kick off a great week of VBS!</p>
         </div>
+        <img src="images/vbs.png" alt="Turned Around Vacation Bible School announcement" />
+      </div>
+    </section>
 
-        <div class="mini-list">
-          <span>Biblical Preaching</span>
-          <span>Bible Study</span>
-          <span>Music & Fellowship</span>
-          <span>Youth & Families</span>
-        </div>
+    <section class="section pastor">
+      <div class="container narrow center">
+        <p class="eyebrow">Pastor</p>
+        <h2>Pastor Ezra Drumheller</h2>
+        <p>We invite you to join us for worship, Bible study, music, and fellowship.</p>
       </div>
     </section>
 
     <section class="section visit" id="visit">
-      <div class="section-heading">
-        <p class="eyebrow">Visit Us</p>
-        <h2>Campbell Memorial Baptist Church</h2>
-        <p>115 Longacre Way, Smithers, WV 25186</p>
-      </div>
-
-      <div class="button-row center">
-        <a class="button primary" href="https://www.google.com/maps/search/?api=1&query=115+Longacre+Way+Smithers+WV+25186" target="_blank" rel="noopener">📍 Get Directions</a>
-
-        <a class="button secondary" href="https://www.facebook.com/campbellmemorialbaptist" target="_blank" rel="noopener">📘 Church Facebook</a>
-
-        <a class="button secondary" href="https://www.facebook.com/CMBCBYF" target="_blank" rel="noopener">👥 CMBC BYF</a>
+      <div class="container visit-card">
+        <div>
+          <p class="eyebrow">Visit Us</p>
+          <h2>Campbell Memorial Baptist Church</h2>
+          <p class="address">115 Longacre Way<br>Smithers, WV 25186</p>
+        </div>
+        <div class="button-stack">
+          <a class="button primary" href="https://maps.google.com/?q=115+Longacre+Way,+Smithers,+WV+25186" target="_blank" rel="noopener">Get Directions</a>
+          <a class="button secondary" href="https://www.facebook.com/campbellmemorialbaptist" target="_blank" rel="noopener">Visit Facebook</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <img src="images/logo.png" alt="CMBC logo" />
-
-    <p>
-      <strong>Campbell Memorial Baptist Church</strong><br />
-      115 Longacre Way<br />
-      Smithers, WV 25186
-    </p>
-
-    <div class="button-row center">
-      <a class="button secondary" href="https://www.facebook.com/campbellmemorialbaptist" target="_blank" rel="noopener">📘 Church Facebook</a>
-
-      <a class="button secondary" href="https://www.facebook.com/CMBCBYF" target="_blank" rel="noopener">👥 CMBC BYF</a>
-    </div>
-
-    <p class="small">© 2026 Campbell Memorial Baptist Church. All rights reserved.</p>
-
-    <p class="small">Website designed by <strong>Blessed Beyond Belief</strong></p>
+  <footer>
+    <img src="images/logo.png" alt="Campbell Memorial Baptist Church logo" />
+    <p>Campbell Memorial Baptist Church • 115 Longacre Way, Smithers, WV 25186</p>
+    <p class="footer-small">Come as you are. We would love to worship with you this Sunday.</p>
   </footer>
 </body>
 </html>
