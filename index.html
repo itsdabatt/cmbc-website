@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Campbell Memorial Baptist Church | Smithers, WV</title>
-  <meta name="description" content="Campbell Memorial Baptist Church is a Baptist church in Smithers, WV. Join us for Sunday worship, Bible study, Wednesday BYF, and Adult Bible Study." />
+  <meta name="description" content="Campbell Memorial Baptist Church is a Baptist church in Smithers, WV. View service times, church announcements, upcoming events, and submit a prayer request." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -18,6 +18,9 @@
     </a>
     <nav class="top-nav" aria-label="Main navigation">
       <a href="#times">Service Times</a>
+      <a href="#announcements">Announcements</a>
+      <a href="#calendar">Calendar</a>
+      <a href="#prayer">Prayer</a>
       <a href="#vbs">VBS</a>
       <a href="#visit">Visit</a>
       <a class="nav-button" href="https://www.facebook.com/campbellmemorialbaptist" target="_blank" rel="noopener">Facebook</a>
@@ -34,7 +37,8 @@
         <p class="hero-text">Campbell Memorial Baptist Church is striving to be the Church God has called us to be through biblical preaching, Bible study, music, fellowship, and service to our community.</p>
         <div class="button-row">
           <a class="button primary" href="#times">Service Times</a>
-          <a class="button secondary" href="https://www.facebook.com/campbellmemorialbaptist" target="_blank" rel="noopener">Church Facebook</a>
+          <a class="button secondary" href="#calendar">Church Calendar</a>
+          <a class="button secondary" href="#prayer">Prayer Request</a>
         </div>
       </div>
     </section>
@@ -61,25 +65,91 @@
       </div>
     </section>
 
-    <section class="vbs-section" id="vbs"><div class="vbs-register">
+    <section class="announcements-section" id="announcements">
+      <div class="section-heading light-heading">
+        <p class="eyebrow light">Stay Informed</p>
+        <h2>Church Announcements</h2>
+        <p>Check here for the latest news and reminders from CMBC.</p>
+      </div>
+      <div class="announcement-grid">
+        <article class="announcement-card featured-announcement">
+          <span class="announcement-label">Featured</span>
+          <h3>Vacation Bible School</h3>
+          <p><strong>Blast Off Party:</strong> August 2, 1:00–4:00 PM</p>
+          <p><strong>VBS:</strong> August 3–7, 6:00–8:00 PM nightly</p>
+          <a href="#vbs">View VBS details</a>
+        </article>
+        <article class="announcement-card">
+          <span class="announcement-label">Weekly</span>
+          <h3>Wednesday at CMBC</h3>
+          <p>BYF begins at 6:25 PM. Adult Bible Study begins at 7:00 PM.</p>
+        </article>
+        <article class="announcement-card">
+          <span class="announcement-label">Welcome</span>
+          <h3>Join Us Sunday</h3>
+          <p>Bible Study begins at 10:00 AM and Morning Worship begins at 11:00 AM.</p>
+        </article>
+      </div>
+      <p class="edit-note">Announcements can be changed anytime by editing this section in <strong>index.html</strong>.</p>
+    </section>
 
-    <h3>Pre-Register Today!</h3>
+    <section class="section calendar-section" id="calendar">
+      <div class="section-heading">
+        <p class="eyebrow">What’s Happening</p>
+        <h2>Church Calendar</h2>
+        <p>View upcoming services, youth activities, and special events.</p>
+      </div>
+      <div class="calendar-frame-wrap">
+        <iframe
+          class="calendar-frame"
+          src="https://calendar.google.com/calendar/embed?src=campbellmemorialbyf%40gmail.com&ctz=America%2FNew_York&mode=AGENDA"
+          title="Campbell Memorial Baptist Church calendar"
+          loading="lazy"
+          frameborder="0"
+          scrolling="no">
+        </iframe>
+      </div>
+      <p class="calendar-help">If the calendar says you do not have permission, make the Google Calendar public using the instructions in README.txt.</p>
+    </section>
 
-    <p>
-        Scan the QR Code below or CLICK THE PICTURE to register your child for Vacation Bible School.
-    </p>
+    <section class="prayer-section" id="prayer">
+      <div class="prayer-wrap">
+        <div class="prayer-copy">
+          <p class="eyebrow light">We’re Here to Pray</p>
+          <h2>Submit a Prayer Request</h2>
+          <p>Share your request with Campbell Memorial Baptist Church. Your name and contact information are optional.</p>
+          <p class="privacy-note">Please do not use this form for emergencies. Call 911 when immediate help is needed.</p>
+        </div>
 
-    <a href="https://forms.gle/bVVY6MKBWdhSR2je7" target="_blank">
+        <form class="prayer-form" action="https://formsubmit.co/campbellmemorialbyf@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New CMBC Website Prayer Request" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" class="hidden-field" tabindex="-1" autocomplete="off" />
 
-        <img src="images/vbs-register.png"
-             alt="VBS Pre-Registration">
+          <label for="prayer-name">Name <span>(optional)</span></label>
+          <input id="prayer-name" name="Name" type="text" autocomplete="name" />
 
-    </a>
+          <label for="prayer-email">Email <span>(optional)</span></label>
+          <input id="prayer-email" name="Email" type="email" autocomplete="email" />
 
-</div>
+          <label for="prayer-request">Prayer Request</label>
+          <textarea id="prayer-request" name="Prayer Request" rows="7" required></textarea>
+
+          <label class="check-row">
+            <input type="checkbox" name="Keep Private" value="Yes" />
+            <span>Please keep this request private.</span>
+          </label>
+
+          <button class="button primary form-button" type="submit">Send Prayer Request</button>
+          <p class="form-note">The first submission may require a one-time email confirmation to activate this form.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="vbs-section" id="vbs">
       <div class="vbs-wrap">
         <div class="vbs-copy">
-          <p class="eyebrow light">Upcoming Event</p>
+          <p class="eyebrow light">Current Event</p>
           <h2>Vacation Bible School is coming!</h2>
           <p class="vbs-theme"><strong>Turned Around</strong><br />The Missionary Story: Ringu of India’s Forest</p>
           <div class="vbs-dates">
@@ -125,10 +195,6 @@
   <footer class="site-footer">
     <img src="images/logo.png" alt="CMBC logo" />
     <p><strong>Campbell Memorial Baptist Church</strong><br />115 Longacre Way, Smithers, WV 25186</p>
-    <div class="button-row center footer-buttons">
-      <a class="button secondary" href="https://www.facebook.com/campbellmemorialbaptist" target="_blank" rel="noopener">Church Facebook</a>
-      <a class="button secondary" href="https://www.facebook.com/CMBCBYF" target="_blank" rel="noopener">BYF Facebook</a>
-    </div>
     <p class="small">© 2026 Campbell Memorial Baptist Church. All rights reserved.</p>
     <p class="small">Website designed by <strong>Blessed Beyond Belief</strong></p>
   </footer>
