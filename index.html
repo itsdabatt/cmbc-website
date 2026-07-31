@@ -1,256 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Campbell Memorial Baptist Church | Smithers, WV</title>
-  <meta name="description" content="Campbell Memorial Baptist Church is a Baptist church in Smithers, WV. View service times, church announcements, upcoming events, and submit a prayer request." />
-  <style>
-:root{
-  --navy:#071a35;
-  --navy-2:#0d2b55;
-  --gold:#f5c542;
-  --cream:#fff8e8;
-  --white:#ffffff;
-  --text:#172033;
-  --muted:#5d687a;
-  --shadow:0 18px 45px rgba(5,20,45,.18);
-  --radius:24px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.55}
-a{color:inherit;text-decoration:none}
-.site-header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px clamp(16px,4vw,54px);background:rgba(7,26,53,.96);backdrop-filter:blur(10px);color:white;box-shadow:0 8px 28px rgba(0,0,0,.18)}
-.brand{display:flex;align-items:center;gap:12px;min-width:0}.brand img{width:54px;height:54px;border-radius:12px;object-fit:cover}.brand strong{display:block;font-size:1rem;line-height:1.05;text-transform:uppercase;letter-spacing:.04em}.brand span{display:block;color:var(--gold);font-weight:700;font-size:.86rem;text-transform:uppercase;letter-spacing:.06em}
-.top-nav{display:flex;align-items:center;gap:15px;font-weight:700}.top-nav a{opacity:.94;font-size:.94rem}.top-nav a:hover{color:var(--gold)}.nav-button{padding:10px 14px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(255,255,255,.08)}
-.hero{position:relative;min-height:720px;display:flex;align-items:flex-end;overflow:hidden}.hero-photo{position:absolute;inset:0;background:url('images/church.jpg') center/cover no-repeat;transform:scale(1.01)}.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,26,53,.92),rgba(7,26,53,.58) 42%,rgba(7,26,53,.14) 78%),linear-gradient(0deg,rgba(7,26,53,.66),transparent 45%)}
-.hero-content{position:relative;max-width:820px;padding:90px clamp(18px,6vw,80px);color:white}.eyebrow{margin:0 0 10px;color:var(--gold);font-weight:900;text-transform:uppercase;letter-spacing:.13em;font-size:.82rem}.eyebrow.light{color:#ffe98a}.hero h1{margin:0 0 18px;font-size:clamp(3.2rem,8vw,7rem);line-height:.92;letter-spacing:-.06em;text-transform:uppercase}.hero-text{font-size:clamp(1.1rem,2.3vw,1.55rem);max-width:680px;margin:0 0 30px}.button-row{display:flex;flex-wrap:wrap;gap:14px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:14px 20px;border:0;border-radius:14px;font:inherit;font-weight:900;text-transform:uppercase;letter-spacing:.04em;box-shadow:var(--shadow);cursor:pointer}.primary{background:var(--gold);color:#13213a}.secondary{background:white;color:var(--navy)}
-.section{padding:70px clamp(18px,5vw,70px)}.section-heading{text-align:center;max-width:760px;margin:0 auto 30px}.section h2,.vbs-section h2,.announcements-section h2,.prayer-section h2{margin:0 0 10px;font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;color:var(--navy);letter-spacing:-.04em}.section-heading p{font-size:1.1rem;color:var(--muted)}
-.cards{max-width:1050px;margin:auto;display:grid;gap:20px}.cards.two{grid-template-columns:repeat(2,minmax(0,1fr))}.card{background:white;border:1px solid #e8edf4;border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}.icon{font-size:2rem}.card h3{font-size:1.8rem;margin:10px 0 18px;color:var(--navy)}.time-line{display:flex;justify-content:space-between;gap:14px;padding:16px 0;border-top:1px solid #e8edf4}.time-line strong{font-size:1.35rem;color:var(--navy)}.time-line span{color:var(--muted);font-weight:700;text-align:right}
-.announcements-section{padding:70px clamp(18px,5vw,70px);background:linear-gradient(135deg,#071a35,#0d2b55);color:white}.light-heading h2{color:white}.light-heading p{color:#dce7f7}.announcement-grid{max-width:1120px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.announcement-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:24px}.announcement-card h3{margin:12px 0;color:white;font-size:1.45rem}.announcement-card p{color:#e6edf7}.announcement-card a{display:inline-block;margin-top:8px;color:var(--gold);font-weight:900}.announcement-label{display:inline-block;background:var(--gold);color:var(--navy);padding:5px 10px;border-radius:999px;font-size:.74rem;font-weight:900;text-transform:uppercase}.featured-announcement{box-shadow:0 0 0 2px rgba(245,197,66,.45)}.edit-note{text-align:center;color:#c6d4e8;font-size:.9rem;margin:24px 0 0}
-.calendar-section{background:var(--cream)}.calendar-frame-wrap{max-width:1100px;margin:auto;background:white;border-radius:var(--radius);padding:12px;box-shadow:var(--shadow)}.calendar-frame{display:block;width:100%;height:620px;border:0;border-radius:16px}.calendar-help{max-width:900px;margin:18px auto 0;text-align:center;color:var(--muted);font-size:.92rem}
-.prayer-section{padding:70px clamp(18px,5vw,70px);background:linear-gradient(135deg,#061730,#0d2b55);color:white}.prayer-wrap{max-width:1120px;margin:auto;display:grid;grid-template-columns:.85fr 1.15fr;gap:32px;align-items:start}.prayer-section h2{color:white}.prayer-copy p{font-size:1.08rem;color:#e6edf7}.privacy-note{padding:14px;border-left:4px solid var(--gold);background:rgba(255,255,255,.08);border-radius:10px}.prayer-form{background:white;color:var(--text);border-radius:var(--radius);padding:28px;box-shadow:0 20px 60px rgba(0,0,0,.3)}.prayer-form label{display:block;margin:0 0 7px;color:var(--navy);font-weight:900}.prayer-form label span{font-weight:normal;color:var(--muted)}.prayer-form input[type="text"],.prayer-form input[type="email"],.prayer-form textarea{width:100%;margin:0 0 18px;padding:13px 14px;border:1px solid #ccd6e4;border-radius:12px;font:inherit;color:var(--text);background:#fbfcfe}.prayer-form textarea{resize:vertical}.check-row{display:flex!important;align-items:flex-start;gap:10px;margin-bottom:20px!important}.check-row input{margin-top:5px}.form-button{width:100%}.form-note{margin:13px 0 0;color:var(--muted);font-size:.85rem;text-align:center}.hidden-field{position:absolute!important;left:-9999px!important}
-.vbs-section{padding:70px clamp(16px,5vw,70px);background:linear-gradient(135deg,#061730,#0d2b55);color:white}.vbs-wrap{max-width:1180px;margin:auto;display:grid;grid-template-columns:.78fr 1.22fr;gap:28px;align-items:center}.vbs-section h2{color:white}.vbs-copy{padding:10px}.vbs-theme{font-size:1.3rem}.vbs-dates{display:grid;gap:12px;margin:24px 0}.vbs-dates div{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:18px;padding:16px}.vbs-dates strong,.vbs-dates span{display:block}.vbs-dates span{color:#e8eef8}.vbs-banner{width:100%;border-radius:22px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
-.about{background:var(--cream)}.about-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}.about p{font-size:1.15rem}.mini-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.mini-list span{padding:18px;border-radius:18px;background:white;font-weight:900;color:var(--navy);box-shadow:0 10px 28px rgba(5,20,45,.08)}.center{justify-content:center}.visit{background:#fff}.site-footer{text-align:center;padding:40px 18px;background:var(--navy);color:white}.site-footer img{width:72px;border-radius:16px}.site-footer .small{color:#b8c5d8;font-size:.9rem}
-@media(max-width:1060px){.top-nav{gap:10px}.top-nav a{font-size:.82rem}}
-@media(max-width:820px){.top-nav{display:none}.site-header{align-items:center}.brand img{width:48px;height:48px}.brand strong{font-size:.86rem}.brand span{font-size:.72rem}.hero{min-height:650px;align-items:flex-end}.hero-overlay{background:linear-gradient(0deg,rgba(7,26,53,.96),rgba(7,26,53,.58) 58%,rgba(7,26,53,.10))}.hero-content{padding:90px 18px 44px}.hero h1{font-size:3.7rem}.button{width:100%}.cards.two,.vbs-wrap,.about-grid,.prayer-wrap{grid-template-columns:1fr}.announcement-grid{grid-template-columns:1fr}.section{padding:52px 16px}.card{padding:24px}.time-line{display:block}.time-line span{text-align:left;display:block}.mini-list{grid-template-columns:1fr}.vbs-section,.announcements-section,.prayer-section{padding:52px 16px}.vbs-banner{border-radius:16px}.calendar-frame{height:560px}.prayer-form{padding:22px}}
-@media(max-width:420px){.hero h1{font-size:3.1rem}.hero-text{font-size:1.05rem}.section h2,.vbs-section h2,.announcements-section h2,.prayer-section h2{font-size:2.1rem}.card h3{font-size:1.55rem}.time-line strong{font-size:1.2rem}.calendar-frame{height:500px}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Campbell Memorial Baptist Church | Smithers, WV</title>
+<meta name="description" content="Campbell Memorial Baptist Church in Smithers, West Virginia. Service times, announcements, events, and prayer requests.">
+<style>
+:root{--navy:#071a35;--navy2:#0e2d57;--gold:#f6c945;--cream:#fff8e6;--paper:#fff;--ink:#10203a;--muted:#60708a;--line:#dfe7f1;--shadow:0 18px 45px rgba(7,26,53,.16);--round:24px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f7fb;color:var(--ink);line-height:1.55}img{max-width:100%;display:block}a{text-decoration:none;color:inherit}
+header{position:sticky;top:0;z-index:50;background:rgba(7,26,53,.97);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px clamp(16px,4vw,56px);box-shadow:0 8px 25px rgba(0,0,0,.22)}
+.brand{display:flex;align-items:center;gap:12px}.brand img{width:52px;height:52px;object-fit:contain;background:#fff;border-radius:12px;padding:4px}.brand strong{display:block;line-height:1.05;text-transform:uppercase;letter-spacing:.03em}.brand span{display:block;color:var(--gold);font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.nav{display:flex;gap:18px;align-items:center;font-weight:800;font-size:.92rem}.nav a:hover{color:var(--gold)}
+.hero{min-height:690px;position:relative;display:flex;align-items:flex-end;background:url('church1.jpg') center/cover no-repeat}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,26,53,.95),rgba(7,26,53,.66) 44%,rgba(7,26,53,.12) 80%),linear-gradient(0deg,rgba(7,26,53,.72),transparent 52%)}.hero-inner{position:relative;color:#fff;width:min(1180px,100%);margin:auto;padding:90px clamp(18px,6vw,80px)}
+.kicker{margin:0 0 10px;color:var(--gold);font-size:.82rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.hero h1{max-width:780px;margin:0 0 20px;font-size:clamp(3rem,7vw,6.6rem);line-height:.92;letter-spacing:-.055em;text-transform:uppercase}.hero p{max-width:720px;font-size:clamp(1.05rem,2vw,1.35rem)}
+.btnrow{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:14px;font-weight:900;text-transform:uppercase;letter-spacing:.04em;box-shadow:var(--shadow)}.btn.gold{background:var(--gold);color:var(--navy)}.btn.white{background:#fff;color:var(--navy)}
+section{padding:72px clamp(16px,5vw,70px)}.wrap{width:min(1180px,100%);margin:auto}.heading{text-align:center;max-width:780px;margin:0 auto 34px}.heading h2{margin:0 0 10px;color:var(--navy);font-size:clamp(2.1rem,5vw,3.5rem);line-height:1.05;letter-spacing:-.04em}.heading p{margin:0;color:var(--muted);font-size:1.08rem}
+.times-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.card{background:#fff;border:1px solid var(--line);border-radius:var(--round);padding:28px;box-shadow:var(--shadow)}.card h3{margin:0 0 18px;font-size:1.8rem;color:var(--navy)}.time{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-top:1px solid var(--line)}.time strong{font-size:1.25rem;color:var(--navy)}.time span{font-weight:800;color:var(--muted);text-align:right}
+.announce{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff}.announce .heading h2{color:#fff}.announce .heading p{color:#dce7f5}.announce-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:20px}.announce-card{background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.2);border-radius:22px;padding:26px;min-height:230px;display:flex;flex-direction:column;box-shadow:0 18px 38px rgba(0,0,0,.18)}.announce-card.featured{background:linear-gradient(145deg,rgba(246,201,69,.24),rgba(255,255,255,.1));outline:2px solid rgba(246,201,69,.55)}.pill{align-self:flex-start;background:var(--gold);color:var(--navy);font-size:.72rem;font-weight:900;padding:6px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.08em}.announce-card h3{font-size:1.5rem;margin:15px 0 8px}.announce-card p{color:#edf3fb;margin:5px 0}.announce-card a{margin-top:auto;padding-top:16px;color:var(--gold);font-weight:900}
+.calendar{background:var(--cream)}.calendar-layout{display:grid;grid-template-columns:1.4fr .6fr;gap:26px;align-items:start}.calendar-image{background:#fff;border:10px solid #fff;border-radius:24px;box-shadow:var(--shadow);overflow:hidden}.calendar-image img{width:100%;height:auto}.event-stack{display:grid;gap:14px}.event{background:#fff;border-radius:18px;padding:20px;box-shadow:0 12px 28px rgba(7,26,53,.11);border-left:6px solid var(--gold)}.event strong{display:block;color:var(--navy);font-size:1.08rem}.event span{color:var(--muted)}.calendar-note{margin-top:18px;background:#fff4c6;border:1px solid #ead06b;border-radius:15px;padding:14px 16px;color:#554300;text-align:center}
+.prayer{background:linear-gradient(135deg,#06152b,#0d2b55);color:#fff}.prayer-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:32px;align-items:start}.prayer h2{color:#fff;margin:0 0 14px;font-size:clamp(2.2rem,5vw,3.5rem);line-height:1.05}.prayer-copy p{color:#e7eef8;font-size:1.08rem}.notice{margin-top:24px;border-left:5px solid var(--gold);background:rgba(255,255,255,.1);padding:16px 18px;border-radius:12px}.formbox{background:#fff;color:var(--ink);padding:28px;border-radius:24px;box-shadow:0 22px 60px rgba(0,0,0,.32)}.field{margin-bottom:18px}.field label{display:block;margin-bottom:7px;font-weight:900;color:var(--navy)}.field label span{font-weight:400;color:var(--muted)}.field input,.field textarea{display:block;width:100%;max-width:100%;padding:14px;border:1px solid #cbd6e4;border-radius:12px;font:inherit;background:#fbfcfe;color:var(--ink)}.field textarea{min-height:170px;resize:vertical}.check{display:flex;gap:10px;align-items:flex-start;margin:4px 0 20px;font-weight:700;color:var(--navy)}.check input{margin-top:5px}.submit{width:100%;border:0;cursor:pointer;background:var(--gold);color:var(--navy);padding:16px;border-radius:14px;font-weight:900;font-size:1rem;text-transform:uppercase;letter-spacing:.05em}.small{font-size:.86rem;color:var(--muted);text-align:center;margin:12px 0 0}.honeypot{position:absolute;left:-9999px}
+.vbs{background:#fff}.vbs-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:28px;align-items:center}.vbs-copy h2{margin:0 0 14px;color:var(--navy);font-size:clamp(2.2rem,5vw,3.5rem);line-height:1.05}.datebox{display:grid;gap:12px;margin:22px 0}.datebox div{background:var(--cream);border:1px solid #efdfae;border-radius:16px;padding:16px}.datebox strong,.datebox span{display:block}.vbs-pic{border-radius:22px;box-shadow:var(--shadow)}
+.visit{background:#f4f7fb}.visit-card{text-align:center;background:#fff;border-radius:24px;padding:36px;box-shadow:var(--shadow)}.visit-card h2{font-size:clamp(2rem,5vw,3.3rem);margin:0 0 10px;color:var(--navy)}
+footer{background:var(--navy);color:#fff;text-align:center;padding:42px 18px}footer img{width:78px;margin:0 auto 14px;background:#fff;border-radius:16px;padding:6px}footer .fine{color:#bfcadd;font-size:.88rem}
 
-/* Version 2 cache-safe section fixes */
-.announcements-section .section-heading{max-width:760px;margin:0 auto 34px;text-align:center}
-.announcements-section .section-heading h2{color:#fff}
-.announcements-section .section-heading p{color:#dce7f7;margin:0}
-.announcement-grid{width:min(1120px,100%);margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.announcement-card{display:flex;flex-direction:column;min-height:220px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.2);border-radius:22px;padding:26px;color:#fff;box-shadow:0 16px 34px rgba(0,0,0,.16)}
-.announcement-card h3{margin:14px 0 8px;color:#fff;font-size:1.45rem;line-height:1.15}
-.announcement-card p{margin:5px 0;color:#edf3fb;font-size:1rem}
-.announcement-card a{margin-top:auto;padding-top:14px;color:var(--gold);font-weight:900}
-.announcement-label{align-self:flex-start}
-.calendar-frame-wrap{overflow:hidden}
-.calendar-note{max-width:900px;margin:18px auto 0;padding:14px 16px;border-radius:14px;background:#fff3c4;color:#4f3b00;text-align:center;border:1px solid #efd26d}
-@media(max-width:820px){.announcement-grid{grid-template-columns:1fr}.announcement-card{min-height:auto}.calendar-frame-wrap{padding:6px}.calendar-frame{height:620px}}
-
-
-/* Prayer form hardening: keeps fields stacked even if other styles conflict */
-#prayer .prayer-form { display: flex; flex-direction: column; width: 100%; }
-#prayer .prayer-form > label:not(.check-row) { width: 100%; }
-#prayer .prayer-form input[type="text"],
-#prayer .prayer-form input[type="email"],
-#prayer .prayer-form textarea { display: block; width: 100%; max-width: 100%; min-width: 0; }
-#prayer .check-row { width: 100%; }
-  </style>
+.bigweek{background:linear-gradient(135deg,#f6c945,#ffe98f);color:var(--navy);padding:18px clamp(16px,5vw,70px);border-bottom:4px solid var(--navy)}
+.bigweek-inner{width:min(1180px,100%);margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.bigweek strong{font-size:clamp(1.15rem,2.5vw,1.65rem);text-transform:uppercase;letter-spacing:.02em}.bigweek span{font-weight:800}.bigweek .btn{box-shadow:none;background:var(--navy);color:#fff;white-space:nowrap}
+.deadline{display:inline-block;background:#fff;color:var(--navy);padding:6px 10px;border-radius:999px;font-size:.75rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.countdown-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:24px}.countdown-card{background:#fff;border:2px solid rgba(246,201,69,.45);border-radius:18px;padding:18px;color:var(--navy)}.countdown-card b{display:block;color:#b42318;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}.countdown-card strong{font-size:1.25rem}.countdown-card span{display:block;color:var(--muted);font-weight:700}
+@media(max-width:900px){.nav{display:none}.bigweek-inner{display:block;text-align:center}.bigweek .btn{margin-top:12px;width:100%}.announce-grid,.calendar-layout,.prayer-grid,.vbs-grid{grid-template-columns:1fr}.announce-card{min-height:auto}.times-grid{grid-template-columns:1fr}.calendar-layout{gap:18px}.hero{min-height:640px}.hero:before{background:linear-gradient(0deg,rgba(7,26,53,.96),rgba(7,26,53,.62) 60%,rgba(7,26,53,.1))}.hero-inner{padding:88px 18px 42px}.btn{width:100%}}
+@media(max-width:520px){section{padding:52px 15px}.countdown-grid{grid-template-columns:1fr}.brand strong{font-size:.84rem}.brand span{font-size:.68rem}.hero h1{font-size:3.15rem}.card,.formbox{padding:22px}.time{display:block}.time span{display:block;text-align:left;margin-top:4px}.calendar-image{border-width:5px;border-radius:16px}}
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="Campbell Memorial Baptist Church home">
-      <img src="images/logo.png" alt="CMBC logo" />
-      <div>
-        <strong>Campbell Memorial</strong>
-        <span>Baptist Church</span>
-      </div>
-    </a>
-    <nav class="top-nav" aria-label="Main navigation">
-      <a href="#times">Service Times</a>
-      <a href="#announcements">Announcements</a>
-      <a href="#calendar">Calendar</a>
-      <a href="#prayer">Prayer</a>
-      <a href="#vbs">VBS</a>
-      <a href="#visit">Visit</a>
-      <a class="nav-button" href="https://www.facebook.com/campbellmemorialbaptist" target="_blank" rel="noopener">Facebook</a>
-    </nav>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="hero-photo" role="img" aria-label="Campbell Memorial Baptist Church building"></div>
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <p class="eyebrow">A Baptist Church in Smithers, WV</p>
-        <h1>You’re welcome here.</h1>
-        <p class="hero-text">Campbell Memorial Baptist Church is striving to be the Church God has called us to be through biblical preaching, Bible study, music, fellowship, and service to our community.</p>
-        <div class="button-row">
-          <a class="button primary" href="#times">Service Times</a>
-          <a class="button secondary" href="#calendar">Church Calendar</a>
-          <a class="button secondary" href="#prayer">Prayer Request</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="times">
-      <div class="section-heading">
-        <p class="eyebrow">Join Us</p>
-        <h2>Service Times</h2>
-        <p>Come as you are. We would love to worship with you.</p>
-      </div>
-      <div class="cards two">
-        <article class="card">
-          <span class="icon">☀️</span>
-          <h3>Sunday</h3>
-          <div class="time-line"><strong>10:00 AM</strong><span>Bible Study</span></div>
-          <div class="time-line"><strong>11:00 AM</strong><span>Morning Worship</span></div>
-        </article>
-        <article class="card">
-          <span class="icon">✝️</span>
-          <h3>Wednesday</h3>
-          <div class="time-line"><strong>6:25 – 7:45 PM</strong><span>BYF Youth Service</span></div>
-          <div class="time-line"><strong>7:00 – 8:00 PM</strong><span>Adult Bible Study</span></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="announcements-section" id="announcements">
-      <div class="section-heading light-heading">
-        <p class="eyebrow light">Stay Informed</p>
-        <h2>Church Announcements</h2>
-        <p>Check here for the latest news and reminders from CMBC.</p>
-      </div>
-      <div class="announcement-grid">
-        <article class="announcement-card featured-announcement">
-          <span class="announcement-label">Featured</span>
-          <h3>Vacation Bible School</h3>
-          <p><strong>Blast Off Party:</strong> August 2, 1:00–4:00 PM</p>
-          <p><strong>VBS:</strong> August 3–7, 6:00–8:00 PM nightly</p>
-          <a href="#vbs">View VBS details</a>
-        </article>
-        <article class="announcement-card">
-          <span class="announcement-label">Weekly</span>
-          <h3>Wednesday at CMBC</h3>
-          <p>BYF begins at 6:25 PM. Adult Bible Study begins at 7:00 PM.</p>
-        </article>
-        <article class="announcement-card">
-          <span class="announcement-label">Welcome</span>
-          <h3>Join Us Sunday</h3>
-          <p>Bible Study begins at 10:00 AM and Morning Worship begins at 11:00 AM.</p>
-        </article>
-      </div>
-      
-    </section>
-
-    <section class="section calendar-section" id="calendar">
-      <div class="section-heading">
-        <p class="eyebrow">What’s Happening</p>
-        <h2>Church Calendar</h2>
-        <p>View upcoming services, youth activities, and special events.</p>
-      </div>
-      <div class="calendar-frame-wrap">
-        <iframe
-          class="calendar-frame"
-          src="https://calendar.google.com/calendar/embed?src=campbellmemorialbyf%40gmail.com&ctz=America%2FNew_York&mode=AGENDA"
-          title="Campbell Memorial Baptist Church calendar"
-          loading="lazy"
-          frameborder="0"
-          scrolling="no">
-        </iframe>
-      </div>
-      <div class="calendar-note"><strong>Calendar not loading?</strong> The church calendar must be set to public in Google Calendar before visitors can see it.</div>
-    </section>
-
-    <section class="prayer-section" id="prayer">
-      <div class="prayer-wrap">
-        <div class="prayer-copy">
-          <p class="eyebrow light">We’re Here to Pray</p>
-          <h2>Submit a Prayer Request</h2>
-          <p>Share your request with Campbell Memorial Baptist Church. Your name and contact information are optional.</p>
-          <div class="privacy-note"><strong>Need immediate help?</strong><br>Please call 911 for an emergency. This form is for prayer requests only.</div>
-        </div>
-
-        <form class="prayer-form" action="https://formsubmit.co/campbellmemorialbyf@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="New CMBC Website Prayer Request" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="text" name="_honey" class="hidden-field" tabindex="-1" autocomplete="off" />
-
-          <label for="prayer-name">Name <span>(optional)</span></label>
-          <input id="prayer-name" name="Name" type="text" autocomplete="name" />
-
-          <label for="prayer-email">Email <span>(optional)</span></label>
-          <input id="prayer-email" name="Email" type="email" autocomplete="email" />
-
-          <label for="prayer-request">Prayer Request</label>
-          <textarea id="prayer-request" name="Prayer Request" rows="7" required></textarea>
-
-          <label class="check-row">
-            <input type="checkbox" name="Keep Private" value="Yes" />
-            <span>Please keep this request private.</span>
-          </label>
-
-          <button class="button primary form-button" type="submit">Send Prayer Request</button>
-          <p class="form-note">Your request will be sent directly to Campbell Memorial Baptist Church.</p>
-        </form>
-      </div>
-    </section>
-
-    <section class="vbs-section" id="vbs">
-      <div class="vbs-wrap">
-        <div class="vbs-copy">
-          <p class="eyebrow light">Current Event</p>
-          <h2>Vacation Bible School is coming!</h2>
-          <p class="vbs-theme"><strong>Turned Around</strong><br />The Missionary Story: Ringu of India’s Forest</p>
-          <div class="vbs-dates">
-            <div><strong>Blast Off Kick-Off Party</strong><span>Saturday, August 2 · 1:00 PM – 4:00 PM</span></div>
-            <div><strong>Vacation Bible School</strong><span>August 3–7, 2026 · 6:00 PM – 8:00 PM nightly</span></div>
-          </div>
-          <p>All children are welcome for Bible lessons, songs, crafts, snacks, games, stickers, and prizes.</p>
-        </div>
-        <img class="vbs-banner" src="images/vbs-banner.png" alt="Turned Around Vacation Bible School banner with dates and church location" />
-      </div>
-    </section>
-
-    <section class="section about">
-      <div class="about-grid">
-        <div>
-          <p class="eyebrow">About CMBC</p>
-          <h2>A church home for the community</h2>
-          <p>We offer biblical preaching, Bible study, music, and fellowship. Whether you are new to the area or looking for a church home, we would love to see you this Sunday.</p>
-        </div>
-        <div class="mini-list">
-          <span>Biblical Preaching</span>
-          <span>Bible Study</span>
-          <span>Music & Fellowship</span>
-          <span>Youth & Families</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section visit" id="visit">
-      <div class="section-heading">
-        <p class="eyebrow">Visit Us</p>
-        <h2>Campbell Memorial Baptist Church</h2>
-        <p>115 Longacre Way, Smithers, WV 25186</p>
-      </div>
-      <div class="button-row center">
-        <a class="button primary" href="https://www.google.com/maps/search/?api=1&query=115+Longacre+Way+Smithers+WV+25186" target="_blank" rel="noopener">Get Directions</a>
-        <a class="button secondary" href="https://www.facebook.com/campbellmemorialbaptist" target="_blank" rel="noopener">Church Facebook</a>
-        <a class="button secondary" href="https://www.facebook.com/CMBCBYF" target="_blank" rel="noopener">BYF Facebook</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <img src="images/logo.png" alt="CMBC logo" />
-    <p><strong>Campbell Memorial Baptist Church</strong><br />115 Longacre Way, Smithers, WV 25186</p>
-    <p class="small">© 2026 Campbell Memorial Baptist Church. All rights reserved.</p>
-    <p class="small">Website designed by <strong>Blessed Beyond Belief</strong></p>
-  </footer>
+<header>
+<a class="brand" href="#top"><img src="logo.png" alt="Campbell Memorial Baptist Church logo"><div><strong>Campbell Memorial</strong><span>Baptist Church</span></div></a>
+<nav class="nav"><a href="#times">Service Times</a><a href="#announcements">Announcements</a><a href="#calendar">Calendar</a><a href="#prayer">Prayer</a><a href="#vbs">VBS</a><a href="#visit">Visit</a></nav>
+</header>
+<div class="bigweek"><div class="bigweek-inner"><div><strong>⭐ A Big Week at CMBC Starts This Sunday!</strong><br><span>Block Party Sunday, August 2 · VBS Monday–Friday, August 3–7</span></div><a class="btn" href="#vbs">See All Details</a></div></div>
+<main id="top">
+<section class="hero"><div class="hero-inner"><p class="kicker">This Week at Campbell Memorial</p><h1>VBS Week Is Here!</h1><p>Join us for our <strong>Turned Around Block Party this Sunday, August 2</strong>, followed by <strong>Vacation Bible School August 3–7</strong>. We are excited for a full week of Bible lessons, music, crafts, snacks, games, and fellowship!</p><div class="btnrow"><a class="btn gold" href="#vbs">VBS Details</a><a class="btn white" href="#calendar">August Calendar</a><a class="btn white" href="#prayer">Prayer Request</a></div></div></section>
+<section id="times"><div class="wrap"><div class="heading"><p class="kicker">Join Us</p><h2>Weekly Service Times</h2><p>Come as you are. We would love to worship with you.</p></div><div class="times-grid"><article class="card"><h3>☀️ Sunday</h3><div class="time"><strong>10:00 AM</strong><span>Bible Study</span></div><div class="time"><strong>11:00 AM</strong><span>Morning Worship</span></div></article><article class="card"><h3>✝️ Wednesday</h3><div class="time"><strong>6:25–7:45 PM</strong><span>BYF Youth Service</span></div><div class="time"><strong>7:00–8:00 PM</strong><span>Adult Bible Study</span></div></article></div></div></section>
+<section class="announce" id="announcements"><div class="wrap"><div class="heading"><p class="kicker">Updated July 30, 2026</p><h2>This Is Our Big Week!</h2><p>Please share these dates, invite a family, and keep our children, teachers, helpers, and church in prayer.</p></div><div class="announce-grid"><article class="announce-card featured"><span class="pill">This Sunday</span><h3>🚀 Turned Around Block Party</h3><p><strong>Sunday, August 2</strong></p><p><strong>1:00–4:00 PM</strong></p><p>Kick off VBS with an afternoon of fun, fellowship, and excitement for children and families.</p><a href="#vbs">See the full VBS schedule →</a></article><article class="announce-card featured"><span class="pill">Next Week</span><h3>🌴 Vacation Bible School</h3><p><strong>Monday–Friday, August 3–7</strong></p><p><strong>6:00–8:00 PM nightly</strong></p><p>Bible lessons, music, crafts, snacks, games, stickers, prizes, and the missionary story of Ringu.</p><a href="https://www.facebook.com/campbellmemorialbaptist" target="_blank" rel="noopener">Follow church updates →</a></article><article class="announce-card"><span class="pill">Please Remember</span><h3>🙏 Pray · Invite · Share</h3><p>Pray for every child, family, teacher, helper, and visitor.</p><p>Invite someone who may need a church family.</p><p>Share our VBS information with friends and neighbors.</p></article></div></div></section>
+<section class="calendar" id="calendar"><div class="wrap"><div class="heading"><p class="kicker">Starting This Weekend</p><h2>August 2026 Church Calendar</h2><p>Our biggest week of the summer begins Sunday, August 2. Tap the calendar to see every August activity full-size.</p></div><div class="calendar-layout"><a class="calendar-image" href="august-calendar.jpg" target="_blank" aria-label="Open the August church calendar full size"><img src="august-calendar.jpg" alt="Campbell Memorial Baptist Church August 2026 calendar"></a><div class="event-stack"><div class="event"><strong>Every Sunday</strong><span>Bible Study at 10:00 AM<br>Morning Worship at 11:00 AM</span></div><div class="event"><strong>Every Wednesday</strong><span>BYF begins at 6:25 PM<br>Adult Bible Study begins at 7:00 PM</span></div><div class="event"><strong>August 2</strong><span>VBS Block Party, 1:00–4:00 PM</span></div><div class="event"><strong>August 3–7</strong><span>Vacation Bible School, 6:00–8:00 PM</span></div><div class="event"><strong>August 23</strong><span>Church Picnic</span></div><div class="event"><strong>August 26 & 28</strong><span>Pizza Night and Movie Night</span></div></div></div><p class="calendar-note"><strong>Tap the calendar image</strong> to open it full-size on your phone.</p></div></section>
+<section class="prayer" id="prayer"><div class="wrap prayer-grid"><div class="prayer-copy"><p class="kicker">We’re Here to Pray</p><h2>Submit a Prayer Request</h2><p>Share your request with Campbell Memorial Baptist Church. Your name and email are optional, and you may mark your request private.</p><div class="notice"><strong>For emergencies:</strong><br>Please call 911 when immediate help is needed. This form is for prayer requests only.</div></div><form class="formbox" action="https://formsubmit.co/campbellmemorialbyf@gmail.com" method="POST"><input type="hidden" name="_subject" value="New CMBC Website Prayer Request"><input type="hidden" name="_captcha" value="false"><input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off"><div class="field"><label for="name">Name <span>(optional)</span></label><input id="name" name="Name" type="text" autocomplete="name" placeholder="Your name"></div><div class="field"><label for="email">Email <span>(optional)</span></label><input id="email" name="Email" type="email" autocomplete="email" placeholder="you@example.com"></div><div class="field"><label for="request">Prayer Request</label><textarea id="request" name="Prayer Request" required placeholder="How may we pray for you?"></textarea></div><label class="check"><input type="checkbox" name="Keep Private" value="Yes"><span>Please keep this request private.</span></label><button class="submit" type="submit">Send Prayer Request</button><p class="small">Your request will be emailed directly to Campbell Memorial Baptist Church.</p></form></div></section>
+<section class="vbs" id="vbs"><div class="wrap vbs-grid"><div class="vbs-copy"><span class="deadline">Begins This Sunday</span><p class="kicker">Turned Around VBS 2026</p><h2>A Big Week for Our Church & Community</h2><p><strong>The Missionary Story: Ringu of India’s Forest</strong></p><div class="countdown-grid"><div class="countdown-card"><b>This Sunday</b><strong>Blast Off Block Party</strong><span>August 2 · 1:00–4:00 PM</span></div><div class="countdown-card"><b>Monday–Friday</b><strong>Vacation Bible School</strong><span>August 3–7 · 6:00–8:00 PM</span></div></div><p style="margin-top:22px">Children will enjoy Bible lessons, music, themed crafts, snacks, games, stickers, prizes, and fellowship each night. Please invite a family and help us spread the word!</p><div class="btnrow"><a class="btn gold" href="https://www.facebook.com/campbellmemorialbaptist" target="_blank" rel="noopener">Church Updates</a><a class="btn white" href="https://www.facebook.com/CMBCBYF" target="_blank" rel="noopener">BYF Updates</a></div></div><img class="vbs-pic" src="vbs-banner.png" alt="Turned Around Vacation Bible School banner"></div></section>
+<section class="visit" id="visit"><div class="wrap"><div class="visit-card"><p class="kicker">Plan Your Visit</p><h2>Campbell Memorial Baptist Church</h2><p>115 Longacre Way, Smithers, WV 25186</p><div class="btnrow" style="justify-content:center"><a class="btn gold" href="https://www.google.com/maps/search/?api=1&query=115+Longacre+Way+Smithers+WV+25186" target="_blank" rel="noopener">Get Directions</a><a class="btn white" href="https://www.facebook.com/campbellmemorialbaptist" target="_blank" rel="noopener">Church Facebook</a><a class="btn white" href="https://www.facebook.com/CMBCBYF" target="_blank" rel="noopener">BYF Facebook</a></div></div></div></section>
+</main>
+<footer><img src="logo.png" alt="CMBC logo"><p><strong>Campbell Memorial Baptist Church</strong><br>115 Longacre Way, Smithers, WV 25186</p><p class="fine">© 2026 Campbell Memorial Baptist Church · Website designed by <strong>Blessed Beyond Belief</strong></p></footer>
 </body>
 </html>
