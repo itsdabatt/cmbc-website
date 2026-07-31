@@ -1,19 +1,18 @@
-CMBC IMMERSIVE BIG WEEK UPDATE
+CMBC FRIENDLY + IMMERSIVE + PHOTO SHARE UPDATE
 
-UPLOAD ALL FILES DIRECTLY TO THE MAIN GITHUB REPOSITORY:
+UPLOAD THESE 5 FILES TO THE MAIN LEVEL OF YOUR GITHUB REPOSITORY:
 - index.html
 - church1.jpg
 - logo.png
 - august-calendar.jpg
 - vbs-register.png
 
-Then click Commit changes. Cloudflare Pages should deploy automatically.
+Then click Commit changes. Cloudflare Pages will publish automatically.
+Refresh the live website using Ctrl + F5.
 
-IMPORTANT FOR THE LIVE CALENDAR:
-Google Calendar must be public:
-Google Calendar > Settings > Access permissions for events > Make available to public > See all event details.
+PHOTO SHARE FOLDER:
+The website button opens:
+https://drive.google.com/drive/folders/1jBWzlqWklCSk_l3bf9D5mWF4vBMGcTZa?usp=sharing
 
-The website calendar is set to MONTH view and opens on August 2026.
-
-VBS registration button:
-https://forms.gle/qXTvdr9CMjeN6ekF6
+IMPORTANT:
+A Google Drive folder that allows anyone to add files may also allow broad editing or deletion depending on its sharing settings. Monitor it closely. A safer future option is a Google Form with a file-upload question, although Google normally requires uploaders to sign in.
