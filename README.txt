@@ -1,11 +1,19 @@
-CMBC BIG WEEK UPDATE — JULY 30, 2026
+CMBC IMMERSIVE BIG WEEK UPDATE
 
-Upload all five files directly to the main cmbc-website GitHub repository:
+UPLOAD ALL FILES DIRECTLY TO THE MAIN GITHUB REPOSITORY:
 - index.html
 - church1.jpg
-- august-calendar.jpg
 - logo.png
-- vbs-banner.png
+- august-calendar.jpg
+- vbs-register.png
 
-Replace the existing files when prompted, then Commit changes.
-Cloudflare Pages will publish automatically. Wait 1–2 minutes and refresh with Ctrl+F5.
+Then click Commit changes. Cloudflare Pages should deploy automatically.
+
+IMPORTANT FOR THE LIVE CALENDAR:
+Google Calendar must be public:
+Google Calendar > Settings > Access permissions for events > Make available to public > See all event details.
+
+The website calendar is set to MONTH view and opens on August 2026.
+
+VBS registration button:
+https://forms.gle/qXTvdr9CMjeN6ekF6
