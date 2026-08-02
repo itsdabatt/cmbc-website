@@ -1,22 +1,17 @@
-CMBC FULL IMMERSIVE UPDATE
+CMBC Mobile Fix Update
 
-Upload these files directly to the main GitHub repository:
-- index.html
-- church1.jpg
-- logo.png
-- august-calendar.jpg
-- vbs-register.png
+This version keeps the desktop/browser design unchanged.
 
-Then click Commit changes. Cloudflare Pages should publish automatically.
-Refresh the live website with Ctrl + F5 after deployment.
+Changes made:
+- Sunday Bible Study corrected to Sunday School everywhere it appears.
+- Footer credit changed to Outside The Hollar.
+- Large decorative cross hidden on phones only in the hero and invitation section.
+- Desktop decorative cross remains unchanged.
 
-This version includes:
-- Larger, more readable sections
-- Gamified quick-action cards
-- Separate cards for Pizza Night and Movie Night
-- Big Week countdown
-- VBS registration graphic and button
-- Full month Google Calendar
-- Prayer request form
-- Church photo upload section
-- Improved mobile layout
+UPLOAD TO GITHUB:
+1. Open your cmbc-website repository.
+2. Click Add file > Upload files.
+3. Upload all files from this folder, replacing the existing versions.
+4. Click Commit changes.
+5. Wait 1-2 minutes for Cloudflare Pages.
+6. On your phone, close/reopen the tab or refresh the page.
