@@ -93,17 +93,25 @@
       white-space:nowrap;
     }
     .ticker-track{
-      display:inline-flex;
-      gap:42px;
+      display:flex;
+      width:max-content;
       align-items:center;
-      min-width:max-content;
-      animation:ticker 30s linear infinite;
+      animation:ticker-scroll 34s linear infinite;
+      will-change:transform;
       font-weight:800;
       font-size:.91rem;
     }
-    @keyframes ticker{
-      from{transform:translateX(0)}
-      to{transform:translateX(-50%)}
+    .ticker-group{
+      display:flex;
+      align-items:center;
+      gap:42px;
+      padding-right:42px;
+      flex-shrink:0;
+    }
+    .ticker:hover .ticker-track{animation-play-state:paused}
+    @keyframes ticker-scroll{
+      from{transform:translate3d(0,0,0)}
+      to{transform:translate3d(-50%,0,0)}
     }
 
     header{
@@ -445,8 +453,154 @@
 
     @media(prefers-reduced-motion:reduce){
       *{scroll-behavior:auto!important}
-      .ticker-track,.live-dot{animation:none!important}
+      .ticker-track{animation-duration:70s!important}
+      .live-dot{animation:none!important}
     }
+  
+    /* Gentle gamified touches */
+    .path-card{
+      position:relative;
+      overflow:hidden;
+    }
+    .path-card:before{
+      content:"";
+      position:absolute;
+      inset:0 auto 0 0;
+      width:6px;
+      background:linear-gradient(var(--gold),#ff9f1c);
+      opacity:.9;
+    }
+    .path-card:after{
+      content:"LEVEL UP";
+      position:absolute;
+      top:14px;
+      right:14px;
+      padding:4px 8px;
+      border-radius:999px;
+      background:var(--blue-soft);
+      color:var(--blue);
+      font-size:.62rem;
+      font-weight:900;
+      letter-spacing:.08em;
+      opacity:0;
+      transform:translateY(-5px);
+      transition:.2s;
+    }
+    .path-card:hover:after,
+    .path-card:focus-visible:after{opacity:1;transform:none}
+
+    .feature-event{
+      position:relative;
+      overflow:hidden;
+    }
+    .feature-event:after{
+      content:"";
+      position:absolute;
+      width:180px;height:180px;
+      right:-55px;top:-65px;
+      background:
+        radial-gradient(circle,var(--gold) 0 3px,transparent 4px),
+        radial-gradient(circle,#fff 0 2px,transparent 3px);
+      background-size:28px 28px,38px 38px;
+      opacity:.25;
+      animation:sparkle-drift 8s linear infinite;
+      pointer-events:none;
+    }
+    @keyframes sparkle-drift{
+      from{transform:rotate(0deg)}
+      to{transform:rotate(360deg)}
+    }
+
+    .mission-progress{
+      margin:22px 0 4px;
+      padding:14px;
+      border-radius:17px;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.18);
+    }
+    .mission-progress-head{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      font-weight:900;
+      font-size:.84rem;
+      text-transform:uppercase;
+      letter-spacing:.07em;
+      color:var(--gold-soft);
+    }
+    .mission-bar{
+      height:14px;
+      margin-top:10px;
+      border-radius:999px;
+      overflow:hidden;
+      background:rgba(255,255,255,.14);
+    }
+    .mission-fill{
+      height:100%;
+      width:35%;
+      border-radius:999px;
+      background:linear-gradient(90deg,var(--gold),#ff9f1c);
+      box-shadow:0 0 22px rgba(255,200,61,.45);
+      animation:mission-glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes mission-glow{
+      to{filter:brightness(1.18)}
+    }
+
+    .event-card{
+      transition:transform .2s,box-shadow .2s;
+    }
+    .event-card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 18px 42px rgba(7,27,57,.16);
+    }
+    .event-card .date-pill:before{content:"⭐ "}
+
+    .btn{
+      position:relative;
+      overflow:hidden;
+    }
+    .btn:after{
+      content:"";
+      position:absolute;
+      top:-50%;
+      left:-70%;
+      width:45%;
+      height:200%;
+      background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);
+      transform:rotate(18deg);
+      transition:left .55s ease;
+    }
+    .btn:hover:after{left:130%}
+
+    .achievement-pop{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:999;
+      max-width:310px;
+      padding:15px 17px;
+      border-radius:18px;
+      background:var(--navy);
+      color:#fff;
+      border:2px solid var(--gold);
+      box-shadow:0 18px 50px rgba(0,0,0,.28);
+      transform:translateY(140%);
+      opacity:0;
+      transition:.45s;
+      pointer-events:none;
+    }
+    .achievement-pop.show{transform:none;opacity:1}
+    .achievement-pop b{display:block;color:var(--gold);margin-bottom:3px}
+    .achievement-pop span{font-size:.9rem;color:#e2edf9}
+
+    @media(max-width:620px){
+      .ticker-track{animation-duration:26s}
+      .ticker-group{gap:28px;padding-right:28px}
+      .achievement-pop{left:12px;right:12px;bottom:12px;max-width:none}
+      .path-card:after{display:none}
+    }
+
   </style>
 </head>
 
@@ -456,20 +610,24 @@
 <div class="live-strip" aria-label="CMBC current updates">
   <div class="container live-inner">
     <span class="live-label"><span class="live-dot"></span>CMBC NOW</span>
-    <div class="ticker">
+    <div class="ticker" aria-label="Current CMBC updates">
       <div class="ticker-track">
-        <span>🌴 VBS TONIGHT • 6:00–8:00 PM</span>
-        <span>📖 Sunday School • 10:00 AM</span>
-        <span>🙌 Morning Worship Sunday • 11:00 AM</span>
-        <span>🧺 Praise in the Park • August 23 • Details Coming Soon</span>
-        <span>🙏 Send a Prayer Request Anytime</span>
-        <span>📸 Share Your VBS Photos</span>
-        <span aria-hidden="true">🌴 VBS TONIGHT • 6:00–8:00 PM</span>
-        <span aria-hidden="true">📖 Sunday School • 10:00 AM</span>
-        <span aria-hidden="true">🙌 Morning Worship Sunday • 11:00 AM</span>
-        <span aria-hidden="true">🧺 Praise in the Park • August 23 • Details Coming Soon</span>
-        <span aria-hidden="true">🙏 Send a Prayer Request Anytime</span>
-        <span aria-hidden="true">📸 Share Your VBS Photos</span>
+        <div class="ticker-group">
+          <span>🌴 VBS TONIGHT • 6:00–8:00 PM</span>
+          <span>📖 Sunday School • 10:00 AM</span>
+          <span>🙌 Morning Worship • 11:00 AM</span>
+          <span>🧺 Praise in the Park • August 23</span>
+          <span>🙏 Prayer Requests Always Open</span>
+          <span>📸 Share Your VBS Photos</span>
+        </div>
+        <div class="ticker-group" aria-hidden="true">
+          <span>🌴 VBS TONIGHT • 6:00–8:00 PM</span>
+          <span>📖 Sunday School • 10:00 AM</span>
+          <span>🙌 Morning Worship • 11:00 AM</span>
+          <span>🧺 Praise in the Park • August 23</span>
+          <span>🙏 Prayer Requests Always Open</span>
+          <span>📸 Share Your VBS Photos</span>
+        </div>
       </div>
     </div>
   </div>
@@ -561,6 +719,11 @@
           <h3>🌴 Turned Around VBS</h3>
           <p class="big">The Missionary Story: Ringu of India’s Forest</p>
           <p>Walk-ins are welcome. Children may join us even if they cannot attend every night.</p>
+
+          <div class="mission-progress" aria-label="VBS week progress">
+            <div class="mission-progress-head"><span>🌴 VBS Week Adventure</span><span>Night 1 of 5</span></div>
+            <div class="mission-bar"><div class="mission-fill"></div></div>
+          </div>
 
           <div class="fun-row" aria-label="VBS activities">
             <span>📖 Bible Lessons</span>
@@ -795,6 +958,12 @@
   <p class="fine">© 2026 Campbell Memorial Baptist Church • Website by <strong>Outside The Holler</strong></p>
 </footer>
 
+
+<div class="achievement-pop" id="achievement" role="status" aria-live="polite">
+  <b>🏆 Welcome Achievement Unlocked!</b>
+  <span>You found CMBC’s digital front door. Choose what you need and we’ll guide you there.</span>
+</div>
+
 <script>
 (function(){
   const el = document.getElementById("countdown");
@@ -843,6 +1012,16 @@
   render();
   setInterval(render,1000);
 })();
+</script>
+<script>
+
+(function(){
+  const achievement = document.getElementById("achievement");
+  if(!achievement) return;
+  setTimeout(() => achievement.classList.add("show"), 900);
+  setTimeout(() => achievement.classList.remove("show"), 5600);
+})();
+
 </script>
 </body>
 </html>

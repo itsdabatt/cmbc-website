@@ -1,37 +1,30 @@
-CMBC DIGITAL FRONT DOOR — VERSION 2
+CMBC DIGITAL FRONT DOOR — VERSION 3 GAMIFIED
 
-UPLOAD THESE FILES TO THE TOP LEVEL OF YOUR GITHUB REPOSITORY:
+WHAT CHANGED:
+- Fixed the CMBC NOW ticker so it continuously moves on desktop and phones
+- Hovering the ticker pauses it so visitors can read
+- Added gentle gamified effects without making the church site childish
+- Added a VBS adventure progress bar
+- Added animated sparkles in the VBS feature
+- Added clearer hover/tap feedback on buttons and event cards
+- Added a short welcome achievement message
+- Kept Sunday School wording and Outside The Holler footer credit
+- Kept the same church photo, logo, calendar, prayer form, links, and overall layout
+
+UPLOAD THESE FILES TO THE TOP LEVEL OF GITHUB:
 - index.html
 - church1.jpg
 - logo.png
 - august-calendar.jpg
+- README.txt
 
-CHANGES IN THIS VERSION:
-- Corrected Sunday service wording to Sunday School
-- Reworded event and calendar headings so they sound natural to visitors
-- Added warmer invitation language
-- Added a Matthew 19:14 Scripture moment
-- Updated footer credit to Outside The Holler
-- Kept the same current church photo, logo, calendar graphic, prayer form, photo-sharing link, VBS focus, and mobile layout
+PUBLISH:
+1. Open the cmbc-website GitHub repository.
+2. Add file > Upload files.
+3. Upload all five files.
+4. Commit changes.
+5. Wait about one minute for Cloudflare.
+6. Refresh with Ctrl + F5.
 
-HOW TO PUBLISH:
-1. Open GitHub and go to the cmbc-website repository.
-2. Click Add file > Upload files.
-3. Upload the four files above.
-4. Allow index.html and image files to be replaced.
-5. Click Commit changes.
-6. Wait about one minute for Cloudflare Pages.
-7. Refresh the live site with Ctrl + F5.
-
-CURRENT IMPORTANT LINKS:
-Church Facebook:
-https://www.facebook.com/campbellmemorialbaptist
-
-BYF Facebook:
-https://www.facebook.com/CMBCBYF
-
-VBS registration:
-https://forms.gle/qXTvdr9CMjeN6ekF6
-
-Photo sharing:
-https://drive.google.com/drive/folders/1jBWzlqWklCSk_l3bf9D5mWF4vBMGcTZa?usp=sharing
+NOTE:
+Visitors who have “Reduce Motion” enabled on their phone or computer will see the ticker move more slowly for accessibility.
