@@ -1,17 +1,12 @@
-CMBC Mobile Fix Update
+CMBC VBS WEEK UPDATE — AUGUST 3, 2026
 
-This version keeps the desktop/browser design unchanged.
+Upload every file in this folder to the main level of your GitHub cmbc-website repository and replace the existing files.
 
-Changes made:
-- Sunday Bible Study corrected to Sunday School everywhere it appears.
-- Footer credit changed to Outside The Hollar.
-- Large decorative cross hidden on phones only in the hero and invitation section.
-- Desktop decorative cross remains unchanged.
+This update:
+- Removes Block Party promotion because it has ended.
+- Focuses the entire homepage on VBS August 3–7, 6:00–8:00 PM nightly.
+- Adds a live countdown that updates every second and automatically changes during each VBS night.
+- Keeps service times, church calendar, prayer requests, photo sharing, Facebook links, and future August events.
+- Uses the same church photo, logo, and current design.
 
-UPLOAD TO GITHUB:
-1. Open your cmbc-website repository.
-2. Click Add file > Upload files.
-3. Upload all files from this folder, replacing the existing versions.
-4. Click Commit changes.
-5. Wait 1-2 minutes for Cloudflare Pages.
-6. On your phone, close/reopen the tab or refresh the page.
+After uploading, click Commit changes. Cloudflare Pages should deploy automatically. Refresh with Ctrl+F5 if needed.
