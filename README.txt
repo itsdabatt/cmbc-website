@@ -1,30 +1,16 @@
-CMBC DIGITAL FRONT DOOR — VERSION 3 GAMIFIED
+CMBC VBS FINAL NIGHT WEBSITE UPDATE
 
-WHAT CHANGED:
-- Fixed the CMBC NOW ticker so it continuously moves on desktop and phones
-- Hovering the ticker pauses it so visitors can read
-- Added gentle gamified effects without making the church site childish
-- Added a VBS adventure progress bar
-- Added animated sparkles in the VBS feature
-- Added clearer hover/tap feedback on buttons and event cards
-- Added a short welcome achievement message
-- Kept Sunday School wording and Outside The Holler footer credit
-- Kept the same church photo, logo, calendar, prayer form, links, and overall layout
+Updated August 6, 2026.
 
-UPLOAD THESE FILES TO THE TOP LEVEL OF GITHUB:
-- index.html
-- church1.jpg
-- logo.png
-- august-calendar.jpg
-- README.txt
+Changes:
+- Final VBS night is now the main feature
+- Countdown updated to Friday, August 7 at 6:00 PM
+- Old Block Party and registration messaging removed
+- Added thank-you message for families and volunteers
+- Upcoming church picnic, pizza night, and movie night remain
+- Sunday School wording stays correct
+- Outside The Hollar footer credit stays intact
+- Existing photos, prayer form, calendar, and photo-sharing area remain
 
-PUBLISH:
-1. Open the cmbc-website GitHub repository.
-2. Add file > Upload files.
-3. Upload all five files.
-4. Commit changes.
-5. Wait about one minute for Cloudflare.
-6. Refresh with Ctrl + F5.
-
-NOTE:
-Visitors who have “Reduce Motion” enabled on their phone or computer will see the ticker move more slowly for accessibility.
+UPLOAD TO GITHUB:
+Upload every file in this folder and replace the current versions. Commit changes. Cloudflare will update automatically.
