@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#071b39">
-<title>Campbell Memorial Baptist Church | Smithers, WV</title>
+<meta name="theme-color" content="#071b39">
+  <title>Campbell Memorial Baptist Church | Smithers, WV</title>
 <meta name="description" content="Campbell Memorial Baptist Church in Smithers, West Virginia. Worship, Bible study, BYF, Vacation Bible School, church events, prayer, and community.">
 <link rel="icon" type="image/png" href="logo.png">
 <link rel="apple-touch-icon" href="logo.png">
@@ -40,7 +41,7 @@ footer{background:#041329;color:#fff;text-align:center;padding:40px 18px;border-
 
 /* SPORTS-CENTER TICKER + MOTION + SOUND */
 .news-ticker{background:#020c19;color:#fff;border-bottom:3px solid var(--gold);overflow:hidden;white-space:nowrap;position:relative}
-.news-ticker:before{content:"CMBC LIVE";position:absolute;left:0;top:0;bottom:0;z-index:2;display:flex;align-items:center;padding:0 16px;background:var(--gold);color:var(--navy);font-weight:1000;letter-spacing:.08em;clip-path:polygon(0 0,88% 0,100% 50%,88% 100%,0 100%)}
+.news-ticker:before{content:"CMBC LIVE •";position:absolute;left:0;top:0;bottom:0;z-index:2;display:flex;align-items:center;padding:0 16px;background:var(--gold);color:var(--navy);font-weight:1000;letter-spacing:.08em;clip-path:polygon(0 0,88% 0,100% 50%,88% 100%,0 100%)}
 .ticker-track{display:inline-flex;gap:48px;align-items:center;min-width:max-content;padding:12px 0 12px 145px;animation:tickerMove 34s linear infinite;font-weight:900;letter-spacing:.025em}
 .ticker-track span:after{content:" • ";color:var(--gold);margin-left:48px}
 .news-ticker:hover .ticker-track{animation-play-state:paused}
@@ -52,6 +53,28 @@ footer{background:#041329;color:#fff;text-align:center;padding:40px 18px;border-
 .hero-content{animation:heroEnter .9s ease both}.hero:after{animation:crossFloat 5s ease-in-out infinite}
 @keyframes heroEnter{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
 @keyframes crossFloat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-16px) rotate(2deg)}}
+
+/* BEST SITE EVER AUG 6: unmistakable live ticker, celebration motion, confetti */
+.news-ticker{min-height:58px;display:flex;align-items:center;box-shadow:0 8px 24px rgba(0,0,0,.22);background:linear-gradient(90deg,#020c19,#0b2b55,#020c19);background-size:200% 100%;animation:tickerGlow 6s ease-in-out infinite;border-top:1px solid rgba(255,255,255,.12)}
+.news-ticker:before{font-size:.86rem;min-width:126px;justify-content:center;text-shadow:none;box-shadow:8px 0 20px rgba(0,0,0,.25)}
+.ticker-track{font-size:1rem;padding-top:17px;padding-bottom:17px;animation-duration:30s}
+.ticker-track span{display:inline-flex;align-items:center;gap:7px}
+@keyframes tickerGlow{0%,100%{background-position:0 50%}50%{background-position:100% 50%}}
+.sound-toggle{animation:soundPulse 2.3s ease-in-out infinite;min-height:48px}
+.sound-toggle[aria-pressed="true"]{background:var(--gold);color:var(--navy);box-shadow:0 0 0 7px rgba(255,200,61,.20),var(--shadow)}
+@keyframes soundPulse{0%,100%{box-shadow:0 10px 28px rgba(0,0,0,.25)}50%{box-shadow:0 0 0 7px rgba(255,200,61,.14),0 14px 34px rgba(0,0,0,.32)}}
+.event-card,.time-card,.quest,.cal-event,.memory{will-change:transform}
+.event-card:hover,.time-card:hover,.quest:hover,.cal-event:hover,.memory:hover{transform:translateY(-7px) scale(1.012)}
+.hero-content .eyebrow{animation:badgeShine 2.8s ease-in-out infinite}
+@keyframes badgeShine{0%,100%{filter:drop-shadow(0 0 0 rgba(255,200,61,0))}50%{filter:drop-shadow(0 0 9px rgba(255,200,61,.8))}}
+.confetti-piece{position:fixed;z-index:9999;top:-20px;width:10px;height:16px;border-radius:3px;pointer-events:none;animation:confettiFall linear forwards}
+@keyframes confettiFall{to{transform:translate3d(var(--drift),110vh,0) rotate(900deg);opacity:.95}}
+.live-badge{display:inline-flex;align-items:center;gap:8px;background:#e51837;color:#fff;border-radius:999px;padding:8px 13px;font-size:.76rem;font-weight:1000;letter-spacing:.1em;text-transform:uppercase;box-shadow:0 9px 24px rgba(229,24,55,.3)}
+.live-dot{width:9px;height:9px;background:#fff;border-radius:50%;animation:liveBlink 1s steps(2,end) infinite}
+@keyframes liveBlink{50%{opacity:.25}}
+@media(max-width:620px){.news-ticker{min-height:52px}.news-ticker:before{min-width:98px;font-size:.65rem}.ticker-track{font-size:.85rem;padding-top:15px;padding-bottom:15px}.sound-toggle{bottom:12px;max-width:150px}.event-card:hover,.time-card:hover,.quest:hover,.cal-event:hover,.memory:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){.ticker-track{animation-duration:70s}.sound-toggle,.hero-content .eyebrow,.news-ticker{animation:none}.reveal-up{opacity:1!important;transform:none!important}}
+
 @media(max-width:620px){.news-ticker:before{padding:0 10px;font-size:.72rem}.ticker-track{padding-left:112px;font-size:.82rem;gap:30px;animation-duration:26s}.ticker-track span:after{margin-left:30px}.sound-toggle{right:10px;bottom:10px;padding:10px 12px;font-size:.78rem}}
 
 </style>
@@ -64,7 +87,7 @@ footer{background:#041329;color:#fff;text-align:center;padding:40px 18px;border-
   <nav class="nav" aria-label="Main navigation"><a href="#times">Service Times</a><a href="#events">Events</a><a href="#calendar">Calendar</a><a href="#prayer">Prayer</a><a href="#photos">Photos</a><a href="#visit">Visit</a></nav>
  </div>
 </header>
-<div class="hypebar"><div class="container"><b>🎉 VBS Final Night Is Friday!</b><span>Join us August 7 • 6:00–8:00 PM</span><a class="mini-btn" href="#events">See Final Night</a></div></div>
+<div class="hypebar"><div class="container"><span class="live-badge"><span class="live-dot"></span>Big Week Live</span><b>🎉 VBS Final Night Is Friday!</b><span>Join us August 7 • 6:00–8:00 PM</span><a class="mini-btn" href="#events">See Final Night</a></div></div>
 <div class="news-ticker" aria-label="CMBC announcements ticker"><div class="ticker-track"><span>🌴 VBS Final Night Friday • 6:00–8:00 PM</span><span>🙌 Sunday School 10:00 AM • Worship 11:00 AM</span><span>🧺 Church Picnic August 23</span><span>🍕 Pizza Night August 26</span><span>🎬 Family Movie Night August 28</span><span>🙏 Prayer requests are always welcome</span><span>📸 Share your CMBC photos</span><span>🌴 VBS Final Night Friday • 6:00–8:00 PM</span><span>🙌 Sunday School 10:00 AM • Worship 11:00 AM</span><span>🧺 Church Picnic August 23</span><span>🍕 Pizza Night August 26</span><span>🎬 Family Movie Night August 28</span><span>🙏 Prayer requests are always welcome</span><span>📸 Share your CMBC photos</span></div></div>
 <main id="main">
 <section class="hero" id="top"><div class="container"><div class="hero-content"><span class="eyebrow">⛪ Campbell Memorial Baptist Church</span><h1>One More<br>Big Night.</h1><p class="lead">VBS has been full of Bible lessons, music, crafts, laughter, friendship, and the love of Jesus. Join us Friday for our final night—and then keep growing with us all year long. 🙌</p><div class="verse-box">“Let the little children come unto me...”<strong>Matthew 19:14 KJV</strong></div><div class="btns"><a class="btn gold" href="#events">🎉 Final Night Details</a><a class="btn white" href="#photos">📸 Share VBS Photos</a><a class="btn outline" href="#visit">⛪ Join Us Sunday</a></div></div></div></section>
@@ -77,8 +100,8 @@ footer{background:#041329;color:#fff;text-align:center;padding:40px 18px;border-
 <section class="photos" id="photos"><div class="container"><div class="section-head"><span class="kicker">📸 Share the Joy</span><h2>Help Build Our Church Memory Wall</h2><p>Share photos from VBS, BYF, worship, the Block Party, and other church events. Approved pictures can be added to the site later.</p></div><div class="photos-grid"><div class="photo-panel"><span class="kicker">✨ Your Pictures Matter</span><h3>Share Your CMBC Moments</h3><p>Family smiles, crafts, games, worship, volunteers, and special memories help tell the story of what God is doing.</p><div class="steps"><div class="step"><b>1️⃣</b><span>Open the shared folder</span></div><div class="step"><b>2️⃣</b><span>Add your church-event photos</span></div><div class="step"><b>3️⃣</b><span>CMBC reviews them before posting</span></div></div><a class="btn gold" href="https://drive.google.com/drive/folders/1jBWzlqWklCSk_l3bf9D5mWF4vBMGcTZa?usp=sharing" target="_blank" rel="noopener">📤 Share Church Photos</a><div class="upload-note"><b>Please note:</b> Upload church-event photos only. By uploading, you confirm CMBC may review and use approved pictures in church posts or on the website.</div></div><div class="gallery-preview"><div class="memory">🚀 Block Party Memories</div><div class="memory">🌴 VBS Smiles & Adventures</div><div class="memory">🙏 Worship & Prayer</div><div class="memory">❤️ Our Church Family</div></div></div></div></section>
 <section class="visit" id="visit"><div class="container"><div class="visit-card"><span class="eyebrow">⛪ You’re Invited This Sunday</span><h2>There’s a Place for You at Campbell Memorial</h2><p class="welcome">Whether you have attended church your whole life, have been away for a while, or are looking for a church home, we would be honored to welcome you. Bring your family, invite a friend, and come worship with us.</p><div class="visit-times"><span>📖 Sunday School • 10:00 AM</span><span>🙌 Morning Worship • 11:00 AM</span></div><p><b>Campbell Memorial Baptist Church</b><br>115 Longacre Way, Smithers, WV 25186</p><div class="verse-box" style="margin:24px auto 0;text-align:left">“I was glad when they said unto me, Let us go into the house of the LORD.”<strong>Psalm 122:1 KJV</strong></div><div class="btns"><a class="btn gold" href="https://www.google.com/maps/search/?api=1&query=115+Longacre+Way+Smithers+WV+25186" target="_blank" rel="noopener">📍 Get Directions</a><a class="btn white" href="https://www.facebook.com/campbellmemorialbaptist" target="_blank" rel="noopener">⛪ Church Facebook</a><a class="btn white" href="https://www.facebook.com/CMBCBYF" target="_blank" rel="noopener">🎉 BYF Facebook</a></div></div></div></section>
 </main>
-<button id="soundToggle" class="sound-toggle" type="button" aria-pressed="false">🔇 Sound Off</button>
-<footer><img src="logo.png" alt="CMBC logo"><p><b>✝️ Campbell Memorial Baptist Church</b><br>115 Longacre Way, Smithers, WV 25186</p><p>Faith • Family • Fellowship • All Are Welcome ❤️</p><p class="fine">© 2026 Campbell Memorial Baptist Church • Website designed by <b>Outside The Hollar</b></p></footer>
+<button id="soundToggle" class="sound-toggle" type="button" aria-pressed="false">🔊 Tap for Sounds</button>
+<footer><img src="logo.png" alt="CMBC logo"><p><b>✝️ Campbell Memorial Baptist Church</b><br>115 Longacre Way, Smithers, WV 25186</p><p>Faith • Family • Fellowship • All Are Welcome ❤️</p><p class="fine">© 2026 Campbell Memorial Baptist Church • Website designed by <b>Outside The Hollar</b> • Site Update: August 6</p></footer>
 <script>
 (function(){
  const el=document.getElementById('countdown');
@@ -114,7 +137,18 @@ function tone(freq=520,duration=.07,type='square',volume=.025){
  osc.connect(gain);gain.connect(audioCtx.destination);osc.start();
  gain.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+duration);osc.stop(audioCtx.currentTime+duration);
 }
-soundButton.addEventListener('click',()=>{soundOn=!soundOn;soundButton.textContent=soundOn?'🔊 Sound On':'🔇 Sound Off';soundButton.setAttribute('aria-pressed',String(soundOn));if(soundOn){tone(660,.09,'sine',.04);setTimeout(()=>tone(880,.12,'sine',.035),90);}});
+function celebrate(count=42){
+ const colors=['#ffc83d','#ffffff','#2f80ff','#ff5d8f','#65e6a7'];
+ for(let i=0;i<count;i++){
+  const c=document.createElement('i');c.className='confetti-piece';
+  c.style.left=Math.random()*100+'vw';c.style.background=colors[i%colors.length];
+  c.style.setProperty('--drift',(Math.random()*220-110)+'px');
+  c.style.animationDuration=(2.5+Math.random()*2.3)+'s';c.style.animationDelay=(Math.random()*.5)+'s';
+  document.body.appendChild(c);setTimeout(()=>c.remove(),5200);
+ }
+}
+soundButton.addEventListener('click',()=>{soundOn=!soundOn;soundButton.textContent=soundOn?'🔊 Sounds On':'🔊 Tap for Sounds';soundButton.setAttribute('aria-pressed',String(soundOn));if(soundOn){tone(523,.10,'sine',.045);setTimeout(()=>tone(659,.11,'sine',.04),100);setTimeout(()=>tone(784,.18,'sine',.035),210);celebrate(34);}});
+setTimeout(()=>celebrate(24),900);
 document.querySelectorAll('a,button,.quest,.event-card').forEach(el=>el.addEventListener('click',()=>tone(420,.055,'square',.018)));
 
 </script>
