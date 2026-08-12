@@ -1,0 +1,13 @@
+IMPORTANT - HOW TO UPLOAD TO GITHUB
+
+1. Extract this ZIP on your computer.
+2. Open the extracted cmbc_GALLERY_FORCED_READY folder.
+3. In GitHub, open the cmbc-website repository.
+4. Click Add file > Upload files.
+5. DRAG ALL ITEMS INCLUDING THE ENTIRE gallery FOLDER onto GitHub.
+   Do not select only index.html/logo/church1.jpg.
+6. Before committing, make sure GitHub's upload list includes:
+   gallery/church-family-start.jpg
+7. Click Commit changes.
+
+After commit, the repository should visibly contain a folder named gallery.
