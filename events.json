@@ -1,0 +1,15 @@
+{
+  "featured": {
+    "title": "Church Picnic",
+    "start": "2026-08-23T11:00:00-04:00",
+    "location": "Location TBA",
+    "summary": "Bring a dish • Kids activities • Worship and fellowship • Rain or shine",
+    "anchor": "#picnic"
+  },
+  "weekly": [
+    {"day":0,"hour":10,"minute":0,"title":"Sunday School","details":"Sunday • 10:00 AM","anchor":"#times"},
+    {"day":0,"hour":11,"minute":0,"title":"Morning Worship","details":"Sunday • 11:00 AM","anchor":"#times"},
+    {"day":3,"hour":18,"minute":25,"title":"BYF Youth Service","details":"Wednesday • 6:25 PM","anchor":"#byf"},
+    {"day":3,"hour":19,"minute":0,"title":"Adult Bible Study","details":"Wednesday • 7:00 PM","anchor":"#times"}
+  ]
+}
