@@ -28,3 +28,14 @@ KEPT:
 - BYF and Adult Bible Study
 - Outside The Hollar footer credit
 - Mobile cross fix
+
+
+CHURCH PHOTO WORKFLOW — NO CHATGPT NEEDED
+1. Visitors use the Share Church Photos button and upload to your Google Drive folder.
+2. You review the Drive folder and download only the photos you approve.
+3. In GitHub open: itsdabatt/cmbc-website > gallery
+4. Click Add file > Upload files. Upload the approved photos directly there.
+5. Commit changes.
+6. The website Memory Wall loads the photos automatically. You do NOT need to edit index.html or send the pictures to ChatGPT.
+
+Tip: use simple filenames like 2026-08-23-picnic-01.jpg.
