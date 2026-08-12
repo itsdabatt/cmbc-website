@@ -1,28 +1,100 @@
 {
   "photos": [
-    {"album":"church-family","src":"gallery/church-family/church1.jpg"},
-    {"album":"church-family","src":"gallery/church-family/_DSC8388.JPEG"},
-    {"album":"church-family","src":"gallery/church-family/_DSC8403.JPEG"},
-    {"album":"church-family","src":"gallery/church-family/_DSC8437.JPEG"},
-    {"album":"church-family","src":"gallery/church-family/_DSC8512.JPEG"},
-    {"album":"church-family","src":"gallery/church-family/IMG_0080.HEIC"},
-    {"album":"byf-youth","src":"gallery/byf-youth/_DSC8429.JPEG"},
-    {"album":"byf-youth","src":"gallery/byf-youth/_DSC8462.JPEG"},
-    {"album":"byf-youth","src":"gallery/byf-youth/_DSC8518.JPEG"},
-    {"album":"byf-youth","src":"gallery/byf-youth/_DSC8524.JPEG"},
-    {"album":"byf-youth","src":"gallery/byf-youth/_DSC8561.JPEG"},
-    {"album":"byf-youth","src":"gallery/byf-youth/_DSC8601.JPEG"},
-    {"album":"byf-youth","src":"gallery/byf-youth/_DSC8612.JPEG"},
-    {"album":"byf-youth","src":"gallery/byf-youth/_DSC8675-2.JPEG"},
-    {"album":"worship","src":"gallery/worship/IMG_0079.HEIC"},
-    {"album":"worship","src":"gallery/worship/IMG_3142.HEIC"},
-    {"album":"special-events","src":"gallery/special-events/IMG_3135.HEIC"},
-    {"album":"special-events","src":"gallery/special-events/IMG_3136(1).HEIC"},
-    {"album":"special-events","src":"gallery/special-events/IMG_3137.HEIC"},
-    {"album":"special-events","src":"gallery/special-events/IMG_3138.HEIC"},
-    {"album":"special-events","src":"gallery/special-events/IMG_3140.HEIC"},
-    {"album":"special-events","src":"gallery/special-events/IMG_3142.HEIC"},
-    {"album":"special-events","src":"gallery/special-events/IMG_3197.HEIC"},
-    {"album":"special-events","src":"gallery/special-events/IMG_3198.HEIC"}
+    {
+      "album": "worship",
+      "src": "gallery/worship/IMG_3142.HEIC"
+    },
+    {
+      "album": "worship",
+      "src": "gallery/worship/IMG_0079.HEIC"
+    },
+    {
+      "album": "church-family",
+      "src": "gallery/church-family/IMG_0080.HEIC"
+    },
+    {
+      "album": "church-family",
+      "src": "gallery/church-family/church1.jpg"
+    },
+    {
+      "album": "church-family",
+      "src": "gallery/church-family/_DSC8512.JPEG"
+    },
+    {
+      "album": "church-family",
+      "src": "gallery/church-family/_DSC8437.JPEG"
+    },
+    {
+      "album": "church-family",
+      "src": "gallery/church-family/_DSC8403.JPEG"
+    },
+    {
+      "album": "church-family",
+      "src": "gallery/church-family/_DSC8388.JPEG"
+    },
+    {
+      "album": "special-events",
+      "src": "gallery/special-events/IMG_3198.HEIC"
+    },
+    {
+      "album": "special-events",
+      "src": "gallery/special-events/IMG_3197.HEIC"
+    },
+    {
+      "album": "special-events",
+      "src": "gallery/special-events/IMG_3142.HEIC"
+    },
+    {
+      "album": "special-events",
+      "src": "gallery/special-events/IMG_3140.HEIC"
+    },
+    {
+      "album": "special-events",
+      "src": "gallery/special-events/IMG_3138.HEIC"
+    },
+    {
+      "album": "special-events",
+      "src": "gallery/special-events/IMG_3137.HEIC"
+    },
+    {
+      "album": "special-events",
+      "src": "gallery/special-events/IMG_3136(1).HEIC"
+    },
+    {
+      "album": "special-events",
+      "src": "gallery/special-events/IMG_3135.HEIC"
+    },
+    {
+      "album": "byf-youth",
+      "src": "gallery/byf-youth/_DSC8675-2.JPEG"
+    },
+    {
+      "album": "byf-youth",
+      "src": "gallery/byf-youth/_DSC8612.JPEG"
+    },
+    {
+      "album": "byf-youth",
+      "src": "gallery/byf-youth/_DSC8601.JPEG"
+    },
+    {
+      "album": "byf-youth",
+      "src": "gallery/byf-youth/_DSC8561.JPEG"
+    },
+    {
+      "album": "byf-youth",
+      "src": "gallery/byf-youth/_DSC8524.JPEG"
+    },
+    {
+      "album": "byf-youth",
+      "src": "gallery/byf-youth/_DSC8518.JPEG"
+    },
+    {
+      "album": "byf-youth",
+      "src": "gallery/byf-youth/_DSC8462.JPEG"
+    },
+    {
+      "album": "byf-youth",
+      "src": "gallery/byf-youth/_DSC8429.JPEG"
+    }
   ]
 }

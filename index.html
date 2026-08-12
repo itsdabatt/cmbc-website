@@ -126,6 +126,9 @@ body{font-size:17px}
 .gallery-status{grid-column:1/-1;padding:18px;text-align:center;border-radius:16px;background:#fff8dd;color:#5b4a12;font-weight:800}
 .lightbox{position:fixed;inset:0;background:rgba(2,10,24,.94);z-index:9999;display:none;align-items:center;justify-content:center;padding:18px}.lightbox.open{display:flex}.lightbox img{max-width:min(1100px,96vw);max-height:88vh;object-fit:contain;border-radius:18px;box-shadow:0 25px 80px rgba(0,0,0,.55)}.lightbox-close{position:absolute;right:18px;top:18px;border:0;border-radius:999px;width:48px;height:48px;font-size:1.5rem;background:#ffc83d;color:#071b39;font-weight:900;cursor:pointer}
 @media(max-width:620px){.gallery-item:after{opacity:1}.gallery-live{gap:12px}.gallery-item{border-radius:16px}.gallery-item img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}}
+
+/* CMBC phone gallery reliability */
+@media(max-width:620px){.gallery-live{grid-template-columns:1fr!important}.gallery-item{min-height:0!important;background:#eef3f9}.gallery-item img{width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:auto!important;object-fit:contain!important}.approved-gallery{margin-top:28px}.gallery-status,.gallery-empty{font-size:1rem;line-height:1.5}}
 </style>
 </head>
 <body>
@@ -192,39 +195,41 @@ document.querySelectorAll('a,button,.quest,.event-card').forEach(el=>el.addEvent
 setTimeout(()=>celebrate(18),700);
 
 
-// LIVE CMBC Memory Wall — four easy GitHub album folders.
+// CMBC Memory Wall — phone-safe same-site photo loader.
 const CMBC_ALBUMS={
- 'worship':{label:'⛪ Worship & Church Services',folder:'worship'},
- 'church-family':{label:'👨‍👩‍👧‍👦 Church Family & Fellowship',folder:'church-family'},
- 'special-events':{label:'🎉 Special Events',folder:'special-events'},
- 'byf-youth':{label:'🧒 BYF & Youth',folder:'byf-youth'}
+ 'worship':{label:'⛪ Worship & Church Services'},
+ 'church-family':{label:'👨‍👩‍👧‍👦 Church Family & Fellowship'},
+ 'special-events':{label:'🎉 Special Events'},
+ 'byf-youth':{label:'🧒 BYF & Youth'}
 };
+let CMBC_GALLERY=[];
+async function getGalleryManifest(){
+ if(CMBC_GALLERY.length)return CMBC_GALLERY;
+ const res=await fetch('gallery-manifest.json?fresh='+Date.now(),{cache:'no-store'});
+ if(!res.ok)throw new Error('gallery unavailable');
+ const data=await res.json();
+ CMBC_GALLERY=Array.isArray(data.photos)?data.photos:[];
+ return CMBC_GALLERY;
+}
 async function loadApprovedGallery(album='all'){
  const wall=document.getElementById('galleryLive'); if(!wall)return;
  document.querySelectorAll('.album-card').forEach(b=>b.classList.toggle('active',b.dataset.album===album));
  wall.innerHTML='<div class="gallery-status">📸 Loading our church memories…</div>';
  try{
-  const keys=album==='all'?Object.keys(CMBC_ALBUMS):[album]; let imgs=[]; let heicCount=0;
-  if(album==='all'){
-   const rootRes=await fetch('https://api.github.com/repos/itsdabatt/cmbc-website/contents/gallery?ref=main',{headers:{'Accept':'application/vnd.github+json'},cache:'no-store'});
-   if(rootRes.ok){const rootFiles=await rootRes.json(); imgs.push(...rootFiles.filter(f=>f.type==='file'&&/\.(jpe?g|png|webp|gif)$/i.test(f.name)).map(f=>({...f,album:'all',label:'📸 CMBC Church Memories'})));}
-  }
-  for(const key of keys){
-   const meta=CMBC_ALBUMS[key];
-   const api='https://api.github.com/repos/itsdabatt/cmbc-website/contents/gallery/'+encodeURIComponent(meta.folder)+'?ref=main';
-   const res=await fetch(api,{headers:{'Accept':'application/vnd.github+json'},cache:'no-store'});
-   if(!res.ok) continue;
-   const files=await res.json();
-   heicCount += files.filter(f=>f.type==='file'&&/\.heic$/i.test(f.name)).length;
-   imgs.push(...files.filter(f=>f.type==='file'&&/\.(jpe?g|png|webp|gif)$/i.test(f.name)).map(f=>({...f,album:key,label:meta.label})));
-  }
-  if(!imgs.length){wall.innerHTML='<div class="gallery-empty">📷 This album has photos, but some are iPhone HEIC files that web browsers cannot reliably display. For guaranteed website display, add/export them as JPG, JPEG, PNG, or WEBP.</div>';return;}
-  wall.innerHTML=''; if(heicCount){const note=document.createElement('div');note.className='gallery-status';note.textContent='📱 '+heicCount+' iPhone HEIC photo'+(heicCount===1?' is':'s are')+' stored here too. They are kept in the album, but only web-ready JPG/PNG/WEBP photos are shown below.';wall.appendChild(note);} imgs.sort((a,b)=>b.name.localeCompare(a.name)).forEach((f,i)=>{
-   const card=document.createElement('figure'); card.className='gallery-item'; card.tabIndex=0; card.title=f.label;
-   const img=document.createElement('img'); img.loading=i<3?'eager':'lazy'; img.src=f.download_url+'?v='+encodeURIComponent(f.sha); img.alt=f.label+' — Campbell Memorial Baptist Church';
+  const all=await getGalleryManifest();
+  const imgs=album==='all'?all:all.filter(f=>f.album===album);
+  if(!imgs.length){wall.innerHTML='<div class="gallery-empty">📷 More memories from this part of church life are coming soon.</div>';return;}
+  wall.innerHTML='';
+  let visible=0;
+  imgs.forEach((f,i)=>{
+   const meta=CMBC_ALBUMS[f.album]||{label:'CMBC Church Memory'};
+   const card=document.createElement('figure'); card.className='gallery-item'; card.tabIndex=0; card.title=meta.label;
+   const img=document.createElement('img'); img.loading=i<4?'eager':'lazy'; img.decoding='async'; img.src=encodeURI(f.src); img.alt=meta.label+' — Campbell Memorial Baptist Church';
+   img.addEventListener('load',()=>{visible++;});
+   img.addEventListener('error',()=>{card.remove(); setTimeout(()=>{if(!wall.querySelector('.gallery-item'))wall.innerHTML='<div class="gallery-empty">📷 These memories are being prepared for your device. Please check back soon.</div>';},50);});
    const open=()=>openLightbox(img.src); card.addEventListener('click',open); card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}}); card.appendChild(img); wall.appendChild(card);
   });
- }catch(e){wall.innerHTML='<div class="gallery-empty">📷 We could not load the Memory Wall right now. Please try again shortly.</div>';}
+ }catch(e){wall.innerHTML='<div class="gallery-empty">📷 The Memory Wall is taking a moment to load. Please refresh and try again.</div>';}
 }
 document.querySelectorAll('.album-card').forEach(btn=>btn.addEventListener('click',()=>{loadApprovedGallery(btn.dataset.album);document.getElementById('galleryLive')?.scrollIntoView({behavior:'smooth',block:'center'});}));
 loadApprovedGallery('all');
