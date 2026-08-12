@@ -1,41 +1,18 @@
-CMBC Church Picnic Website Update — August 11, 2026
+CMBC WEBSITE - GALLERY READY VERSION
 
-UPLOAD TO GITHUB:
-- index.html
-- logo.png
-- church1.jpg
+HOW THE PHOTO GALLERY WORKS
+1. Visitors share photos using the Google Drive button on the website.
+2. CMBC reviews the photos in Google Drive.
+3. Download only the photos you approve.
+4. In GitHub, open the cmbc-website repository.
+5. Open the gallery folder.
+6. Click Add file > Upload files.
+7. Upload approved photos and Commit changes.
+8. Cloudflare republishes the site automatically.
+9. The Church Memory Wall automatically reads image files from the public GitHub gallery folder.
 
-This version removes VBS content and makes the August 23 Church Picnic the featured event.
-
-PICNIC DETAILS:
-- Sunday, August 23, 2026
-- Starts at 11:00 AM
-- Location: TBA
-- Bring a dish to share
-- Activities for kids
-- Worship and fellowship
-- Rain or shine
-
-KEPT:
-- CMBC LIVE scrolling ticker
-- Countdown with seconds
-- Scroll animations
-- Optional sound button
-- Prayer request form
-- Google Calendar month view
-- Photo share link
-- Sunday School 10 AM / Worship 11 AM
-- BYF and Adult Bible Study
-- Outside The Hollar footer credit
-- Mobile cross fix
-
-
-CHURCH PHOTO WORKFLOW — NO CHATGPT NEEDED
-1. Visitors use the Share Church Photos button and upload to your Google Drive folder.
-2. You review the Drive folder and download only the photos you approve.
-3. In GitHub open: itsdabatt/cmbc-website > gallery
-4. Click Add file > Upload files. Upload the approved photos directly there.
-5. Commit changes.
-6. The website Memory Wall loads the photos automatically. You do NOT need to edit index.html or send the pictures to ChatGPT.
-
-Tip: use simple filenames like 2026-08-23-picnic-01.jpg.
+IMPORTANT
+- Keep the gallery/README.txt file. It keeps the folder present even when there are no photos.
+- The GitHub repository must remain public for the automatic gallery loader to work without authentication.
+- Supported image types: JPG, JPEG, PNG, WEBP, GIF.
+- You do NOT need to edit index.html for each new approved photo.
