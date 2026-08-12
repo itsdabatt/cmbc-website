@@ -192,25 +192,27 @@ document.querySelectorAll('a,button,.quest,.event-card').forEach(el=>el.addEvent
 setTimeout(()=>celebrate(18),700);
 
 
-// LIVE CMBC Memory Wall — reads /gallery.json generated automatically by GitHub Actions.
+// LIVE CMBC Memory Wall — automatically reads approved photos from GitHub /gallery.
 (async function loadApprovedGallery(){
  const wall=document.getElementById('galleryLive');
  if(!wall) return;
  wall.innerHTML='<div class="gallery-status">📸 Loading our church memories…</div>';
+ const api='https://api.github.com/repos/itsdabatt/cmbc-website/contents/gallery?ref=main';
  try{
-  const res=await fetch('gallery.json?v='+Date.now(),{cache:'no-store'});
-  if(!res.ok) throw new Error('Gallery manifest unavailable');
+  const res=await fetch(api,{headers:{'Accept':'application/vnd.github+json'},cache:'no-store'});
+  if(!res.ok) throw new Error('Gallery request failed');
   const files=await res.json();
-  if(!Array.isArray(files) || !files.length){wall.innerHTML='<div class="gallery-empty">📷 Approved church pictures will appear here after they are uploaded to the GitHub <b>gallery</b> folder.</div>';return;}
+  const imgs=files.filter(f=>f.type==='file' && /\.(jpe?g|png|webp|gif)$/i.test(f.name));
+  if(!imgs.length){wall.innerHTML='<div class="gallery-empty">📷 Your approved church pictures will appear here automatically after you upload them into the GitHub <b>gallery</b> folder.</div>';return;}
   wall.innerHTML='';
-  files.forEach((path,i)=>{
+  imgs.sort((a,b)=>b.name.localeCompare(a.name)).forEach((f,i)=>{
    const card=document.createElement('figure'); card.className='gallery-item'; card.tabIndex=0;
-   const img=document.createElement('img'); img.loading=i<3?'eager':'lazy'; img.src=path+'?v='+Date.now(); img.alt='Campbell Memorial Baptist Church memory';
+   const img=document.createElement('img'); img.loading=i<3?'eager':'lazy'; img.src=f.download_url+'?v='+encodeURIComponent(f.sha); img.alt='Campbell Memorial Baptist Church memory';
    const open=()=>openLightbox(img.src);
    card.addEventListener('click',open); card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});
    card.appendChild(img); wall.appendChild(card);
   });
- }catch(e){wall.innerHTML='<div class="gallery-empty">📷 The Memory Wall is getting ready. Upload approved pictures into the GitHub <b>gallery</b> folder and GitHub will update this section automatically.</div>';}
+ }catch(e){wall.innerHTML='<div class="gallery-empty">📷 We could not load the Memory Wall right now. The rest of the website is still available.</div>';}
 })();
 const lb=document.getElementById('photoLightbox'), lbImg=document.getElementById('lightboxImage');
 function openLightbox(src){lbImg.src=src;lb.classList.add('open');lb.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
