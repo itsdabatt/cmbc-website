@@ -1,8 +1,13 @@
 /* Aug. 16, 2026 mobile/header + picnic fixes */
 .picnic-flyer{max-width:760px;margin:0 auto 34px;padding:10px;border-radius:28px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);box-shadow:0 22px 55px rgba(0,0,0,.28)}
-.picnic-flyer a{display:block;width:100%;aspect-ratio:1103/1426;border-radius:20px;overflow:hidden;background:#fff url('praise-in-the-park-flyer.jpg?v=20260816b') center/contain no-repeat}
+.picnic-flyer a{display:block;width:100%;aspect-ratio:1103/1426;border-radius:20px;overflow:hidden;background:#fff url('images/8.16.26.png?v=20260816final') center/contain no-repeat}
 .picnic-flyer img{display:none!important}
 .picnic-flyer-note{text-align:center;color:#dce8f7;font-size:.84rem;margin:9px 4px 2px}
+.next-count.is-live{animation:livePulse 1.8s ease-in-out infinite}
+.next-count.is-live>div{border-color:rgba(255,200,61,.6);box-shadow:0 0 22px rgba(255,200,61,.14)}
+.next-count .live-now-box{background:linear-gradient(135deg,#d41414,#7c0000)!important;color:#fff!important}
+.next-count .live-now-box b{font-size:1.15rem;letter-spacing:.08em}
+@keyframes livePulse{0%,100%{filter:none}50%{filter:drop-shadow(0 0 12px rgba(255,200,61,.35))}}
 @media(max-width:700px){
  .nav-wrap{min-height:72px;gap:9px}
  .brand{flex:1;min-width:0;gap:9px;overflow:hidden}
@@ -19,6 +24,7 @@
  .picnic-flyer{margin-bottom:24px;padding:7px;border-radius:20px}
  .picnic-flyer a{border-radius:14px}
  .event-card h3{font-size:1.75rem}
+ .next-count.is-live{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:380px){
  .brand strong{font-size:.67rem}
