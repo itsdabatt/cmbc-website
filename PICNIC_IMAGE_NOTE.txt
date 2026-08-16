@@ -1,0 +1,2 @@
+Final Praise in the Park flyer is stored at images/8.16.26.png.
+The live picnic image should use this exact uploaded file.
