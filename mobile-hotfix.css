@@ -1,7 +1,7 @@
 /* Aug. 16, 2026 mobile/header + picnic fixes */
 .picnic-flyer{max-width:760px;margin:0 auto 34px;padding:10px;border-radius:28px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);box-shadow:0 22px 55px rgba(0,0,0,.28)}
-.picnic-flyer a{display:block;border-radius:20px;overflow:hidden;background:#fff}
-.picnic-flyer img{width:100%;height:auto;display:block}
+.picnic-flyer a{display:block;width:100%;aspect-ratio:1103/1426;border-radius:20px;overflow:hidden;background:#fff url('praise-in-the-park-flyer.jpg?v=20260816b') center/contain no-repeat}
+.picnic-flyer img{display:none!important}
 .picnic-flyer-note{text-align:center;color:#dce8f7;font-size:.84rem;margin:9px 4px 2px}
 @media(max-width:700px){
  .nav-wrap{min-height:72px;gap:9px}
