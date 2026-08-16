@@ -1,0 +1,2 @@
+/* Final flyer display: the actual uploaded flyer is images/8.16.26.png */
+.picnic-flyer img{width:100%;height:auto;object-fit:contain;display:block;}
