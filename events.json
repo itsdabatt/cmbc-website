@@ -2,14 +2,15 @@
   "featured": {
     "title": "Praise in the Park",
     "start": "2026-08-23T11:00:00-04:00",
+    "durationMinutes": 180,
     "location": "Cannelton Ballfield",
     "summary": "CMBC Annual Church Picnic • 11 AM fellowship & family fun • Noon picnic • 1:30 PM praise & preaching • Bring lawn chairs and a vegetable, salad, or dessert",
     "anchor": "#picnic"
   },
   "weekly": [
-    {"day":0,"hour":10,"minute":0,"title":"Sunday School","details":"Sunday • 10:00 AM","anchor":"#times"},
-    {"day":0,"hour":11,"minute":0,"title":"Morning Worship","details":"Sunday • 11:00 AM","anchor":"#times"},
-    {"day":3,"hour":18,"minute":25,"title":"BYF Youth Service","details":"Wednesday • 6:25 PM","anchor":"#byf"},
-    {"day":3,"hour":19,"minute":0,"title":"Adult Bible Study","details":"Wednesday • 7:00 PM","anchor":"#times"}
+    {"day":0,"hour":10,"minute":0,"durationMinutes":60,"title":"Sunday School","details":"Sunday • 10:00 AM","anchor":"#times"},
+    {"day":0,"hour":11,"minute":0,"durationMinutes":75,"title":"Morning Worship","details":"Sunday • 11:00 AM","anchor":"#times"},
+    {"day":3,"hour":18,"minute":25,"durationMinutes":80,"title":"BYF Youth Service","details":"Wednesday • 6:25–7:45 PM","anchor":"#byf"},
+    {"day":3,"hour":19,"minute":0,"durationMinutes":60,"title":"Adult Bible Study","details":"Wednesday • 7:00–8:00 PM","anchor":"#times"}
   ]
 }
