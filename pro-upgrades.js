@@ -30,22 +30,16 @@
     let start = weeklyStart(item, now, 0);
     const duration = Number(item.durationMinutes || 60) * 60000;
     let end = new Date(start.getTime() + duration);
-
-    // If today's occurrence has fully ended, use next week.
     if (end <= now) {
       start = weeklyStart(item, now, 1);
       end = new Date(start.getTime() + duration);
     }
-
-    // If today's start is later in the week logic but a currently-running
-    // occurrence started last week, check that too.
     const previous = weeklyStart(item, now, -1);
     const previousEnd = new Date(previous.getTime() + duration);
     if (previous <= now && previousEnd > now) {
       start = previous;
       end = previousEnd;
     }
-
     return {...item, start, end, special:false};
   }
 
@@ -69,17 +63,9 @@
     const all = (schedule?.weekly || []).map(w => occurrence(w, now));
     const featured = featuredOccurrence(schedule?.featured, now);
     if (featured) all.push(featured);
-
-    const happening = all
-      .filter(e => e.start <= now && e.end > now)
-      .sort((a,b) => b.start - a.start);
-
+    const happening = all.filter(e => e.start <= now && e.end > now).sort((a,b) => b.start - a.start);
     if (happening.length) return {mode:'live', event:happening[0]};
-
-    const upcoming = all
-      .filter(e => e.start > now)
-      .sort((a,b) => a.start - b.start);
-
+    const upcoming = all.filter(e => e.start > now).sort((a,b) => a.start - b.start);
     return upcoming.length ? {mode:'next', event:upcoming[0]} : null;
   }
 
@@ -87,25 +73,20 @@
     if (!schedule) return;
     const state = chooseLive();
     if (!state) return;
-
     const e = state.event;
     const badge = $('#nextBadge');
     const title = $('#nextTitle');
     const details = $('#nextDetails');
     const action = $('#nextAction');
     const count = $('#nextCount');
-
     if (!badge || !title || !details || !action || !count) return;
-
     title.textContent = e.title;
     action.href = e.anchor || '#visit';
-
     if (state.mode === 'live') {
       badge.textContent = e.special ? '🎉 HAPPENING NOW' : '🔴 HAPPENING NOW';
       const endTime = e.end.toLocaleTimeString(undefined,{hour:'numeric',minute:'2-digit'});
       details.textContent = `${e.details || 'Happening now at CMBC'} • In progress until about ${endTime}`;
       action.textContent = e.special ? 'See Event Details' : 'Service Info';
-
       const left = Math.max(0, e.end - Date.now());
       const p = parts(left);
       count.innerHTML = `
@@ -134,4 +115,12 @@
   load();
   setInterval(renderLive, 250);
   setInterval(load, 60000);
+})();
+
+/* Load the lightweight immersive/gamified CMBC Journey layer. */
+(() => {
+  const s=document.createElement('script');
+  s.src='experience.js?v=20260816x2';
+  s.defer=true;
+  document.head.appendChild(s);
 })();
