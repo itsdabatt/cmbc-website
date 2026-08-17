@@ -1,0 +1,106 @@
+(() => {
+  if (window.__CMBC_JOURNEY__) return;
+  window.__CMBC_JOURNEY__ = true;
+  const $ = (s,r=document)=>r.querySelector(s);
+  const $$ = (s,r=document)=>[...r.querySelectorAll(s)];
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const storageKey = 'cmbcJourney2026';
+  const tasks = [
+    {id:'next',icon:'🔴',title:'See What’s Next',desc:'Check the live CMBC schedule.',target:'#next'},
+    {id:'times',icon:'⛪',title:'Find a Service',desc:'See Sunday and Wednesday times.',target:'#times'},
+    {id:'picnic',icon:'🌳',title:'Explore Praise in the Park',desc:'See the featured church picnic.',target:'#picnic'},
+    {id:'byf',icon:'🎉',title:'Visit BYF',desc:'See what’s happening for youth.',target:'#byf'},
+    {id:'prayer',icon:'🙏',title:'Find Prayer',desc:'See how CMBC can pray with you.',target:'#prayer'},
+    {id:'photos',icon:'📸',title:'Meet the Church Family',desc:'Explore CMBC memories.',target:'#photos'},
+    {id:'visit',icon:'📍',title:'Plan a Visit',desc:'Find directions and church info.',target:'#visit'}
+  ];
+  let completed = new Set();
+  try { completed = new Set(JSON.parse(localStorage.getItem(storageKey) || '[]')); } catch(_) {}
+
+  function save(){ try{ localStorage.setItem(storageKey, JSON.stringify([...completed])); }catch(_){} }
+  function confetti(count=18){
+    if(reduce) return;
+    const colors=['#ffc83d','#fff','#55a8ff','#71d98f'];
+    for(let i=0;i<count;i++){
+      const p=document.createElement('i');
+      Object.assign(p.style,{position:'fixed',zIndex:'5999',top:'-18px',left:(15+Math.random()*70)+'vw',width:'8px',height:'13px',borderRadius:'2px',background:colors[i%colors.length],pointerEvents:'none',transform:`rotate(${Math.random()*180}deg)`,transition:`top ${2.2+Math.random()*1.1}s linear,transform ${2.2+Math.random()*1.1}s linear,opacity .5s`});
+      document.body.appendChild(p);
+      requestAnimationFrame(()=>{p.style.top='108vh';p.style.transform=`translateX(${Math.random()*120-60}px) rotate(720deg)`});
+      setTimeout(()=>p.remove(),3600);
+    }
+  }
+  function toast(icon,title,text){
+    let el=$('.journey-toast');
+    if(!el){el=document.createElement('div');el.className='journey-toast';document.body.appendChild(el)}
+    el.innerHTML=`<i>${icon}</i><div><b>${title}</b><span>${text}</span></div>`;
+    requestAnimationFrame(()=>el.classList.add('show'));
+    clearTimeout(el._t); el._t=setTimeout(()=>el.classList.remove('show'),2600);
+  }
+  function progress(){ return Math.round((completed.size/tasks.length)*100); }
+  function render(){
+    const pct=progress();
+    const launch=$('.journey-launch');
+    if(launch){
+      launch.classList.toggle('complete',pct===100);
+      $('.journey-pct',launch).textContent=`${pct}%`;
+      $('span',launch).innerHTML=pct===100?'Journey complete ✨':`<span class="journey-pct">${pct}%</span> explored`;
+    }
+    const bar=$('.journey-progress i'); if(bar) bar.style.width=pct+'%';
+    const sum=$('.journey-summary'); if(sum) sum.textContent=`${completed.size} of ${tasks.length} places discovered`;
+    $$('.journey-task').forEach(btn=>{
+      const done=completed.has(btn.dataset.task);
+      btn.classList.toggle('done',done);
+      $('.jt-state',btn).textContent=done?'DONE':'GO';
+      if(done) $('.jt-icon',btn).textContent='✓';
+      else $('.jt-icon',btn).textContent=tasks.find(t=>t.id===btn.dataset.task)?.icon||'•';
+    });
+  }
+  function complete(id,announce=true){
+    if(!id || completed.has(id)) return;
+    completed.add(id); save(); render();
+    const t=tasks.find(x=>x.id===id);
+    const section=$(t?.target||''); if(section) section.classList.add('journey-discovered');
+    if(announce&&t){toast('✨','CMBC Journey',`${t.title} discovered!`); if(completed.size===tasks.length){confetti(38);setTimeout(()=>toast('🎉','Journey complete!','You explored the heart of CMBC.'),350)} }
+  }
+
+  function build(){
+    const css=document.createElement('link');css.rel='stylesheet';css.href='experience.css?v=20260816x2';document.head.appendChild(css);
+    const launch=document.createElement('button');
+    launch.className='journey-launch';launch.type='button';launch.setAttribute('aria-expanded','false');launch.innerHTML='<span><b>CMBC Journey</b><span><span class="journey-pct">0%</span> explored</span></span>';
+    document.body.appendChild(launch);
+    const panel=document.createElement('aside');
+    panel.className='journey-panel';panel.setAttribute('aria-hidden','true');
+    panel.innerHTML=`<div class="journey-panel-head"><div><small>EXPLORE • DISCOVER • CONNECT</small><h3>Your CMBC Journey</h3></div><button class="journey-close" type="button" aria-label="Close CMBC Journey">×</button></div><div class="journey-progress"><i></i></div><div class="journey-summary"></div><div class="journey-list">${tasks.map(t=>`<button class="journey-task" data-task="${t.id}" type="button"><span class="jt-icon">${t.icon}</span><span><b>${t.title}</b><small>${t.desc}</small></span><span class="jt-state">GO</span></button>`).join('')}</div><p class="journey-note">No account, no score, no pressure — just a fun way to explore CMBC.</p>`;
+    document.body.appendChild(panel);
+    const toggle=(force)=>{const open=typeof force==='boolean'?force:!panel.classList.contains('open');panel.classList.toggle('open',open);panel.setAttribute('aria-hidden',String(!open));launch.setAttribute('aria-expanded',String(open))};
+    launch.addEventListener('click',()=>toggle()); $('.journey-close',panel).addEventListener('click',()=>toggle(false));
+    $$('.journey-task',panel).forEach(btn=>btn.addEventListener('click',()=>{const t=tasks.find(x=>x.id===btn.dataset.task);if(t){toggle(false);$(t.target)?.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});setTimeout(()=>complete(t.id),700)}}));
+    render();
+
+    const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting&&e.intersectionRatio>.42){const t=tasks.find(x=>x.target==='#'+e.target.id);if(t) complete(t.id)}}),{threshold:[.42,.6]});
+    tasks.forEach(t=>{const el=$(t.target);if(el) observer.observe(el)});
+
+    // Tactile micro-interactions.
+    $$('.btn,.quick-card,.event-card,.time-card,.album-tab,.cal-card,.mobile-dock a').forEach(el=>{
+      el.classList.add('ripple-host');
+      el.addEventListener('pointerdown',ev=>{if(reduce)return;const r=el.getBoundingClientRect(),d=Math.max(r.width,r.height),s=document.createElement('i');s.className='site-ripple';s.style.width=s.style.height=d+'px';s.style.left=(ev.clientX-r.left-d/2)+'px';s.style.top=(ev.clientY-r.top-d/2)+'px';el.appendChild(s);setTimeout(()=>s.remove(),650)});
+    });
+
+    // Subtle desktop glow only; phones stay lightweight.
+    if(matchMedia('(pointer:fine)').matches&&!reduce){const g=document.createElement('div');g.className='experience-glow';document.body.appendChild(g);addEventListener('pointermove',e=>{g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'},{passive:true})}
+
+    // Correct old picnic markup without risking the full homepage file.
+    const picnic=$('#picnic');
+    if(picnic){
+      const flyer=$('.picnic-flyer',picnic), a=$('a',flyer), img=$('img',flyer);
+      const fresh='images/8.16.26.png?v=202608162100'; if(a)a.href=fresh;if(img){img.src=fresh;img.loading='eager'}
+      const cards=$$('.event-card',picnic);
+      const stale=cards.find(c=>/1:30|Praise\s*&\s*Preaching/i.test(c.textContent));
+      if(stale){const sm=$('small',stale),h=$('h3',stale),p=$('p',stale);if(sm)sm.textContent='11:00 AM';if(h)h.textContent='🎶 Kids Singing & Praise';if(p)p.textContent='We’ll begin with our kids singing and praising, followed by preaching and worship.'}
+      const first=cards[0]; if(first){const ps=$$('p',first);if(ps[1])ps[1].textContent='Bring your lawn chairs and join us for kids singing, praise, preaching, worship, fellowship, and time together.'}
+    }
+    $$('#tickerGroup span').forEach(s=>{if(/1:30|Praise\s*&\s*preaching/i.test(s.textContent))s.textContent='🎶 11:00 AM Kids Singing & Praise • Preaching & Worship'});
+  }
+
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',build,{once:true});else build();
+})();
