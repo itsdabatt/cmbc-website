@@ -1,18 +1,14 @@
 /* Loader for the full CMBC interactive app. */
 (function(){
-  const version='20260816app4';
+  const version='20260816app5';
   if(!document.querySelector('script[data-tailwind-cmbc]')){
     const tw=document.createElement('script');tw.src='https://cdn.tailwindcss.com';tw.dataset.tailwindCmbc='1';document.head.appendChild(tw);
   }
-  if(!document.querySelector('link[data-cmbc-app]')){
-    const l=document.createElement('link');l.rel='stylesheet';l.href='church-app.css?v='+version;l.dataset.cmbcApp='1';document.head.appendChild(l);
-  }
-  if(!document.querySelector('link[data-cmbc-kids]')){
-    const k=document.createElement('link');k.rel='stylesheet';k.href='kids-corner.css?v='+version;k.dataset.cmbcKids='1';document.head.appendChild(k);
-  }
+  const css=[['church-app.css','cmbcApp'],['kids-corner.css','cmbcKids'],['connect.css','cmbcConnect']];
+  css.forEach(([href,key])=>{if(!document.querySelector(`link[data-${key}]`)){const l=document.createElement('link');l.rel='stylesheet';l.href=href+'?v='+version;l.setAttribute(`data-${key}`,'1');document.head.appendChild(l)}});
   const start=()=>{
-    if(!document.querySelector('script[data-cmbc-app]')){const s=document.createElement('script');s.src='church-app.js?v='+version;s.defer=true;s.dataset.cmbcApp='1';document.body.appendChild(s)}
-    if(!document.querySelector('script[data-cmbc-kids]')){const k=document.createElement('script');k.src='kids-corner.js?v='+version;k.defer=true;k.dataset.cmbcKids='1';document.body.appendChild(k)}
+    const js=[['church-app.js','cmbcApp'],['kids-corner.js','cmbcKids'],['connect.js','cmbcConnect']];
+    js.forEach(([src,key])=>{if(!document.querySelector(`script[data-${key}]`)){const s=document.createElement('script');s.src=src+'?v='+version;s.defer=true;s.setAttribute(`data-${key}`,'1');document.body.appendChild(s)}});
   };
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>setTimeout(start,120));else setTimeout(start,120);
 })();
