@@ -1,0 +1,2 @@
+/* CMBC app fallback polish. Tailwind Play CDN provides the primary utility styling. */
+#cmbc-app{isolation:isolate}#cmbc-app button,#cmbc-app a{touch-action:manipulation;-webkit-tap-highlight-color:transparent}#cmbc-app .ring-2{box-shadow:0 0 0 2px #fbbf24,0 18px 50px rgba(251,191,36,.12)}@media(max-width:640px){#cmbc-app{scroll-margin-top:70px}#cmbc-app button{min-height:44px}}
