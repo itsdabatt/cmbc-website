@@ -1,6 +1,6 @@
 /* Loader for the full CMBC interactive app. */
 (function(){
-  const version='20260816app1';
+  const version='20260816app2';
   if(!document.querySelector('script[data-tailwind-cmbc]')){
     const tw=document.createElement('script');tw.src='https://cdn.tailwindcss.com';tw.dataset.tailwindCmbc='1';document.head.appendChild(tw);
   }
