@@ -1,0 +1,28 @@
+{
+  "id": "2026-08-praise-god",
+  "month": "August 2026",
+  "theme": "Praise God!",
+  "verseReference": "Psalm 34:3 KJV",
+  "verseText": "O magnify the LORD with me, and let us exalt his name together.",
+  "intro": "Open your Bible, learn God's Word, get moving, and make something to bring back to church! Complete all three missions, print this month's pages, and bring your finished work to CMBC for our Little Artists Wall!",
+  "read": {
+    "title": "Open Your Bible",
+    "text": "Find Psalm 34:3. Read it out loud with somebody in your family. Then tap complete!",
+    "button": "I READ IT! ✓"
+  },
+  "move": {
+    "title": "Praise in Motion",
+    "text": "Say the memory verse while doing 3 praise jumps, 3 big claps, and 3 reaches toward the sky. Movement helps us remember!",
+    "button": "I MOVED IT! ✓"
+  },
+  "learn": {
+    "title": "Bible Challenge",
+    "question": "Psalm 34:3 tells us to do something together. What is it?",
+    "answer": "Magnify the Lord and exalt His name together! 🙌",
+    "button": "I LEARNED IT! ✓"
+  },
+  "coloringImage": "images/kidscornercolorpage1.png",
+  "activityImage": "images/kidscorneractivitypage1.png",
+  "artistWallMessage": "Bring it back → We'll display completed pages on the CMBC Kids' Corner Wall!",
+  "completionMessage": "🏆 Bible Adventure Complete! Bring your pages to church!"
+}
