@@ -1,18 +1,30 @@
-/* CMBC Journey — bold church-specific, mobile-first polish */
-#cmbc-app{isolation:isolate;position:relative;overflow:hidden;background:radial-gradient(circle at 15% 0%,rgba(245,190,55,.18),transparent 28%),radial-gradient(circle at 90% 30%,rgba(43,108,176,.22),transparent 30%),linear-gradient(145deg,#031127 0%,#071b39 46%,#0b2d55 100%);border-top:4px solid #f5be37;border-bottom:4px solid #f5be37;color:#fff}
-#cmbc-app:before{content:'✝';position:absolute;right:-.04em;top:-.22em;font-size:clamp(14rem,35vw,34rem);font-weight:900;line-height:1;color:rgba(255,255,255,.035);pointer-events:none;transform:rotate(4deg)}
-#cmbc-app:after{content:'';position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:32px 32px;mask-image:linear-gradient(to bottom,#000,transparent 85%)}
+/* CMBC Journey — bold church-specific visual system */
+#cmbc-app{isolation:isolate;position:relative;overflow:hidden;background:radial-gradient(circle at 12% 5%,rgba(255,200,61,.24),transparent 25%),radial-gradient(circle at 88% 20%,rgba(48,126,207,.28),transparent 30%),linear-gradient(135deg,#020b19 0%,#061a38 43%,#0b3564 100%);border-top:6px solid #ffc83d;border-bottom:6px solid #ffc83d;color:#fff;box-shadow:inset 0 1px rgba(255,255,255,.08),0 28px 80px rgba(3,17,39,.28)}
+#cmbc-app:before{content:'✝';position:absolute;right:-.02em;top:-.25em;font-family:Georgia,serif;font-size:clamp(18rem,31vw,38rem);font-weight:900;line-height:1;color:rgba(255,255,255,.045);pointer-events:none;transform:rotate(3deg)}
+#cmbc-app:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 0 48%,rgba(255,200,61,.045) 48% 49%,transparent 49%),linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:auto,34px 34px,34px 34px;mask-image:linear-gradient(to bottom,#000,transparent 92%)}
 #cmbc-app>*{position:relative;z-index:1}
 #cmbc-app button,#cmbc-app a{touch-action:manipulation;-webkit-tap-highlight-color:transparent;max-width:100%;white-space:normal;overflow-wrap:anywhere}
 #cmbc-app button{cursor:pointer}
-#cmbc-app .ring-2{box-shadow:0 0 0 3px #f5be37,0 18px 50px rgba(245,190,55,.18)}
-#cmbc-app [class*="rounded"]{border-color:rgba(255,255,255,.14)}
-#cmbc-app h2,#cmbc-app h3{letter-spacing:-.025em}
-#cmbc-app .bg-white\/5,#cmbc-app .bg-white\/10{backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
-#cmbc-app button:focus-visible,#cmbc-app a:focus-visible{outline:3px solid #f5be37;outline-offset:3px}
-/* Prevent fixed interactive controls from fighting the phone dock/music player. */
-.journey-launch{bottom:calc(78px + env(safe-area-inset-bottom))!important;right:12px!important;max-width:calc(100vw - 24px)!important}
-.journey-panel{bottom:calc(76px + env(safe-area-inset-bottom))!important;max-height:min(72vh,620px)!important}
+#cmbc-app .ring-2{box-shadow:0 0 0 3px #ffc83d,0 0 0 7px rgba(255,200,61,.12),0 20px 55px rgba(255,200,61,.18)}
+#cmbc-app [class*="rounded"]{border-color:rgba(255,255,255,.16)}
+#cmbc-app h2{font-family:Arial Black,Arial,sans-serif;text-transform:uppercase;letter-spacing:-.045em;text-shadow:0 8px 28px rgba(0,0,0,.28)}
+#cmbc-app h3{letter-spacing:-.025em}
+#cmbc-app .bg-white\/5,#cmbc-app .bg-white\/10{backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+#cmbc-app button:focus-visible,#cmbc-app a:focus-visible{outline:3px solid #ffc83d;outline-offset:3px}
+#cmbc-app .cmbc-mode{position:relative;overflow:hidden;border-width:1px!important;box-shadow:inset 0 1px rgba(255,255,255,.05),0 14px 35px rgba(0,0,0,.16)}
+#cmbc-app .cmbc-mode:after{content:'';position:absolute;left:0;bottom:0;width:0;height:4px;background:#ffc83d;transition:width .25s ease}
+#cmbc-app .cmbc-mode:hover:after,#cmbc-app .cmbc-mode.ring-2:after{width:100%}
+#cmbc-app .cmbc-mode b{font-size:1.08rem}
+#cmbc-app .cmbc-jump{border-left:4px solid #ffc83d!important;box-shadow:0 12px 30px rgba(0,0,0,.13)}
+/* Desktop: Journey status belongs in the upper-right, never on top of the music player. */
+.journey-launch{top:96px!important;right:18px!important;bottom:auto!important;max-width:min(360px,calc(100vw - 36px))!important;z-index:850!important;box-shadow:0 16px 45px rgba(0,0,0,.28)!important}
+.journey-panel{top:158px!important;right:18px!important;bottom:auto!important;max-height:calc(100vh - 180px)!important;z-index:849!important}
+@media(min-width:900px){
+ #cmbc-app>.relative{padding-top:72px!important;padding-bottom:72px!important}
+ #cmbc-app h2{font-size:clamp(3.2rem,5vw,5.3rem)!important;max-width:850px;line-height:.9!important}
+ #cmbc-app .cmbc-mode{min-height:155px!important;padding:22px!important}
+ #cmbc-app .cmbc-mode>span{font-size:2.5rem!important}
+}
 @media(max-width:760px){
  #cmbc-app{scroll-margin-top:70px}
  #cmbc-app .max-w-6xl{padding-left:16px!important;padding-right:16px!important}
@@ -26,8 +38,8 @@
  #cmbc-app .flex-wrap{row-gap:10px!important}
  #cmbc-app .justify-between{gap:12px!important}
  #cmbc-app input,#cmbc-app select,#cmbc-app textarea{width:100%;max-width:100%;font-size:16px!important}
- .journey-launch{left:12px!important;right:12px!important;width:auto!important;justify-content:center!important}
- .journey-panel{left:10px!important;right:10px!important;width:auto!important;max-width:none!important}
+ .journey-launch{top:auto!important;left:12px!important;right:12px!important;bottom:calc(142px + env(safe-area-inset-bottom))!important;width:auto!important;justify-content:center!important;max-width:none!important}
+ .journey-panel{top:auto!important;left:10px!important;right:10px!important;bottom:calc(142px + env(safe-area-inset-bottom))!important;width:auto!important;max-width:none!important;max-height:58vh!important}
  .journey-task{grid-template-columns:42px minmax(0,1fr) auto!important;gap:10px!important}
  .journey-task small,.journey-task b{overflow-wrap:anywhere}
 }
