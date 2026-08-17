@@ -7,13 +7,13 @@ const revealObserver=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersec
 const tickerTrack=$('#tickerTrack'),tickerGroup=$('#tickerGroup');if(tickerTrack&&tickerGroup){let x=0,last=performance.now(),width=0;const clone=tickerGroup.cloneNode(true);clone.removeAttribute('id');clone.setAttribute('aria-hidden','true');tickerTrack.appendChild(clone);const measure=()=>{width=tickerGroup.scrollWidth};measure();addEventListener('resize',measure);new ResizeObserver(measure).observe(tickerGroup);function frame(now){const dt=Math.min(60,now-last);last=now;if(width>0){x-=dt*.06;if(-x>=width)x+=width;tickerTrack.style.transform=`translate3d(${x}px,0,0)`}requestAnimationFrame(frame)}requestAnimationFrame(frame)}
 
 /* Smart next-event engine */
-let scheduleData=null;async function loadSchedule(){try{const r=await fetch('events.json?ts='+Date.now(),{cache:'no-store'});if(r.ok)scheduleData=await r.json()}catch(e){}if(!scheduleData)scheduleData={featured:{title:'Church Picnic',start:'2026-08-23T11:00:00-04:00',location:'Location TBA',summary:'Bring a dish • Kids activities • Rain or shine',anchor:'#picnic'},weekly:[{day:0,hour:10,minute:0,title:'Sunday School',details:'Sunday • 10:00 AM',anchor:'#times'},{day:0,hour:11,minute:0,title:'Morning Worship',details:'Sunday • 11:00 AM',anchor:'#times'},{day:3,hour:18,minute:25,title:'BYF Youth Service',details:'Wednesday • 6:25 PM',anchor:'#byf'},{day:3,hour:19,minute:0,title:'Adult Bible Study',details:'Wednesday • 7:00 PM',anchor:'#times'}]};setupFeatured();updateNext();}
+let scheduleData=null;async function loadSchedule(){try{const r=await fetch('events.json?ts='+Date.now(),{cache:'no-store'});if(r.ok)scheduleData=await r.json()}catch(e){}if(!scheduleData)scheduleData={featured:{title:'Praise in the Park',start:'2026-08-23T11:00:00-04:00',location:'Cannelton Ballfield',summary:'11:00 AM Kids Singing & Praise • Preaching & Worship • 12:00 PM Time to Eat',anchor:'#picnic'},weekly:[{day:0,hour:10,minute:0,title:'Sunday School',details:'Sunday • 10:00 AM',anchor:'#times'},{day:0,hour:11,minute:0,title:'Morning Worship',details:'Sunday • 11:00 AM',anchor:'#times'},{day:3,hour:18,minute:25,title:'BYF Youth Service',details:'Wednesday • 6:25 PM',anchor:'#byf'},{day:3,hour:19,minute:0,title:'Adult Bible Study',details:'Wednesday • 7:00 PM',anchor:'#times'}]};setupFeatured();updateNext();}
 function nextWeekly(item,now=new Date()){const d=new Date(now);let add=(item.day-d.getDay()+7)%7;d.setDate(d.getDate()+add);d.setHours(item.hour,item.minute,0,0);if(d<=now){d.setDate(d.getDate()+7)}return d}
 function chooseNext(){const now=new Date(),c=[];(scheduleData.weekly||[]).forEach(w=>c.push({...w,date:nextWeekly(w,now),special:false}));if(scheduleData.featured){const fd=new Date(scheduleData.featured.start);if(fd>now)c.push({title:scheduleData.featured.title,details:`${fd.toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric'})} • ${fd.toLocaleTimeString(undefined,{hour:'numeric',minute:'2-digit'})} • ${scheduleData.featured.location}`,anchor:scheduleData.featured.anchor||'#calendar',date:fd,special:true})}c.sort((a,b)=>a.date-b.date);return c[0]}
 function durationParts(ms){ms=Math.max(0,ms);const days=Math.floor(ms/86400000);ms%=86400000;const hours=Math.floor(ms/3600000);ms%=3600000;const minutes=Math.floor(ms/60000);ms%=60000;const seconds=Math.floor(ms/1000);return{days,hours,minutes,seconds}}
 function renderCount(el,p){if(!el)return;el.innerHTML=`<div><b>${String(p.days).padStart(2,'0')}</b><span>Days</span></div><div><b>${String(p.hours).padStart(2,'0')}</b><span>Hours</span></div><div><b>${String(p.minutes).padStart(2,'0')}</b><span>Minutes</span></div><div><b>${String(p.seconds).padStart(2,'0')}</b><span>Seconds</span></div>`}
 function updateNext(){if(!scheduleData)return;const n=chooseNext();if(!n)return;$('#nextBadge').textContent=n.special?'⭐ FEATURED EVENT':'🔴 NEXT AT CMBC';$('#nextTitle').textContent=n.title;$('#nextDetails').textContent=n.details;const a=$('#nextAction');a.href=n.anchor||'#visit';a.textContent=n.special?'See Event Details':'Plan Your Visit';renderCount($('#nextCount'),durationParts(n.date-Date.now()))}
-function setupFeatured(){const f=scheduleData.featured;if(!f)return;const d=new Date(f.start),title=$('#headlineTitle'),sub=$('#headlineSub'),link=$('#headlineLink');if(d>Date.now()){title.textContent=`🧺 ${f.title.toUpperCase()} • ${d.toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric'}).toUpperCase()} • ${d.toLocaleTimeString(undefined,{hour:'numeric',minute:'2-digit'})}`;sub.textContent=`${f.location} • ${f.summary}`;link.href=f.anchor||'#calendar';$('#featuredTitle').textContent=`${f.title} • ${d.toLocaleDateString(undefined,{month:'long',day:'numeric'})}`;$('#featuredIntro').textContent=f.summary;const countdown=$('#countdown');const tick=()=>{const left=d-Date.now();if(left<=0){countdown.innerHTML='<div class="count-box"><b>🎉</b><span>Today!</span></div>';return}const p=durationParts(left);countdown.innerHTML=`<div class="count-box"><b>${String(p.days).padStart(2,'0')}</b><span>Days</span></div><div class="count-box"><b>${String(p.hours).padStart(2,'0')}</b><span>Hours</span></div><div class="count-box"><b>${String(p.minutes).padStart(2,'0')}</b><span>Minutes</span></div><div class="count-box"><b>${String(p.seconds).padStart(2,'0')}</b><span>Seconds</span></div>`};tick();setInterval(tick,1000)}}loadSchedule();setInterval(updateNext,1000);$('#nextCalendarBtn')?.addEventListener('click',()=>$('#calendar')?.scrollIntoView({behavior:'smooth'}));
+function setupFeatured(){const f=scheduleData.featured;if(!f)return;const d=new Date(f.start),title=$('#headlineTitle'),sub=$('#headlineSub'),link=$('#headlineLink');if(d>Date.now()){title.textContent=`🌳 ${f.title.toUpperCase()} • ${d.toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric'}).toUpperCase()} • ${d.toLocaleTimeString(undefined,{hour:'numeric',minute:'2-digit'})}`;sub.textContent=`${f.location} • ${f.summary}`;link.href=f.anchor||'#calendar';$('#featuredTitle').textContent=`${f.title} • ${d.toLocaleDateString(undefined,{month:'long',day:'numeric'})}`;$('#featuredIntro').textContent=f.summary;const countdown=$('#countdown');const tick=()=>{const left=d-Date.now();if(left<=0){countdown.innerHTML='<div class="count-box"><b>🎉</b><span>Today!</span></div>';return}const p=durationParts(left);countdown.innerHTML=`<div class="count-box"><b>${String(p.days).padStart(2,'0')}</b><span>Days</span></div><div class="count-box"><b>${String(p.hours).padStart(2,'0')}</b><span>Hours</span></div><div class="count-box"><b>${String(p.minutes).padStart(2,'0')}</b><span>Minutes</span></div><div class="count-box"><b>${String(p.seconds).padStart(2,'0')}</b><span>Seconds</span></div>`};tick();setInterval(tick,1000)}}loadSchedule();setInterval(updateNext,1000);$('#nextCalendarBtn')?.addEventListener('click',()=>$('#calendar')?.scrollIntoView({behavior:'smooth'}));
 
 /* Hymnal player: public-domain / Creative Commons recordings */
 const hymns={
@@ -43,3 +43,37 @@ let deferredPrompt=null;const installBtns=[$('#installBtn'),$('#installBtn2')].f
 
 /* Celebration / motion */
 function confetti(count=24){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;for(let i=0;i<count;i++){const c=document.createElement('i');Object.assign(c.style,{position:'fixed',zIndex:'9998',top:'-18px',left:Math.random()*100+'vw',width:'9px',height:'14px',background:['#ffc83d','#fff','#55a8ff','#ff789b','#71d98f'][i%5],pointerEvents:'none',borderRadius:'2px',transform:`rotate(${Math.random()*180}deg)`,transition:`transform ${2.6+Math.random()*1.7}s linear, top ${2.6+Math.random()*1.7}s linear`});document.body.appendChild(c);requestAnimationFrame(()=>{c.style.top='110vh';c.style.transform=`translateX(${Math.random()*180-90}px) rotate(760deg)`});setTimeout(()=>c.remove(),4800)}}$$('.event-card.featured,.countdown-shell').forEach(el=>el.addEventListener('click',()=>confetti(22)));setTimeout(()=>confetti(14),850);if(matchMedia('(pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const heroBg=$('.hero-bg');addEventListener('scroll',()=>{if(heroBg&&scrollY<900)heroBg.style.transform=`scale(1.06) translate3d(0,${Math.min(30,scrollY*.035)}px,0)`},{passive:true})}
+
+/* Activate the 2026 CMBC interactive experience without relying on index.html edits. */
+(function activateCMBCExperience(){
+  const version='20260816live2';
+  if(!document.querySelector('link[data-cmbc-experience]')){
+    const link=document.createElement('link');
+    link.rel='stylesheet';
+    link.href='experience.css?v='+version;
+    link.dataset.cmbcExperience='1';
+    document.head.appendChild(link);
+  }
+  if(!document.querySelector('script[data-cmbc-experience]')){
+    const s=document.createElement('script');
+    s.src='experience.js?v='+version;
+    s.defer=true;
+    s.dataset.cmbcExperience='1';
+    document.body.appendChild(s);
+  }
+
+  /* Correct stale hard-coded picnic copy still present in the page markup. */
+  const picnic=$('#picnic');
+  if(picnic){
+    const cards=$$('.event-card',picnic);
+    if(cards[0]) cards[0].innerHTML='<small>SUNDAY • AUGUST 23</small><h3>🌳 Praise in the Park</h3><p><b>11:00 AM • Cannelton Ballfield</b></p><p>🎶 <b>Kids Singing & Praise</b> begins at 11:00 AM, followed by preaching and worship.</p><p>🍗 CMBC provides chicken and hot dogs. 🥗 Please bring a vegetable, salad, or dessert to share. 🪑 Bring your lawn chairs!</p>';
+    if(cards[1]) cards[1].innerHTML='<small>12:00 PM</small><h3>🍽️ TIME TO EAT!</h3><p>We’ll eat at noon and enjoy food, fellowship, and time together as a church family.</p>';
+    if(cards[2]) cards[2].innerHTML='<small>11:00 AM</small><h3>🎶 Kids Singing & Praise</h3><p>Come hear our kids sing, worship together, and hear the preaching of God’s Word before lunch.</p>';
+    if(cards[3]) cards[3].innerHTML='<small>EVERYONE WELCOME</small><h3>❤️ Bring the Whole Family</h3><p>Come worship, hear our kids sing, enjoy a good meal, and spend time together in Christian fellowship.</p><p><em>“O magnify the Lord with me, and let us exalt his name together.”</em><br><b>Psalm 34:3 KJV</b></p>';
+    const flyerLink=$('.picnic-flyer a',picnic); if(flyerLink) flyerLink.href='images/8.16.26.png?v='+version;
+  }
+
+  if(tickerGroup){
+    tickerGroup.innerHTML='<span>🌳 Praise in the Park • Sunday, August 23 • 11:00 AM</span><span>📍 Cannelton Ballfield</span><span>🎶 11:00 AM • Kids Singing & Praise</span><span>📖 Preaching & Worship</span><span>🍽️ 12:00 PM • Time to Eat!</span><span>🍗 CMBC provides chicken & hot dogs</span><span>🥗 Bring a vegetable, salad, or dessert</span><span>🪑 Bring your lawn chairs</span><span>❤️ Everyone welcome</span>';
+  }
+})();
