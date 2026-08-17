@@ -8,11 +8,35 @@
     const a=document.createElement('a');a.href=href;a.textContent=label;if(cls)a.className=cls;nav.appendChild(a);
   };
 
+  const navLabels={
+    '#times':'⛪ Services',
+    '#next':'🔴 What’s Next',
+    '#calendar':'📅 Calendar',
+    '#byf':'🎉 BYF',
+    '#prayer':'🙏 Prayer',
+    '#photos':'📸 Photos',
+    '#visit':'📍 Visit',
+    '#kids-corner':'🧒 Kids',
+    '#contact':'📬 Contact'
+  };
+
+  function labelNav(nav,isMobile=false){
+    if(!nav)return;
+    Object.entries(navLabels).forEach(([href,label])=>{
+      const a=nav.querySelector(`a[href="${href}"]`);
+      if(a)a.textContent=(isMobile && href==='#kids-corner')?'🧒 Kids Corner':(isMobile && href==='#contact')?'📬 Contact CMBC':label;
+    });
+  }
+
   function build(){
-    addNavLink(document.querySelector('.desktop-nav'),'#kids-corner','🧒 Kids','kids-nav-link');
-    addNavLink(document.querySelector('.desktop-nav'),'#contact','Contact','contact-nav-link');
-    addNavLink(document.querySelector('#mobileMenu'),'#kids-corner','🧒 Kids Corner','kids-nav-link');
-    addNavLink(document.querySelector('#mobileMenu'),'#contact','📬 Contact CMBC','contact-nav-link');
+    const desktop=document.querySelector('.desktop-nav');
+    const mobile=document.querySelector('#mobileMenu');
+    addNavLink(desktop,'#kids-corner','🧒 Kids','kids-nav-link');
+    addNavLink(desktop,'#contact','📬 Contact','contact-nav-link');
+    addNavLink(mobile,'#kids-corner','🧒 Kids Corner','kids-nav-link');
+    addNavLink(mobile,'#contact','📬 Contact CMBC','contact-nav-link');
+    labelNav(desktop,false);
+    labelNav(mobile,true);
 
     if(!document.querySelector('#contact')){
       const visit=document.querySelector('#visit');
