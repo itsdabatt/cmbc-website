@@ -1,12 +1,5 @@
 {
-  "featured": {
-    "title": "Praise in the Park",
-    "start": "2026-08-23T11:00:00-04:00",
-    "durationMinutes": 120,
-    "location": "Cannelton Ballfield",
-    "summary": "CMBC Annual Church Picnic • 11:00 AM Kids Singing & Praise • Preaching & Worship • 12:00 PM Time to Eat • CMBC provides chicken & hot dogs • Bring a vegetable, salad, or dessert • Bring lawn chairs • Everyone welcome",
-    "anchor": "#picnic"
-  },
+  "featured": null,
   "weekly": [
     {"day":0,"hour":10,"minute":0,"durationMinutes":60,"title":"Sunday School","details":"Sunday • 10:00 AM","anchor":"#times"},
     {"day":0,"hour":11,"minute":0,"durationMinutes":75,"title":"Morning Worship","details":"Sunday • 11:00 AM","anchor":"#times"},
