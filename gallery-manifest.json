@@ -2,11 +2,19 @@
   "photos": [
     {
       "album": "worship",
+      "src": "gallery/worship/IMG_3312.jpg"
+    },
+    {
+      "album": "worship",
       "src": "gallery/worship/IMG_3142.HEIC"
     },
     {
       "album": "worship",
       "src": "gallery/worship/IMG_0079.HEIC"
+    },
+    {
+      "album": "worship",
+      "src": "gallery/worship/4DB88B7A-7662-4B59-801E-55E216106285.jpg"
     },
     {
       "album": "church-family",
@@ -98,6 +106,14 @@
     },
     {
       "album": "byf-youth",
+      "src": "gallery/byf-youth/IMG_0404.jpg"
+    },
+    {
+      "album": "byf-youth",
+      "src": "gallery/byf-youth/IMG_0402.jpg"
+    },
+    {
+      "album": "byf-youth",
       "src": "gallery/byf-youth/_DSC8675-2.JPEG"
     },
     {
@@ -127,6 +143,10 @@
     {
       "album": "byf-youth",
       "src": "gallery/byf-youth/_DSC8429.JPEG"
+    },
+    {
+      "album": "byf-youth",
+      "src": "gallery/byf-youth/47E0EFD9-14A9-4F2D-8915-192F1E8F970A.jpg"
     }
   ]
 }
