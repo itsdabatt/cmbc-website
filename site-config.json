@@ -1,0 +1,42 @@
+{
+  "siteMode": "september-2026",
+  "verseOfMonth": {
+    "month": "September 2026",
+    "reference": "Psalm 29:11 KJV",
+    "text": "The LORD will give strength unto his people; the LORD will bless his people with peace."
+  },
+  "featuredEvent": {
+    "title": "Fire Safety Evening",
+    "dateLabel": "Friday, September 25, 2026",
+    "start": "2026-09-25T17:00:00-04:00",
+    "end": "2026-09-25T19:00:00-04:00",
+    "timeLabel": "5:00–7:00 PM",
+    "location": "Campbell Memorial Baptist Church",
+    "address": "115 Longacre Way, Smithers, WV",
+    "summary": "A free community outreach evening bringing families together for fire-safety education, connection with local firefighters, church hospitality, and family-friendly activities.",
+    "anchor": "#featured-event"
+  },
+  "upcoming": [
+    {"date":"September 25","icon":"🚒","title":"Fire Safety Evening","details":"5:00–7:00 PM • Free community outreach"},
+    {"date":"September 30","icon":"🍕","title":"Pizza Night","details":"BYF Wednesday • Fellowship & fun"},
+    {"date":"October 2","icon":"🎬","title":"Movie Night","details":"Friday evening • More details coming soon"}
+  ],
+  "weekly": [
+    {"day":0,"hour":10,"minute":0,"durationMinutes":60,"title":"Sunday School","details":"Sunday • 10:00 AM","anchor":"#times"},
+    {"day":0,"hour":11,"minute":0,"durationMinutes":75,"title":"Morning Worship","details":"Sunday • 11:00 AM","anchor":"#times"},
+    {"day":3,"hour":18,"minute":25,"durationMinutes":80,"title":"BYF Youth Service","details":"Wednesday • 6:25–7:45 PM","anchor":"#byf"},
+    {"day":3,"hour":19,"minute":0,"durationMinutes":60,"title":"Adult Bible Study","details":"Wednesday • 7:00–8:00 PM","anchor":"#times"}
+  ],
+  "ticker": [
+    "📖 Verse of the Month • Psalm 29:11 KJV",
+    "⛪ Sunday School • Sundays 10:00 AM",
+    "🙌 Morning Worship • Sundays 11:00 AM",
+    "🎉 BYF • Wednesdays 6:25–7:45 PM",
+    "📖 Adult Bible Study • Wednesdays 7:00–8:00 PM",
+    "🚒 Fire Safety Evening • Friday, September 25 • 5:00–7:00 PM",
+    "🍕 Pizza Night • Wednesday, September 30",
+    "🎬 Movie Night • Friday, October 2",
+    "🙏 Prayer requests are always welcome — send as many as you need",
+    "🧒 Kids Corner • Monthly Bible Adventure + printables"
+  ]
+}
