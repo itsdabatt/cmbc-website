@@ -1,28 +1,28 @@
 {
-  "id": "2026-08-praise-god",
-  "month": "August 2026",
-  "theme": "Praise God!",
-  "verseReference": "Psalm 34:3 KJV",
-  "verseText": "O magnify the LORD with me, and let us exalt his name together.",
-  "intro": "Open your Bible, learn God's Word, get moving, and make something to bring back to church! Complete all three missions, print this month's pages, and bring your finished work to CMBC for our Little Artists Wall!",
+  "id": "2026-09-strength-peace",
+  "month": "September 2026",
+  "theme": "Strength & Peace",
+  "verseReference": "Psalm 29:11 KJV",
+  "verseText": "The LORD will give strength unto his people; the LORD will bless his people with peace.",
+  "intro": "September is here! Open your Bible, learn God's Word, get moving, and complete this month's three Bible Adventure missions. New coloring and activity pages are coming this month!",
   "read": {
     "title": "Open Your Bible",
-    "text": "Find Psalm 34:3. Read it out loud with somebody in your family. Then tap complete!",
+    "text": "Find Psalm 29:11. Read it out loud with somebody in your family. What two gifts does the LORD give His people?",
     "button": "I READ IT! ✓"
   },
   "move": {
-    "title": "Praise in Motion",
-    "text": "Say the memory verse while doing 3 praise jumps, 3 big claps, and 3 reaches toward the sky. Movement helps us remember!",
+    "title": "Strong & Steady",
+    "text": "Stand tall and strong for 10 seconds, take 3 slow peaceful breaths, then say: The LORD gives strength and peace!",
     "button": "I MOVED IT! ✓"
   },
   "learn": {
     "title": "Bible Challenge",
-    "question": "Psalm 34:3 tells us to do something together. What is it?",
-    "answer": "Magnify the Lord and exalt His name together! 🙌",
+    "question": "According to Psalm 29:11, what will the LORD give His people and what will He bless them with?",
+    "answer": "Strength and peace! 🙌",
     "button": "I LEARNED IT! ✓"
   },
   "coloringImage": "images/kidscornercolorpage1.png",
   "activityImage": "images/kidscorneractivitypage1.png",
-  "artistWallMessage": "Bring it back → We'll display completed pages on the CMBC Kids' Corner Wall!",
-  "completionMessage": "🏆 Bible Adventure Complete! Bring your pages to church!"
+  "artistWallMessage": "New September coloring and activity pages are coming soon!",
+  "completionMessage": "🏆 September Bible Adventure Complete! Great job!"
 }
