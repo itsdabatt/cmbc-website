@@ -1,5 +1,15 @@
 {
-  "featured": null,
+  "featured": {
+    "title": "Fire Safety Evening",
+    "start": "2026-09-25T17:00:00-04:00",
+    "location": "Campbell Memorial Baptist Church • 115 Longacre Way, Smithers, WV",
+    "summary": "Free community outreach • Fire safety • Family connection • 5:00–7:00 PM",
+    "anchor": "#picnic"
+  },
+  "upcoming": [
+    {"title":"Pizza Night","start":"2026-09-30T18:25:00-04:00","anchor":"#byf"},
+    {"title":"Movie Night","start":"2026-10-02T18:00:00-04:00","anchor":"#byf"}
+  ],
   "weekly": [
     {"day":0,"hour":10,"minute":0,"durationMinutes":60,"title":"Sunday School","details":"Sunday • 10:00 AM","anchor":"#times"},
     {"day":0,"hour":11,"minute":0,"durationMinutes":75,"title":"Morning Worship","details":"Sunday • 11:00 AM","anchor":"#times"},
