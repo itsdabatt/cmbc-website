@@ -1,0 +1,65 @@
+/* CMBC ALL-AGES USABILITY LAYER — designed for phones first and ages 1–101 */
+:root{--cmbc-user-scale:1}
+html{font-size:calc(16px * var(--cmbc-user-scale));scroll-behavior:smooth}
+body{font-size:1.0625rem;line-height:1.62;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+
+/* Clear keyboard/focus treatment */
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,[tabindex]:focus-visible{outline:4px solid #ffc83d!important;outline-offset:4px!important;border-radius:8px}
+button,a,input,textarea,select{touch-action:manipulation}
+button,.btn,.desktop-nav a,.mobile-menu a,.quick-card,.album-card,.gallery-all{min-height:44px}
+
+/* Active navigation makes orientation obvious */
+.desktop-nav a,.mobile-menu a{border-radius:10px;transition:background .18s,color .18s,transform .18s}
+.desktop-nav a{padding:9px 8px}
+.desktop-nav a[aria-current="page"],.desktop-nav a:hover{background:rgba(255,200,61,.14);color:#ffc83d}
+.mobile-menu a[aria-current="page"]{background:rgba(255,200,61,.16);border-color:rgba(255,200,61,.55);color:#ffe28a}
+
+/* Usability controls */
+.cmbc-tools-toggle{position:fixed;right:16px;bottom:18px;z-index:9200;width:52px;height:52px;border:2px solid rgba(255,255,255,.35);border-radius:50%;background:#071b39;color:#fff;font-weight:1000;box-shadow:0 10px 28px rgba(0,0,0,.3);cursor:pointer}
+.cmbc-tools{position:fixed;right:16px;bottom:80px;z-index:9199;width:min(320px,calc(100vw - 28px));background:#fff;color:#071b39;border-radius:20px;padding:16px;box-shadow:0 18px 50px rgba(0,0,0,.28);border:1px solid #dfe7f1;display:none}
+.cmbc-tools.open{display:block}.cmbc-tools h3{margin:0 0 4px;font-size:1.05rem}.cmbc-tools p{margin:0 0 12px;color:#617087;font-size:.88rem;line-height:1.4}.cmbc-tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.cmbc-tools button{border:1px solid #dbe4ef;border-radius:12px;background:#f7f9fc;color:#071b39;font-weight:900;padding:10px 8px;cursor:pointer}.cmbc-tools button:hover{background:#fff1b8}.cmbc-tools .wide{grid-column:1/-1}.cmbc-tools button[aria-pressed="true"]{background:#071b39;color:#fff;border-color:#071b39}
+
+/* Back to top */
+.cmbc-top{position:fixed;left:16px;bottom:18px;z-index:9100;width:50px;height:50px;border:0;border-radius:50%;background:#ffc83d;color:#071b39;font-size:1.25rem;font-weight:1000;box-shadow:0 10px 28px rgba(0,0,0,.24);opacity:0;pointer-events:none;transform:translateY(10px);transition:.2s}.cmbc-top.show{opacity:1;pointer-events:auto;transform:none}
+
+/* Make forms extremely easy to use */
+input,select,textarea{border-radius:12px!important}
+input,select{min-height:50px}
+textarea{min-height:140px}
+label{font-weight:800}
+.prayer-form,.contact-form{max-width:760px}
+.prayer-form button[type="submit"],.contact-form button[type="submit"]{min-height:56px;font-size:1rem}
+
+/* Reduce accidental tiny text */
+.section p,.event-card p,.sep-card p,.cal-card span,.mini-feature span{line-height:1.58}
+.quick-card span{line-height:1.45}
+
+/* Calm view for motion-sensitive visitors */
+body.cmbc-calm *,body.cmbc-calm *:before,body.cmbc-calm *:after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+body.cmbc-calm .sports-ticker{display:none!important}
+body.cmbc-calm .hero-stars,body.cmbc-calm .hero-glow,body.cmbc-calm .scroll-cue,body.cmbc-calm .scroll-progress{display:none!important}
+
+/* High-readability mode */
+body.cmbc-high-read{letter-spacing:.012em}
+body.cmbc-high-read p,body.cmbc-high-read li,body.cmbc-high-read label,body.cmbc-high-read span{line-height:1.72}
+body.cmbc-high-read .section-head p,body.cmbc-high-read .quick-card span,body.cmbc-high-read .cal-card span{color:#33445c}
+
+/* Phone dock — stable, thumb friendly, always understandable */
+.cmbc-phone-dock{display:none}
+@media(max-width:760px){
+ body{padding-bottom:86px!important;font-size:1rem}
+ .cmbc-tools-toggle{right:10px;bottom:94px;width:48px;height:48px}.cmbc-tools{right:10px;bottom:150px}.cmbc-top{left:10px;bottom:94px;width:46px;height:46px}
+ .cmbc-phone-dock{position:fixed;left:0;right:0;bottom:0;z-index:9000;display:grid;grid-template-columns:repeat(5,1fr);gap:2px;padding:7px 5px calc(7px + env(safe-area-inset-bottom));background:rgba(5,20,43,.98);border-top:1px solid rgba(255,255,255,.13);box-shadow:0 -10px 28px rgba(0,0,0,.25);backdrop-filter:blur(16px)}
+ .cmbc-phone-dock a{min-width:0;min-height:54px;color:#fff;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-weight:900;text-align:center}
+ .cmbc-phone-dock a i{font-style:normal;font-size:1.2rem;line-height:1}.cmbc-phone-dock a span{font-size:.59rem;line-height:1.05}.cmbc-phone-dock a[aria-current="page"]{background:rgba(255,200,61,.18);color:#ffe28a}
+ .headline-inner{padding-left:2px;padding-right:2px}
+ .hero-actions .btn,.next-actions .btn,.sep-actions .sep-btn{min-height:52px!important}
+ .quick-card{min-height:158px}
+ .calendar-shell iframe{min-height:520px}
+ .sep-calendar-preview{overflow:hidden;border-radius:18px}.sep-calendar-preview img{width:100%;height:auto}
+ .site-header{position:sticky;top:0}
+}
+
+@media(max-width:390px){.cmbc-tools-grid{grid-template-columns:1fr 1fr}.cmbc-tools .wide{grid-column:1/-1}.cmbc-phone-dock a span{font-size:.55rem}}
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cmbc-tools-toggle,.cmbc-top{transition:none}.sports-ticker{display:none}}
