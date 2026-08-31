@@ -1,28 +1,28 @@
 {
-  "id": "2026-09-strength-peace",
+  "id": "2026-09-fall-praise",
   "month": "September 2026",
-  "theme": "Strength & Peace",
-  "verseReference": "Psalm 29:11 KJV",
-  "verseText": "The LORD will give strength unto his people; the LORD will bless his people with peace.",
-  "intro": "September is here! Open your Bible, learn God's Word, get moving, and complete this month's three Bible Adventure missions. New coloring and activity pages are coming this month!",
+  "theme": "Fall Praise",
+  "verseReference": "Psalm 100:4 KJV",
+  "verseText": "Enter into his gates with thanksgiving, and into his courts with praise: be thankful unto him, and bless his name.",
+  "intro": "September is here! Celebrate fall, praise God, open your Bible, get moving, and enjoy this month's brand-new coloring page and activity sheet.",
   "read": {
     "title": "Open Your Bible",
-    "text": "Find Psalm 29:11. Read it out loud with somebody in your family. What two gifts does the LORD give His people?",
+    "text": "Find Psalm 100:4-5. Read it out loud with somebody in your family. What does the Bible tell us to enter His gates with?",
     "button": "I READ IT! ✓"
   },
   "move": {
-    "title": "Strong & Steady",
-    "text": "Stand tall and strong for 10 seconds, take 3 slow peaceful breaths, then say: The LORD gives strength and peace!",
+    "title": "Fall Praise Moves",
+    "text": "Do 3 praise jumps, 3 big claps, and 3 reaches toward the sky. Then say: Praise God!",
     "button": "I MOVED IT! ✓"
   },
   "learn": {
     "title": "Bible Challenge",
-    "question": "According to Psalm 29:11, what will the LORD give His people and what will He bless them with?",
-    "answer": "Strength and peace! 🙌",
+    "question": "According to Psalm 100:4, how should we enter His gates and His courts?",
+    "answer": "With thanksgiving and with praise! 🙌",
     "button": "I LEARNED IT! ✓"
   },
-  "coloringImage": "images/kidscornercolorpage1.png",
-  "activityImage": "images/kidscorneractivitypage1.png",
-  "artistWallMessage": "New September coloring and activity pages are coming soon!",
+  "coloringImage": "images/kids-september-2026-coloring.png",
+  "activityImage": "images/kids-september-2026-activity.png",
+  "artistWallMessage": "September's fall coloring page and Bible activity are here!",
   "completionMessage": "🏆 September Bible Adventure Complete! Great job!"
 }
