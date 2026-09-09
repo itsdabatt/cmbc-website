@@ -8,14 +8,14 @@
       type:'flyer',
       title:'🚒 Fire Safety Evening Flyer',
       text:'Event details, date, time, family activities, church information, and how to join us.',
-      src:'images/fire-safety-evening-2026.png',
+      src:'images/36.png',
       alt:'Campbell Memorial Baptist Church Fire Safety Evening flyer for Friday September 25, 2026 from 5:00 PM to 7:00 PM'
     },
     {
       type:'kids',
       title:'🧯 Kids Fire Safety Activity Page',
       text:'A kid-friendly color, learn, and stay-safe page with simple fire-safety reminders.',
-      src:'images/fire-safety-kids-2026.png',
+      src:'images/35.png',
       alt:'CMBC kids Fire Safety Evening activity and coloring page with fire safety tips'
     }
   ];
