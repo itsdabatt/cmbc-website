@@ -13,11 +13,12 @@
     "timeLabel": "5:00–7:00 PM",
     "location": "Campbell Memorial Baptist Church",
     "address": "115 Longacre Way, Smithers, WV",
-    "summary": "A free community outreach evening bringing families together for fire-safety education, connection with local firefighters, church hospitality, and family-friendly activities.",
+    "summary": "A free community outreach evening with fire-safety education, local firefighters, family-friendly activities, and FREE hotdogs and drinks provided by CMBC. Everyone is welcome.",
+    "food": "FREE hotdogs and drinks provided by CMBC",
     "anchor": "#featured-event"
   },
   "upcoming": [
-    {"date":"September 25","icon":"🚒","title":"Fire Safety Evening","details":"5:00–7:00 PM • Free community outreach"},
+    {"date":"September 25","icon":"🚒","title":"Fire Safety Evening","details":"5:00–7:00 PM • FREE hotdogs & drinks • Everyone welcome"},
     {"date":"September 30","icon":"🍕","title":"Pizza Night","details":"BYF Wednesday • Fellowship & fun"},
     {"date":"October 2","icon":"🎬","title":"Movie Night","details":"Friday evening • More details coming soon"}
   ],
@@ -34,6 +35,8 @@
     "🎉 BYF • Wednesdays 6:25–7:45 PM",
     "📖 Adult Bible Study • Wednesdays 7:00–8:00 PM",
     "🚒 Fire Safety Evening • Friday, September 25 • 5:00–7:00 PM",
+    "🌭 FREE HOTDOGS & DRINKS • Provided by CMBC at Fire Safety Evening",
+    "👨‍🚒 Come meet and support our local firefighters • Everyone welcome",
     "🍕 Pizza Night • Wednesday, September 30",
     "🎬 Movie Night • Friday, October 2",
     "🙏 Prayer requests are always welcome — send as many as you need",
