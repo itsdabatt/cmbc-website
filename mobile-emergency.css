@@ -1,60 +1,13 @@
-/* Sept 24 mobile cleanup: nothing important should be covered. Loaded LAST. */
+/* Mobile cleanup: nothing important should be covered. Loaded LAST. */
 @media(max-width:760px){
- html{scroll-padding-top:68px}
- body{padding-bottom:calc(76px + env(safe-area-inset-bottom))!important}
- /* Only one bottom navigation. The newer dock is the source of truth. */
- .mobile-dock{display:none!important}
- .cmbc-phone-dock{display:grid!important;z-index:7000!important}
- /* Floating utilities must never sit over reading/actions. */
- .music-player,.hymn-player{display:none!important}
- .cmbc-tools-toggle{right:8px!important;bottom:calc(80px + env(safe-area-inset-bottom))!important;z-index:7100!important;width:44px!important;height:44px!important}
- .cmbc-top{left:8px!important;bottom:calc(80px + env(safe-area-inset-bottom))!important;z-index:7100!important;width:44px!important;height:44px!important}
- .cmbc-tools{right:8px!important;left:8px!important;width:auto!important;bottom:calc(132px + env(safe-area-inset-bottom))!important;z-index:7200!important;max-height:55dvh!important;overflow:auto!important}
- /* No game/toast overlays can cover church content. */
+ html{scroll-padding-top:68px}body{padding-bottom:calc(76px + env(safe-area-inset-bottom))!important}
+ .mobile-dock{display:none!important}.cmbc-phone-dock{display:grid!important;z-index:7000!important}
+ /* Compact in-flow hymn player: visible titles without covering the page. */
+ .music-player{display:grid!important;position:relative!important;right:auto!important;left:auto!important;bottom:auto!important;width:calc(100% - 20px)!important;max-width:520px!important;margin:18px auto!important;grid-template-columns:44px minmax(0,1fr) 44px!important;gap:9px!important;padding:11px!important;border-radius:16px!important;z-index:20!important}
+ .music-player .album-art{width:44px!important;height:44px!important}.music-player .music-info{display:block!important;min-width:0!important}.music-player .music-info b{display:block!important;color:#fff!important;font-size:.92rem!important;line-height:1.2!important;white-space:normal!important;overflow:visible!important}.music-player .music-info span{display:block!important;font-size:.64rem!important;color:#d7e1ef!important;white-space:normal!important;overflow:visible!important}.music-player .music-info select{display:block!important;width:100%!important;max-width:none!important;min-height:38px!important;margin-top:5px!important;color:#fff!important;background:#102d50!important;font-size:.78rem!important}.music-player #musicToggle{display:block!important;width:42px!important;height:42px!important}.music-player #musicVolume,.music-player #musicMinimize{display:none!important}.music-player.minimized{grid-template-columns:44px minmax(0,1fr) 44px!important;width:calc(100% - 20px)!important}.music-player.minimized .music-info{display:block!important}
+ .cmbc-tools-toggle{right:8px!important;bottom:calc(80px + env(safe-area-inset-bottom))!important;z-index:7100!important;width:44px!important;height:44px!important}.cmbc-top{left:8px!important;bottom:calc(80px + env(safe-area-inset-bottom))!important;z-index:7100!important;width:44px!important;height:44px!important}.cmbc-tools{right:8px!important;left:8px!important;width:auto!important;bottom:calc(132px + env(safe-area-inset-bottom))!important;z-index:7200!important;max-height:55dvh!important;overflow:auto!important}
  #cmbcToast,.cmbc-toast{position:fixed!important;top:auto!important;right:10px!important;left:10px!important;bottom:calc(82px + env(safe-area-inset-bottom))!important;max-width:none!important;z-index:6900!important}
- /* Header stays useful without eating the whole screen. */
- .site-header{position:sticky!important;top:0!important}
- .nav-wrap{min-height:58px!important}
- .headline-bar{position:relative!important}
- .headline-inner{min-height:48px!important}
- .sports-ticker{display:flex!important;position:relative!important;z-index:20!important;height:38px!important}
- .ticker-label{flex:0 0 82px!important;width:82px!important}
- .ticker-viewport{min-width:0!important;overflow:hidden!important}
- .ticker-track{display:flex!important;width:max-content!important;white-space:nowrap!important}
- /* Main content can always breathe and wrap. */
- main,section,.container,.sep-card,.firefest-resource-card{min-width:0!important;max-width:100%!important}
- h1,h2,h3,h4,p,span,b,strong,a{overflow-wrap:break-word}
- .hero{min-height:auto!important}
- .hero-copy{padding:34px 0 54px!important}
- .hero h1{font-size:clamp(2.35rem,12vw,3.15rem)!important}
- .hero blockquote{font-size:.88rem!important}
- .hero-actions{grid-template-columns:1fr!important}
- .quick-links{margin-top:0!important;padding-top:12px!important}
- .quick-grid{grid-template-columns:1fr 1fr!important}
- .section{padding:48px 0!important}
- .sep-hub{padding:48px 0!important}
- .sep-card{padding:16px!important;border-radius:18px!important}
- .sep-title{font-size:clamp(2.1rem,11vw,3rem)!important}
- .sep-lead{font-size:.96rem!important}
- .sep-meta span{white-space:normal!important}
- .sep-public-list div{font-size:.92rem!important}
- .sep-safety button{min-height:58px!important}
- .firefest-resource-grid{grid-template-columns:1fr!important}
- .firefest-resource-card{overflow:hidden!important}
- .firefest-image-button img{width:100%!important;height:auto!important;max-height:none!important}
- .calendar-shell iframe{height:480px!important}
- .gallery-grid,.gallery-live{grid-template-columns:1fr 1fr!important}
- .prayer-form,.contact-form{padding:17px!important}
- input,select,textarea{width:100%!important;max-width:100%!important;font-size:16px!important}
- /* First visit remains one-time and compact. */
- .cmbc-first-visit{position:relative!important;z-index:30!important}
- .cmbc-first-actions{grid-template-columns:1fr 1fr!important}
- /* Modals stay inside the visible phone viewport. */
- .modal,.lightbox,.firefest-viewer{z-index:9500!important}
- .modal-card,.firefest-viewer figure{max-height:82dvh!important;overflow:auto!important}
+ .site-header{position:sticky!important;top:0!important}.nav-wrap{min-height:58px!important}.headline-bar{position:relative!important}.headline-inner{min-height:48px!important}.sports-ticker{display:flex!important;position:relative!important;z-index:20!important;height:38px!important}.ticker-label{flex:0 0 82px!important;width:82px!important}.ticker-viewport{min-width:0!important;overflow:hidden!important}.ticker-track{display:flex!important;width:max-content!important;white-space:nowrap!important}
+ main,section,.container,.sep-card,.firefest-resource-card{min-width:0!important;max-width:100%!important}h1,h2,h3,h4,p,span,b,strong,a{overflow-wrap:break-word}.hero{min-height:auto!important}.hero-copy{padding:34px 0 54px!important}.hero h1{font-size:clamp(2.35rem,12vw,3.15rem)!important}.hero blockquote{font-size:.88rem!important}.hero-actions{grid-template-columns:1fr!important}.quick-links{margin-top:0!important;padding-top:12px!important}.quick-grid{grid-template-columns:1fr 1fr!important}.section{padding:48px 0!important}.sep-hub{padding:48px 0!important}.sep-card{padding:16px!important;border-radius:18px!important}.sep-title{font-size:clamp(2.1rem,11vw,3rem)!important}.sep-lead{font-size:.96rem!important}.sep-meta span{white-space:normal!important}.sep-public-list div{font-size:.92rem!important}.sep-safety button{min-height:58px!important}.firefest-resource-grid{grid-template-columns:1fr!important}.firefest-resource-card{overflow:hidden!important}.firefest-image-button img{width:100%!important;height:auto!important;max-height:none!important}.calendar-shell iframe{height:480px!important}.gallery-grid,.gallery-live{grid-template-columns:1fr 1fr!important}.prayer-form,.contact-form{padding:17px!important}input,select,textarea{width:100%!important;max-width:100%!important;font-size:16px!important}.cmbc-first-visit{position:relative!important;z-index:30!important}.cmbc-first-actions{grid-template-columns:1fr 1fr!important}.modal,.lightbox,.firefest-viewer{z-index:9500!important}.modal-card,.firefest-viewer figure{max-height:82dvh!important;overflow:auto!important}
 }
-@media(max-width:380px){
- .quick-grid,.cmbc-first-actions,.gallery-grid,.gallery-live{grid-template-columns:1fr!important}
- .headline-inner b{font-size:.62rem!important}
- .headline-inner a{font-size:.58rem!important}
-}
+@media(max-width:380px){.quick-grid,.cmbc-first-actions,.gallery-grid,.gallery-live{grid-template-columns:1fr!important}.headline-inner b{font-size:.62rem!important}.headline-inner a{font-size:.58rem!important}}
