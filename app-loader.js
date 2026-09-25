@@ -1,6 +1,6 @@
 /* Loader for the full CMBC interactive app. */
 (function(){
-  const version='20260924firefesteve1';
+  const version='20260925firefestday2';
   if(!document.querySelector('script[data-tailwind-cmbc]')){const tw=document.createElement('script');tw.src='https://cdn.tailwindcss.com';tw.dataset.tailwindCmbc='1';document.head.appendChild(tw);}
   const css=[['church-app.css','cmbcApp'],['kids-corner.css','cmbcKids'],['connect.css','cmbcConnect'],['site-current.css','cmbcCurrent'],['ease-of-use.css','cmbcEase'],['firefest-resources.css','cmbcFirefest'],['desktop-revamp.css','cmbcDesktopRevamp'],['mobile-emergency.css','cmbcMobileEmergency']];
   css.forEach(([href,key])=>{if(!document.querySelector(`link[data-${key}]`)){const l=document.createElement('link');l.rel='stylesheet';l.href=href+'?v='+version;l.setAttribute(`data-${key}`,'1');document.head.appendChild(l)}});
