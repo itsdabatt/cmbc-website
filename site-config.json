@@ -1,11 +1,11 @@
 {
-  "siteMode":"september-2026",
+  "siteMode":"normal-fall-2026",
   "verseOfMonth":{"month":"September 2026","reference":"Psalm 29:11 KJV","text":"The LORD will give strength unto his people; the LORD will bless his people with peace."},
-  "featuredEvent":{"title":"Fire Safety Evening — TODAY!","dateLabel":"TODAY • Friday, September 25, 2026","start":"2026-09-25T17:00:00-04:00","end":"2026-09-25T19:00:00-04:00","timeLabel":"5:00–7:00 PM","location":"Campbell Memorial Baptist Church","address":"115 Longacre Way, Smithers, WV","summary":"TODAY! Join us from 5:00–7:00 PM for a FREE community Fire Safety Evening. Montgomery Fire Department and Boomer Fire Department will be with us! Come meet our local firefighters, learn about fire safety, enjoy family-friendly activities, and get FREE hotdogs and drinks provided by CMBC. Bring the family — everyone is welcome!","food":"FREE hotdogs and drinks provided by CMBC","anchor":"#featured-event"},
+  "featuredEvent":{"title":"Montgomery Fall Fest","dateLabel":"Saturday, October 3, 2026","start":"2026-10-03","timeLabel":"Time to be announced","location":"Montgomery Fall Fest","address":"Montgomery, WV","summary":"Campbell Memorial Baptist Church will be at Montgomery Fall Fest on Saturday, October 3. Come see us, say hello, and connect with our church family while we join our community for Fall Fest.","anchor":"#featured-event"},
   "upcoming":[
-    {"date":"TODAY","icon":"🔥","title":"Fire Safety Evening","details":"5:00–7:00 PM • Montgomery & Boomer Fire Departments • FREE hotdogs & drinks • Everyone welcome"},
     {"date":"September 30","icon":"🍕","title":"Pizza Night","details":"BYF Wednesday • Fellowship & fun"},
-    {"date":"October 2","icon":"🎬","title":"Movie Night","details":"Friday evening • More details coming soon"}
+    {"date":"October 2","icon":"🎬","title":"Movie Night","details":"Friday • Church family movie night"},
+    {"date":"October 3","icon":"🍂","title":"Montgomery Fall Fest","details":"Saturday • CMBC will be there • Montgomery, WV"}
   ],
   "weekly":[
     {"day":0,"hour":10,"minute":0,"durationMinutes":60,"title":"Sunday School","details":"Sunday • 10:00 AM","anchor":"#times"},
@@ -14,17 +14,15 @@
     {"day":3,"hour":19,"minute":0,"durationMinutes":60,"title":"Adult Bible Study","details":"Wednesday • 7:00–8:00 PM","anchor":"#times"}
   ],
   "ticker":[
-    "🔥 TODAY! FIRE SAFETY EVENING • 5:00–7:00 PM • Everyone welcome",
-    "🚒 MONTGOMERY FIRE DEPARTMENT + BOOMER FIRE DEPARTMENT will be with us!",
-    "🌭🥤 FREE HOTDOGS & DRINKS • Provided by CMBC • While supplies last",
-    "👨‍🚒 Meet our local firefighters • Learn fire safety • Bring the family",
-    "📍 TONIGHT at CMBC • 115 Longacre Way, Smithers, WV",
-    "⛪ Sunday School • Sundays 10:00 AM",
-    "🙌 Morning Worship • Sundays 11:00 AM",
+    "⛪ YOU'RE WELCOME AT CMBC • Sunday School 10 AM • Morning Worship 11 AM",
+    "🍕 PIZZA NIGHT • Wednesday, September 30 • BYF",
+    "🎬 MOVIE NIGHT • Friday, October 2",
+    "🍂 BIG COMMUNITY EVENT • CMBC at Montgomery Fall Fest • Saturday, October 3",
+    "📍 FALL FEST • Montgomery, WV • Come see us!",
     "🎉 BYF • Wednesdays 6:25–7:45 PM",
     "📖 Adult Bible Study • Wednesdays 7:00–8:00 PM",
-    "🍕 Pizza Night • Wednesday, September 30",
-    "🎬 Movie Night • Friday, October 2",
-    "🙏 Prayer requests are always welcome — send as many as you need"
+    "🙏 Prayer requests are always welcome — send as many as you need",
+    "🧒 Kids Church • During Morning Worship",
+    "❤️ Faith • Family • Fellowship • All are welcome"
   ]
 }
