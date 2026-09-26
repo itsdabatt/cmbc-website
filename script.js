@@ -62,18 +62,5 @@ function confetti(count=24){if(matchMedia('(prefers-reduced-motion: reduce)').ma
     document.body.appendChild(s);
   }
 
-  /* Correct stale hard-coded picnic copy still present in the page markup. */
-  const picnic=$('#picnic');
-  if(picnic){
-    const cards=$$('.event-card',picnic);
-    if(cards[0]) cards[0].innerHTML='<small>SUNDAY • AUGUST 23</small><h3>🌳 Praise in the Park</h3><p><b>11:00 AM • Cannelton Ballfield</b></p><p>🎶 <b>Kids Singing & Praise</b> begins at 11:00 AM, followed by preaching and worship.</p><p>🍗 CMBC provides chicken and hot dogs. 🥗 Please bring a vegetable, salad, or dessert to share. 🪑 Bring your lawn chairs!</p>';
-    if(cards[1]) cards[1].innerHTML='<small>12:00 PM</small><h3>🍽️ TIME TO EAT!</h3><p>We’ll eat at noon and enjoy food, fellowship, and time together as a church family.</p>';
-    if(cards[2]) cards[2].innerHTML='<small>11:00 AM</small><h3>🎶 Kids Singing & Praise</h3><p>Come hear our kids sing, worship together, and hear the preaching of God’s Word before lunch.</p>';
-    if(cards[3]) cards[3].innerHTML='<small>EVERYONE WELCOME</small><h3>❤️ Bring the Whole Family</h3><p>Come worship, hear our kids sing, enjoy a good meal, and spend time together in Christian fellowship.</p><p><em>“O magnify the Lord with me, and let us exalt his name together.”</em><br><b>Psalm 34:3 KJV</b></p>';
-    const flyerLink=$('.picnic-flyer a',picnic); if(flyerLink) flyerLink.href='images/8.16.26.png?v='+version;
-  }
-
-  if(tickerGroup){
-    tickerGroup.innerHTML='<span>🌳 Praise in the Park • Sunday, August 23 • 11:00 AM</span><span>📍 Cannelton Ballfield</span><span>🎶 11:00 AM • Kids Singing & Praise</span><span>📖 Preaching & Worship</span><span>🍽️ 12:00 PM • Time to Eat!</span><span>🍗 CMBC provides chicken & hot dogs</span><span>🥗 Bring a vegetable, salad, or dessert</span><span>🪑 Bring your lawn chairs</span><span>❤️ Everyone welcome</span>';
-  }
+  /* Event content is now owned by site-controller.js and site-config.json. */
 })();
