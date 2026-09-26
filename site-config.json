@@ -1,27 +1,86 @@
 {
-  "siteMode":"normal-fall-2026",
-  "verseOfMonth":{"month":"September 2026","reference":"Psalm 29:11 KJV","text":"The LORD will give strength unto his people; the LORD will bless his people with peace."},
-  "featuredEvent":{"title":"Montgomery Fall Fest","dateLabel":"Saturday, October 3, 2026","start":"2026-10-03","timeLabel":"Time to be announced","location":"Montgomery Fall Fest","address":"Montgomery, WV","summary":"Campbell Memorial Baptist Church will be at Montgomery Fall Fest on Saturday, October 3. Come see us, say hello, and connect with our church family while we join our community for Fall Fest.","anchor":"#featured-event"},
-  "upcoming":[
-    {"date":"September 30","icon":"🍕","title":"Pizza Night","details":"BYF Wednesday • Fellowship & fun"},
-    {"date":"October 2","icon":"🎬","title":"Movie Night","details":"Friday • Church family movie night"},
-    {"date":"October 3","icon":"🍂","title":"Montgomery Fall Fest","details":"Saturday • CMBC will be there • Montgomery, WV"}
+  "siteMode": "post-firefest-fall-2026",
+  "verseOfMonth": {
+    "month": "September 2026",
+    "reference": "Psalm 29:11 KJV",
+    "text": "The LORD will give strength unto his people; the LORD will bless his people with peace."
+  },
+  "featuredEvent": {
+    "title": "Pizza Night",
+    "dateLabel": "Wednesday, September 30, 2026",
+    "start": "2026-09-30T18:25:00-04:00",
+    "timeLabel": "BYF • 6:25–7:45 PM",
+    "location": "Campbell Memorial Baptist Church",
+    "summary": "Pizza Night is the next special night at CMBC. Join BYF Wednesday, September 30 for pizza, fellowship, and fun.",
+    "anchor": "#byf"
+  },
+  "upcoming": [
+    {
+      "date": "September 30",
+      "icon": "🍕",
+      "title": "Pizza Night",
+      "details": "Wednesday • BYF 6:25–7:45 PM"
+    },
+    {
+      "date": "October 2",
+      "icon": "🎬",
+      "title": "Movie Night",
+      "details": "Friday • Church family movie night"
+    },
+    {
+      "date": "October 3",
+      "icon": "🍂",
+      "title": "Montgomery Fall Fest",
+      "details": "Saturday • Montgomery, WV"
+    }
   ],
-  "weekly":[
-    {"day":0,"hour":10,"minute":0,"durationMinutes":60,"title":"Sunday School","details":"Sunday • 10:00 AM","anchor":"#times"},
-    {"day":0,"hour":11,"minute":0,"durationMinutes":75,"title":"Morning Worship","details":"Sunday • 11:00 AM","anchor":"#times"},
-    {"day":3,"hour":18,"minute":25,"durationMinutes":80,"title":"BYF Youth Service","details":"Wednesday • 6:25–7:45 PM","anchor":"#byf"},
-    {"day":3,"hour":19,"minute":0,"durationMinutes":60,"title":"Adult Bible Study","details":"Wednesday • 7:00–8:00 PM","anchor":"#times"}
+  "weekly": [
+    {
+      "day": 0,
+      "hour": 10,
+      "minute": 0,
+      "durationMinutes": 60,
+      "title": "Sunday School",
+      "details": "Sunday • 10:00 AM",
+      "anchor": "#times"
+    },
+    {
+      "day": 0,
+      "hour": 11,
+      "minute": 0,
+      "durationMinutes": 75,
+      "title": "Morning Worship",
+      "details": "Sunday • 11:00 AM",
+      "anchor": "#times"
+    },
+    {
+      "day": 3,
+      "hour": 18,
+      "minute": 25,
+      "durationMinutes": 80,
+      "title": "BYF Youth Service",
+      "details": "Wednesday • 6:25–7:45 PM",
+      "anchor": "#byf"
+    },
+    {
+      "day": 3,
+      "hour": 19,
+      "minute": 0,
+      "durationMinutes": 60,
+      "title": "Adult Bible Study",
+      "details": "Wednesday • 7:00–8:00 PM",
+      "anchor": "#times"
+    }
   ],
-  "ticker":[
-    "⛪ YOU'RE WELCOME AT CMBC • Sunday School 10 AM • Morning Worship 11 AM",
-    "🍕 PIZZA NIGHT • Wednesday, September 30 • BYF",
+  "ticker": [
+    "🍕 NEXT UP • Pizza Night • Wednesday, September 30 • BYF 6:25–7:45 PM",
     "🎬 MOVIE NIGHT • Friday, October 2",
-    "🍂 BIG COMMUNITY EVENT • CMBC at Montgomery Fall Fest • Saturday, October 3",
-    "📍 FALL FEST • Montgomery, WV • Come see us!",
+    "🍂 MONTGOMERY FALL FEST • Saturday, October 3 • Montgomery, WV",
+    "⛪ Sunday School • Sundays 10:00 AM",
+    "🙌 Morning Worship • Sundays 11:00 AM",
     "🎉 BYF • Wednesdays 6:25–7:45 PM",
     "📖 Adult Bible Study • Wednesdays 7:00–8:00 PM",
-    "🙏 Prayer requests are always welcome — send as many as you need",
+    "🙏 Prayer requests are always welcome",
     "🧒 Kids Church • During Morning Worship",
     "❤️ Faith • Family • Fellowship • All are welcome"
   ]
