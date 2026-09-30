@@ -1,81 +1,22 @@
 {
-  "siteMode": "post-firefest-fall-2026",
-  "verseOfMonth": {
-    "month": "September 2026",
-    "reference": "Psalm 29:11 KJV",
-    "text": "The LORD will give strength unto his people; the LORD will bless his people with peace."
-  },
-  "featuredEvent": {
-    "title": "Pizza Night",
-    "dateLabel": "Wednesday, September 30, 2026",
-    "start": "2026-09-30T18:25:00-04:00",
-    "timeLabel": "BYF • 6:25–7:45 PM",
-    "location": "Campbell Memorial Baptist Church",
-    "summary": "Pizza Night is the next special night at CMBC. Join BYF Wednesday, September 30 for pizza, fellowship, and fun.",
-    "anchor": "#byf"
-  },
-  "upcoming": [
-    {
-      "date": "September 30",
-      "icon": "🍕",
-      "title": "Pizza Night",
-      "details": "Wednesday • BYF 6:25–7:45 PM"
-    },
-    {
-      "date": "October 2",
-      "icon": "🎬",
-      "title": "Movie Night",
-      "details": "Friday • Church family movie night"
-    },
-    {
-      "date": "October 3",
-      "icon": "🍂",
-      "title": "Montgomery Fall Fest",
-      "details": "Saturday • Montgomery, WV"
-    }
+  "siteMode":"post-firefest-fall-2026",
+  "verseOfMonth":{"month":"September 2026","reference":"Psalm 29:11 KJV","text":"The LORD will give strength unto his people; the LORD will bless his people with peace."},
+  "featuredEvent":{"title":"Pizza Night","dateLabel":"Wednesday, September 30, 2026","start":"2026-09-30T18:25:00-04:00","timeLabel":"BYF • 6:25–7:45 PM","location":"Campbell Memorial Baptist Church","summary":"Pizza Night is tonight at CMBC. Join BYF for pizza, fellowship, and fun.","anchor":"#byf"},
+  "upcoming":[
+    {"date":"TONIGHT","icon":"🍕","title":"Pizza Night","details":"Wednesday • BYF 6:25–7:45 PM"},
+    {"date":"October 2","icon":"🎬","title":"Movie Night — Orion and the Dark","details":"Friday • Movie Night at CMBC"},
+    {"date":"October 3","icon":"🍂","title":"Montgomery Fall Fest","details":"Saturday • CMBC will be there • Montgomery, WV"}
   ],
-  "weekly": [
-    {
-      "day": 0,
-      "hour": 10,
-      "minute": 0,
-      "durationMinutes": 60,
-      "title": "Sunday School",
-      "details": "Sunday • 10:00 AM",
-      "anchor": "#times"
-    },
-    {
-      "day": 0,
-      "hour": 11,
-      "minute": 0,
-      "durationMinutes": 75,
-      "title": "Morning Worship",
-      "details": "Sunday • 11:00 AM",
-      "anchor": "#times"
-    },
-    {
-      "day": 3,
-      "hour": 18,
-      "minute": 25,
-      "durationMinutes": 80,
-      "title": "BYF Youth Service",
-      "details": "Wednesday • 6:25–7:45 PM",
-      "anchor": "#byf"
-    },
-    {
-      "day": 3,
-      "hour": 19,
-      "minute": 0,
-      "durationMinutes": 60,
-      "title": "Adult Bible Study",
-      "details": "Wednesday • 7:00–8:00 PM",
-      "anchor": "#times"
-    }
+  "weekly":[
+    {"day":0,"hour":10,"minute":0,"durationMinutes":60,"title":"Sunday School","details":"Sunday • 10:00 AM","anchor":"#times"},
+    {"day":0,"hour":11,"minute":0,"durationMinutes":75,"title":"Morning Worship","details":"Sunday • 11:00 AM","anchor":"#times"},
+    {"day":3,"hour":18,"minute":25,"durationMinutes":80,"title":"BYF Youth Service","details":"Wednesday • 6:25–7:45 PM","anchor":"#byf"},
+    {"day":3,"hour":19,"minute":0,"durationMinutes":60,"title":"Adult Bible Study","details":"Wednesday • 7:00–8:00 PM","anchor":"#times"}
   ],
-  "ticker": [
-    "🍕 NEXT UP • Pizza Night • Wednesday, September 30 • BYF 6:25–7:45 PM",
-    "🎬 MOVIE NIGHT • Friday, October 2",
-    "🍂 MONTGOMERY FALL FEST • Saturday, October 3 • Montgomery, WV",
+  "ticker":[
+    "🍕 TONIGHT • Pizza Night • BYF 6:25–7:45 PM",
+    "🎬 MOVIE NIGHT • Friday, October 2 • ORION AND THE DARK",
+    "🍂 MONTGOMERY FALL FEST • Saturday, October 3 • CMBC will be there",
     "⛪ Sunday School • Sundays 10:00 AM",
     "🙌 Morning Worship • Sundays 11:00 AM",
     "🎉 BYF • Wednesdays 6:25–7:45 PM",
