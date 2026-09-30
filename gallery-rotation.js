@@ -13,8 +13,13 @@
   const REDUCE = matchMedia('(prefers-reduced-motion: reduce)').matches;
   let photos = [], queue = [], current = -1, timer = null, paused = false;
 
-  const basename = src => decodeURIComponent((src || '').split('/').pop() || '').toLowerCase();
-  const valid = p => p && p.src && /\.(jpe?g|png|webp|gif)$/i.test(p.src);
+  const basename = src => {
+    try{
+      const u=new URL(src,location.href), id=u.searchParams.get('id');
+      return (id || decodeURIComponent((u.pathname||'').split('/').pop()||'')).toLowerCase();
+    }catch(_){return decodeURIComponent((src||'').split('/').pop()||'').toLowerCase()}
+  };
+  const valid = p => p && p.src && (/\.(jpe?g|png|webp|gif)(?:[?#].*)?$/i.test(p.src) || /drive\.google\.com\/thumbnail/i.test(p.src));
 
   function dedupe(items){
     const seen = new Set();
