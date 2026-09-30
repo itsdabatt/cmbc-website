@@ -54,3 +54,28 @@ body.cmbc-calm .sports-ticker .ticker-track{animation-play-state:paused!importan
  .sports-ticker .ticker-viewport{display:block!important}
  .sports-ticker .ticker-track,.sports-ticker .ticker-group{display:flex!important}
 }
+
+
+/* 2026-09-30 desktop hymn-player repair: readable selector + no hero obstruction */
+@media(min-width:761px){
+ #musicPlayer.music-player{
+  position:fixed!important;right:18px!important;bottom:18px!important;left:auto!important;
+  width:440px!important;max-width:calc(100vw - 36px)!important;
+  display:grid!important;grid-template-columns:46px minmax(0,1fr) 42px 74px 42px!important;
+  align-items:center!important;gap:10px!important;padding:12px 13px!important;
+  overflow:visible!important;z-index:850!important;
+ }
+ #musicPlayer .music-info{display:flex!important;flex-direction:column!important;gap:4px!important;min-width:0!important;overflow:visible!important}
+ #musicPlayer #musicTitle{display:block!important;color:#fff!important;font-size:.9rem!important;line-height:1.2!important;white-space:normal!important;overflow:visible!important;text-overflow:clip!important}
+ #musicPlayer #musicCredit{display:block!important;color:#d7e1ef!important;font-size:.67rem!important;line-height:1.2!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+ #musicPlayer #hymnSelect{
+  display:block!important;position:static!important;width:100%!important;max-width:100%!important;
+  height:38px!important;min-height:38px!important;margin:2px 0 0!important;padding:6px 28px 6px 8px!important;
+  background:#102d50!important;color:#fff!important;-webkit-text-fill-color:#fff!important;
+  border:2px solid #d6ad35!important;border-radius:10px!important;opacity:1!important;
+  font-size:.78rem!important;line-height:1.2!important;color-scheme:dark!important;
+ }
+ #musicPlayer #hymnSelect option{background:#102d50!important;color:#fff!important}
+ #musicPlayer #musicToggle,#musicPlayer #musicMinimize{display:grid!important;place-items:center!important;width:38px!important;height:38px!important}
+ #musicPlayer #musicVolume{display:block!important;width:74px!important}
+}
