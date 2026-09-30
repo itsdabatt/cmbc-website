@@ -39,3 +39,18 @@
  #musicPlayer.minimized{width:calc(100% - 24px)!important;grid-template-columns:44px minmax(0,1fr) 44px!important}
  #musicPlayer.minimized .music-info{display:flex!important}
 }
+
+
+/* 2026-09-30: ticker is a permanent CMBC feature; never hide it */
+.sports-ticker{display:flex!important;visibility:visible!important;opacity:1!important;height:46px!important;min-height:46px!important;overflow:hidden!important}
+.sports-ticker .ticker-viewport{display:block!important;flex:1 1 auto!important;min-width:0!important;overflow:hidden!important}
+.sports-ticker .ticker-track{display:flex!important;visibility:visible!important;opacity:1!important;width:max-content!important;min-width:max-content!important;white-space:nowrap!important}
+.sports-ticker .ticker-group{display:flex!important;visibility:visible!important;opacity:1!important;flex:none!important}
+body.cmbc-calm .sports-ticker{display:flex!important}
+body.cmbc-calm .sports-ticker .ticker-track{animation-play-state:paused!important}
+@media(max-width:760px){
+ .sports-ticker{display:flex!important;height:40px!important;min-height:40px!important}
+ .sports-ticker .ticker-label{display:flex!important;flex:0 0 82px!important;width:82px!important}
+ .sports-ticker .ticker-viewport{display:block!important}
+ .sports-ticker .ticker-track,.sports-ticker .ticker-group{display:flex!important}
+}
