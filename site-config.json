@@ -1,28 +1,88 @@
 {
-  "siteMode":"post-firefest-fall-2026",
-  "verseOfMonth":{"month":"September 2026","reference":"Psalm 29:11 KJV","text":"The LORD will give strength unto his people; the LORD will bless his people with peace."},
-  "featuredEvent":{"title":"Pizza Night","dateLabel":"Wednesday, September 30, 2026","start":"2026-09-30T18:25:00-04:00","timeLabel":"BYF • 6:25–7:45 PM","location":"Campbell Memorial Baptist Church","summary":"Pizza Night is tonight at CMBC. Join BYF for pizza, fellowship, and fun.","anchor":"#byf"},
-  "upcoming":[
-    {"date":"TONIGHT","icon":"🍕","title":"Pizza Night","details":"Wednesday • BYF 6:25–7:45 PM"},
-    {"date":"October 2","icon":"🎬","title":"Movie Night — Orion and the Dark","details":"Friday • Movie Night at CMBC"},
-    {"date":"October 3","icon":"🍂","title":"Montgomery Fall Fest","details":"Saturday • CMBC will be there • Montgomery, WV"}
+  "siteMode": "october-2026",
+  "verseOfMonth": {
+    "month": "October 2026",
+    "reference": "Matthew 5:14 KJV",
+    "text": "Ye are the light of the world. A city that is set on an hill cannot be hid."
+  },
+  "featuredEvent": {
+    "title": "Montgomery Fall Fest",
+    "dateLabel": "Saturday, October 3, 2026",
+    "start": "2026-10-03",
+    "timeLabel": "",
+    "location": "Montgomery, WV",
+    "summary": "CMBC will be at Montgomery Fall Fest on Saturday, October 3. Come see us and connect with our church family.",
+    "anchor": "#featured-event"
+  },
+  "upcoming": [
+    {
+      "date": "October 3",
+      "icon": "🍂",
+      "title": "Montgomery Fall Fest",
+      "details": "Saturday • CMBC will be there • Montgomery, WV"
+    },
+    {
+      "date": "October 28",
+      "icon": "🍕",
+      "title": "Pizza Night",
+      "details": "Wednesday • BYF"
+    },
+    {
+      "date": "October 30",
+      "icon": "🎬",
+      "title": "Movie Night #2",
+      "details": "Friday • CMBC"
+    }
   ],
-  "weekly":[
-    {"day":0,"hour":10,"minute":0,"durationMinutes":60,"title":"Sunday School","details":"Sunday • 10:00 AM","anchor":"#times"},
-    {"day":0,"hour":11,"minute":0,"durationMinutes":75,"title":"Morning Worship","details":"Sunday • 11:00 AM","anchor":"#times"},
-    {"day":3,"hour":18,"minute":25,"durationMinutes":80,"title":"BYF Youth Service","details":"Wednesday • 6:25–7:45 PM","anchor":"#byf"},
-    {"day":3,"hour":19,"minute":0,"durationMinutes":60,"title":"Adult Bible Study","details":"Wednesday • 7:00–8:00 PM","anchor":"#times"}
+  "weekly": [
+    {
+      "day": 0,
+      "hour": 10,
+      "minute": 0,
+      "durationMinutes": 60,
+      "title": "Sunday School",
+      "details": "Sunday • 10:00 AM",
+      "anchor": "#times"
+    },
+    {
+      "day": 0,
+      "hour": 11,
+      "minute": 0,
+      "durationMinutes": 75,
+      "title": "Morning Worship",
+      "details": "Sunday • 11:00 AM",
+      "anchor": "#times"
+    },
+    {
+      "day": 3,
+      "hour": 18,
+      "minute": 25,
+      "durationMinutes": 80,
+      "title": "BYF Youth Service",
+      "details": "Wednesday • 6:25–7:45 PM",
+      "anchor": "#byf"
+    },
+    {
+      "day": 3,
+      "hour": 19,
+      "minute": 0,
+      "durationMinutes": 60,
+      "title": "Adult Bible Study",
+      "details": "Wednesday • 7:00–8:00 PM",
+      "anchor": "#times"
+    }
   ],
-  "ticker":[
-    "🍕 TONIGHT • Pizza Night • BYF 6:25–7:45 PM",
-    "🎬 MOVIE NIGHT • Friday, October 2 • ORION AND THE DARK",
+  "ticker": [
     "🍂 MONTGOMERY FALL FEST • Saturday, October 3 • CMBC will be there",
+    "💡 OCTOBER VERSE • Matthew 5:14 KJV • Ye are the light of the world",
     "⛪ Sunday School • Sundays 10:00 AM",
     "🙌 Morning Worship • Sundays 11:00 AM",
+    "🧒 Kids Church • During Morning Worship",
     "🎉 BYF • Wednesdays 6:25–7:45 PM",
     "📖 Adult Bible Study • Wednesdays 7:00–8:00 PM",
+    "🍕 PIZZA NIGHT • Wednesday, October 28 • BYF",
+    "🎬 MOVIE NIGHT #2 • Friday, October 30",
     "🙏 Prayer requests are always welcome",
-    "🧒 Kids Church • During Morning Worship",
     "❤️ Faith • Family • Fellowship • All are welcome"
   ]
 }
