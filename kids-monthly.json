@@ -1,28 +1,28 @@
 {
-  "id": "2026-09-fall-praise",
-  "month": "September 2026",
-  "theme": "Fall Praise",
-  "verseReference": "Psalm 100:4 KJV",
-  "verseText": "Enter into his gates with thanksgiving, and into his courts with praise: be thankful unto him, and bless his name.",
-  "intro": "September is here! Celebrate fall, praise God, open your Bible, get moving, and enjoy this month's brand-new coloring page and activity sheet.",
+  "id": "2026-10-light-of-the-world",
+  "month": "October 2026",
+  "theme": "Light of the World",
+  "verseReference": "Matthew 5:14 KJV",
+  "verseText": "Ye are the light of the world. A city that is set on an hill cannot be hid.",
+  "intro": "October is here! Learn what Jesus says about being a light, open your Bible, move, pray, and enjoy this month's new CMBC coloring page and activity sheet.",
   "read": {
     "title": "Open Your Bible",
-    "text": "Find Psalm 100:4-5. Read it out loud with somebody in your family. What does the Bible tell us to enter His gates with?",
+    "text": "Find Matthew 5:14. Read it out loud with somebody in your family. Who does Jesus say is the light of the world?",
     "button": "I READ IT! ✓"
   },
   "move": {
-    "title": "Fall Praise Moves",
-    "text": "Do 3 praise jumps, 3 big claps, and 3 reaches toward the sky. Then say: Praise God!",
+    "title": "Shine Your Light",
+    "text": "Reach up like a lighthouse beam, turn slowly in a circle, then point outward and say: I can be a light for Jesus!",
     "button": "I MOVED IT! ✓"
   },
   "learn": {
     "title": "Bible Challenge",
-    "question": "According to Psalm 100:4, how should we enter His gates and His courts?",
-    "answer": "With thanksgiving and with praise! 🙌",
+    "question": "According to Matthew 5:14, what are we called to be?",
+    "answer": "The light of the world! 💡",
     "button": "I LEARNED IT! ✓"
   },
-  "coloringImage": "images/kids-september-2026-coloring.png",
-  "activityImage": "images/kids-september-2026-activity.png",
-  "artistWallMessage": "September's fall coloring page and Bible activity are here!",
-  "completionMessage": "🏆 September Bible Adventure Complete! Great job!"
+  "coloringImage": "images/octcolorsheet26.png",
+  "activityImage": "images/octactivitysheet26.png",
+  "artistWallMessage": "October's Light of the World coloring page and activity sheet are here!",
+  "completionMessage": "🏆 October Bible Adventure Complete! Keep shining your light for Jesus!"
 }
