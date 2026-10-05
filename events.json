@@ -1,65 +1,19 @@
 {
   "featured": {
-    "title": "Montgomery Fall Fest",
-    "start": "2026-10-03",
-    "location": "Montgomery, WV",
-    "summary": "CMBC will be at Montgomery Fall Fest on Saturday, October 3.",
-    "anchor": "#featured-event"
+    "title": "October at CMBC",
+    "start": "2026-10-05",
+    "location": "Campbell Memorial Baptist Church",
+    "summary": "Regular Sunday and Wednesday church life continues throughout October.",
+    "anchor": "#times"
   },
   "upcoming": [
-    {
-      "title": "Montgomery Fall Fest",
-      "start": "2026-10-03",
-      "location": "Montgomery, WV",
-      "anchor": "#featured-event"
-    },
-    {
-      "title": "Pizza Night",
-      "start": "2026-10-28T18:25:00-04:00",
-      "anchor": "#byf"
-    },
-    {
-      "title": "Movie Night #2",
-      "start": "2026-10-30",
-      "anchor": "#byf"
-    }
+    {"title":"Pizza Night","start":"2026-10-28T18:25:00-04:00","anchor":"#byf"},
+    {"title":"Movie Night #2","start":"2026-10-30","anchor":"#byf"}
   ],
   "weekly": [
-    {
-      "day": 0,
-      "hour": 10,
-      "minute": 0,
-      "durationMinutes": 60,
-      "title": "Sunday School",
-      "details": "Sunday • 10:00 AM",
-      "anchor": "#times"
-    },
-    {
-      "day": 0,
-      "hour": 11,
-      "minute": 0,
-      "durationMinutes": 75,
-      "title": "Morning Worship",
-      "details": "Sunday • 11:00 AM",
-      "anchor": "#times"
-    },
-    {
-      "day": 3,
-      "hour": 18,
-      "minute": 25,
-      "durationMinutes": 80,
-      "title": "BYF Youth Service",
-      "details": "Wednesday • 6:25–7:45 PM",
-      "anchor": "#byf"
-    },
-    {
-      "day": 3,
-      "hour": 19,
-      "minute": 0,
-      "durationMinutes": 60,
-      "title": "Adult Bible Study",
-      "details": "Wednesday • 7:00–8:00 PM",
-      "anchor": "#times"
-    }
+    {"day":0,"hour":10,"minute":0,"durationMinutes":60,"title":"Sunday School","details":"Sunday • 10:00 AM","anchor":"#times"},
+    {"day":0,"hour":11,"minute":0,"durationMinutes":75,"title":"Morning Worship","details":"Sunday • 11:00 AM","anchor":"#times"},
+    {"day":3,"hour":18,"minute":25,"durationMinutes":80,"title":"BYF Youth Service","details":"Wednesday • 6:25–7:45 PM","anchor":"#byf"},
+    {"day":3,"hour":19,"minute":0,"durationMinutes":60,"title":"Adult Bible Study","details":"Wednesday • 7:00–8:00 PM","anchor":"#times"}
   ]
 }
