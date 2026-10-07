@@ -8,31 +8,16 @@
   "featuredEvent": {
     "title": "October at CMBC",
     "dateLabel": "October 2026",
-    "start": "2026-10-05",
+    "start": "2026-10-07",
     "timeLabel": "Sundays & Wednesdays",
     "location": "Campbell Memorial Baptist Church",
     "summary": "Come worship, learn, pray, and grow with us this October at Campbell Memorial Baptist Church.",
     "anchor": "#times"
   },
   "upcoming": [
-    {
-      "date": "Every Sunday",
-      "icon": "⛪",
-      "title": "Sunday School & Morning Worship",
-      "details": "Sunday School 10:00 AM • Worship 11:00 AM • Kids Church during worship"
-    },
-    {
-      "date": "October 28",
-      "icon": "🍕",
-      "title": "Pizza Night",
-      "details": "Wednesday • BYF"
-    },
-    {
-      "date": "October 30",
-      "icon": "🎬",
-      "title": "Movie Night #2",
-      "details": "Friday • CMBC"
-    }
+    {"date":"October 28","icon":"🍕","title":"Pizza Night","details":"Wednesday • BYF 6:25–7:45 PM • Pizza provided — bring a friend!"},
+    {"date":"October 30","icon":"🎬","title":"Movie Night","details":"Friday • 6:00 PM • Popcorn & fellowship"},
+    {"date":"October 31","icon":"🎃","title":"Trick-or-Treat","details":"Saturday • 7:00 PM • Find CMBC/BYF on Backstreet in Smithers • Candy for the community"}
   ],
   "weekly": [
     {"day":0,"hour":10,"minute":0,"durationMinutes":60,"title":"Sunday School","details":"Sunday • 10:00 AM","anchor":"#times"},
@@ -47,10 +32,11 @@
     "🧒 Kids Church • During Morning Worship",
     "🎉 BYF • Wednesdays 6:25–7:45 PM",
     "📖 Adult Bible Study • Wednesdays 7:00–8:00 PM",
-    "🍕 PIZZA NIGHT • Wednesday, October 28 • BYF",
-    "🎬 MOVIE NIGHT #2 • Friday, October 30",
-    "📸 Fire Fest memories are now in our photo gallery",
+    "🍕 PIZZA NIGHT • Wednesday, October 28 • BYF 6:25–7:45 PM • Pizza provided",
+    "🎬 MOVIE NIGHT • Friday, October 30 • 6:00 PM",
+    "🎃 TRICK-OR-TREAT • Saturday, October 31 • 7:00 PM • CMBC/BYF on Backstreet in Smithers",
+    "📸 Fire Fest memories are in our photo gallery",
     "🙏 Prayer requests are always welcome",
-    "❤️ Faith • Family • Fellowship • All are welcome"
+    "❤️ Real People • Real Faith • Real Family"
   ]
 }
