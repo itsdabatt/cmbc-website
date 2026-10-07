@@ -1,14 +1,15 @@
 {
   "featured": {
     "title": "October at CMBC",
-    "start": "2026-10-05",
+    "start": "2026-10-07",
     "location": "Campbell Memorial Baptist Church",
-    "summary": "Regular Sunday and Wednesday church life continues throughout October.",
+    "summary": "Regular Sunday and Wednesday church life continues throughout October, with Pizza Night, Movie Night, and community Trick-or-Treat at the end of the month.",
     "anchor": "#times"
   },
   "upcoming": [
     {"title":"Pizza Night","start":"2026-10-28T18:25:00-04:00","anchor":"#byf"},
-    {"title":"Movie Night #2","start":"2026-10-30","anchor":"#byf"}
+    {"title":"Movie Night","start":"2026-10-30T18:00:00-04:00","anchor":"#byf"},
+    {"title":"CMBC/BYF Trick-or-Treat on Backstreet","start":"2026-10-31T19:00:00-04:00","location":"Backstreet, Smithers, WV","anchor":"#featured-event"}
   ],
   "weekly": [
     {"day":0,"hour":10,"minute":0,"durationMinutes":60,"title":"Sunday School","details":"Sunday • 10:00 AM","anchor":"#times"},
