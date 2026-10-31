@@ -1,28 +1,28 @@
 {
-  "id": "2026-10-light-of-the-world",
-  "month": "October 2026",
-  "theme": "Light of the World",
-  "verseReference": "Matthew 5:14 KJV",
-  "verseText": "Ye are the light of the world. A city that is set on an hill cannot be hid.",
-  "intro": "October is here! Learn what Jesus says about being a light, open your Bible, move, pray, and enjoy this month's new CMBC coloring page and activity sheet.",
+  "id": "2026-11-give-thanks-to-god",
+  "month": "November 2026",
+  "theme": "Give Thanks to God!",
+  "verseReference": "Psalm 107:1 KJV",
+  "verseText": "O give thanks unto the LORD; for he is good: for his mercy endureth for ever.",
+  "intro": "November is here! Give thanks to God, open your Bible, pray at home, help others, and enjoy this month's new CMBC coloring page and activity sheet.",
   "read": {
     "title": "Open Your Bible",
-    "text": "Find Matthew 5:14. Read it out loud with somebody in your family. Who does Jesus say is the light of the world?",
+    "text": "Find Psalm 107:1. Read it out loud with somebody in your family. What does this verse tell us to do, and why?",
     "button": "I READ IT! ✓"
   },
   "move": {
-    "title": "Shine Your Light",
-    "text": "Reach up like a lighthouse beam, turn slowly in a circle, then point outward and say: I can be a light for Jesus!",
+    "title": "Thankful Moves",
+    "text": "Name three things you are thankful for. Reach up high for the first, stretch side to side for the second, and do a joyful jump for the third!",
     "button": "I MOVED IT! ✓"
   },
   "learn": {
     "title": "Bible Challenge",
-    "question": "According to Matthew 5:14, what are we called to be?",
-    "answer": "The light of the world! 💡",
+    "question": "According to Psalm 107:1, why should we give thanks unto the LORD?",
+    "answer": "Because He is good, and His mercy endureth for ever! ❤️",
     "button": "I LEARNED IT! ✓"
   },
-  "coloringImage": "octactivyncolorpage.png",
-  "activityImage": "octactivitysheet26.png",
-  "artistWallMessage": "October's Light of the World coloring page and activity sheet are here!",
-  "completionMessage": "🏆 October Bible Adventure Complete! Keep shining your light for Jesus!"
+  "coloringImage": "novcolorpage.png",
+  "activityImage": "novactivity26.png",
+  "artistWallMessage": "November's Give Thanks to God coloring page and activity sheet are here!",
+  "completionMessage": "🏆 November Bible Adventure Complete! Keep giving thanks to God, praying, helping others, and growing in your faith!"
 }
