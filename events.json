@@ -1,16 +1,16 @@
 {
   "featured": {
-    "title": "October at CMBC",
-    "start": "2026-10-14",
+    "title": "November at CMBC",
+    "start": "2026-11-01",
     "location": "Campbell Memorial Baptist Church",
-    "summary": "Regular Sunday and Wednesday church life continues throughout October, with Montgomery Trunk-or-Treat, Pizza Night, Movie Night, and Smithers Trick-or-Treat coming up.",
+    "summary": "Regular Sunday and Wednesday church life continues throughout November, with Veteran Night, Pizza Night, Thanksgiving community service, and Movie Night.",
     "anchor": "#times"
   },
   "upcoming": [
-    {"title":"Montgomery Trunk-or-Treat","start":"2026-10-27T17:00:00-04:00","end":"2026-10-27T19:00:00-04:00","location":"3rd Avenue, Montgomery, WV","anchor":"#featured-event"},
-    {"title":"Pizza Night","start":"2026-10-28T18:25:00-04:00","anchor":"#byf"},
-    {"title":"Movie Night","start":"2026-10-30T18:00:00-04:00","anchor":"#byf"},
-    {"title":"CMBC/BYF Smithers Trick-or-Treat","start":"2026-10-31T19:00:00-04:00","location":"Backstreet at Mike’s, Smithers, WV","anchor":"#featured-event"}
+    {"title":"Veteran Night","start":"2026-11-11T18:25:00-05:00","anchor":"#byf"},
+    {"title":"Pizza Night — Sponsored by Pizza Hut Smithers","start":"2026-11-25T18:25:00-05:00","anchor":"#byf"},
+    {"title":"Thanksgiving Community Service","start":"2026-11-26T09:00:00-05:00","location":"Smithers Gateway Center, Smithers, WV","anchor":"#featured-event"},
+    {"title":"Movie Night","start":"2026-11-27T18:00:00-05:00","anchor":"#byf"}
   ],
   "weekly": [
     {"day":0,"hour":10,"minute":0,"durationMinutes":60,"title":"Sunday School","details":"Sunday • 10:00 AM","anchor":"#times"},
