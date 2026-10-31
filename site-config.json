@@ -1,24 +1,24 @@
 {
-  "siteMode": "october-2026-normal",
+  "siteMode": "november-2026-normal",
   "verseOfMonth": {
-    "month": "October 2026",
-    "reference": "Matthew 5:14 KJV",
-    "text": "Ye are the light of the world. A city that is set on an hill cannot be hid."
+    "month": "November 2026",
+    "reference": "Psalm 107:1 KJV",
+    "text": "O give thanks unto the LORD; for he is good: for his mercy endureth for ever."
   },
   "featuredEvent": {
-    "title": "October at CMBC",
-    "dateLabel": "October 2026",
-    "start": "2026-10-21",
+    "title": "November at CMBC",
+    "dateLabel": "November 2026",
+    "start": "2026-11-01",
     "timeLabel": "Sundays & Wednesdays",
     "location": "Campbell Memorial Baptist Church",
-    "summary": "Come worship, learn, pray, and grow with us this October at Campbell Memorial Baptist Church.",
+    "summary": "Give thanks to God with us this November through worship, Bible study, BYF, fellowship, and community service.",
     "anchor": "#times"
   },
   "upcoming": [
-    {"date":"October 27","icon":"🎃","title":"Montgomery Trunk-or-Treat","details":"Tuesday • 5:00–7:00 PM • 3rd Avenue, Montgomery • Find CMBC/BYF there"},
-    {"date":"October 28","icon":"🍕","title":"Pizza Night","details":"Wednesday • BYF 6:25–7:45 PM • Pizza sponsored by Pizza Hut in Smithers — bring a friend!"},
-    {"date":"October 30","icon":"🎬","title":"Movie Night","details":"Friday • 6:00 PM • Popcorn & fellowship"},
-    {"date":"October 31","icon":"🍬","title":"Smithers Trick-or-Treat","details":"Saturday • 7:00 PM • Find CMBC/BYF on Backstreet at Mike’s in Smithers • We’ll have candy"}
+    {"date":"November 11","icon":"🇺🇸","title":"Veteran Night","details":"Wednesday • Special November BYF night"},
+    {"date":"November 25","icon":"🍕","title":"Pizza Night","details":"Wednesday • BYF 6:25–7:45 PM • Sponsored by Pizza Hut in Smithers — bring a friend!"},
+    {"date":"November 26","icon":"🦃","title":"Thanksgiving Community Service","details":"Thursday • 9:00 AM • Smithers Gateway Center • Helping with Thanksgiving food distribution"},
+    {"date":"November 27","icon":"🎬","title":"Movie Night","details":"Friday • 6:00 PM • Popcorn & fellowship"}
   ],
   "weekly": [
     {"day":0,"hour":10,"minute":0,"durationMinutes":60,"title":"Sunday School","details":"Sunday • 10:00 AM","anchor":"#times"},
@@ -27,18 +27,18 @@
     {"day":3,"hour":19,"minute":0,"durationMinutes":60,"title":"Adult Bible Study","details":"Wednesday • 7:00–8:00 PM","anchor":"#times"}
   ],
   "ticker": [
-    "💡 OCTOBER VERSE • Matthew 5:14 KJV • Ye are the light of the world",
+    "🍂 NOVEMBER VERSE • Psalm 107:1 KJV • O give thanks unto the LORD; for he is good",
     "⛪ Sunday School • Sundays 10:00 AM",
     "🙌 Morning Worship • Sundays 11:00 AM",
     "🧒 Kids Church • During Morning Worship",
     "🎉 BYF • Wednesdays 6:25–7:45 PM",
     "📖 Adult Bible Study • Wednesdays 7:00–8:00 PM",
-    "🎃 MONTGOMERY TRUNK-OR-TREAT • Tuesday, October 27 • 5–7 PM • 3rd Avenue • Find CMBC/BYF there",
-    "🍕 PIZZA NIGHT • Wednesday, October 28 • BYF 6:25–7:45 PM • Sponsored by Pizza Hut in Smithers",
+    "🇺🇸 VETERAN NIGHT • Wednesday, November 11",
+    "🍕 PIZZA NIGHT • Wednesday, November 25 • Sponsored by Pizza Hut in Smithers",
     "🍕 THANK YOU PIZZA HUT SMITHERS & MANAGER MANDY FLORES • Proud sponsor of every CMBC/BYF Pizza Night!",
-    "🎬 MOVIE NIGHT • Friday, October 30 • 6:00 PM",
-    "🍬 SMITHERS TRICK-OR-TREAT • Saturday, October 31 • 7:00 PM • CMBC/BYF on Backstreet at Mike’s",
+    "🦃 THANKSGIVING COMMUNITY SERVICE • Thursday, November 26 • 9:00 AM • Smithers Gateway Center",
+    "🎬 MOVIE NIGHT • Friday, November 27 • 6:00 PM",
     "🙏 Prayer requests are always welcome",
-    "❤️ Real People • Real Faith • Real Family"
+    "❤️ Real People • Real Faith • A Brighter Tomorrow"
   ]
 }
