@@ -1,6 +1,14 @@
 {
   "archive": [
     {
+      "id": "2026-10-light-of-the-world",
+      "month": "October 2026",
+      "theme": "Light of the World",
+      "verseReference": "Matthew 5:14 KJV",
+      "coloringImage": "octactivyncolorpage.png",
+      "activityImage": "octactivitysheet26.png"
+    },
+    {
       "id": "2026-08-praise-god",
       "month": "August 2026",
       "theme": "Praise God!",
