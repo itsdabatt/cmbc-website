@@ -1,6 +1,18 @@
 {
   "photos": [
     {
+      "album": "special-events",
+      "src": "images/IMG_4836.jpg"
+    },
+    {
+      "album": "byf-youth",
+      "src": "images/258E2D95-A71F-4353-A4D1-2D9FC788833A.jpg"
+    },
+    {
+      "album": "special-events",
+      "src": "images/E19F1D95-7468-45B1-BB1D-2D92DDDB0E6E.jpg"
+    },
+    {
       "album": "worship",
       "src": "gallery/worship/IMG_3312.jpg"
     },
