@@ -1,0 +1,117 @@
+/* CMBC November 2026 usability refresh — loaded after all legacy style layers. */
+:root { --cmbc-header-height: 82px; }
+html { scroll-behavior:smooth; scroll-padding-top:calc(var(--cmbc-header-height) + 18px); }
+body { overflow-x:clip; }
+[id] { scroll-margin-top:calc(var(--cmbc-header-height) + 18px); }
+button, a, select, input { -webkit-tap-highlight-color:transparent; }
+button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible {
+  outline:3px solid #ffca3a!important; outline-offset:3px;
+}
+/* Full, legible navigation. Switch to the accessible menu before links collide. */
+.site-header { z-index:8100!important; }
+.site-header .nav-wrap { width:min(1540px,calc(100% - 32px))!important;max-width:none!important;min-height:78px!important;gap:12px!important; }
+.site-header .brand { flex:0 0 auto;min-width:180px;max-width:210px; }
+.site-header .brand img { flex:0 0 52px; }
+.site-header .desktop-nav { flex:1 1 auto;min-width:0;display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;column-gap:3px!important;row-gap:1px!important; }
+.site-header .desktop-nav a { white-space:nowrap;line-height:1.25;font-size:clamp(.76rem,.89vw,.88rem)!important;padding:8px 6px!important;min-height:38px!important;border-radius:9px; }
+.site-header .desktop-nav a:hover,.site-header .desktop-nav a:focus-visible { background:rgba(255,200,61,.16);color:#ffca3a!important; }
+.site-header .desktop-nav a[href="#help-us-help-kids"] {background:rgba(255,200,61,.12);color:#ffca3a!important;}
+.site-header .nav-actions {display:flex;align-items:center;flex:0 0 auto;gap:7px!important; }
+.site-header .nav-actions .cmbc-header-tool {display:inline-flex;align-items:center;justify-content:center;gap:5px;white-space:nowrap;width:auto;min-width:42px;height:42px;min-height:42px;padding:8px 10px;border-radius:12px;border:1px solid rgba(255,255,255,.28);background:#163453;color:#fff;font-size:.83rem;font-weight:900;cursor:pointer;box-shadow:none; }
+.site-header .nav-actions .cmbc-header-tool:hover {background:#265078;color:#ffca3a;}
+.site-header .nav-actions #cmbcToolsToggle {position:static!important;inset:auto!important;z-index:auto!important;box-shadow:none!important;border-radius:12px!important;width:42px!important;height:42px!important;font-size:1rem!important;}
+body > #cmbcToolsToggle {display:none!important;}
+.cmbc-tools {top:calc(var(--cmbc-header-height) + 8px)!important;right:12px!important;bottom:auto!important;left:auto!important;z-index:8200!important;max-height:calc(100dvh - var(--cmbc-header-height) - 20px);overflow-y:auto;width:min(320px,calc(100vw - 24px))!important;}
+@media(max-width:1280px) {
+  .site-header .desktop-nav {display:none!important;}
+  .site-header .menu-btn {display:grid!important;place-items:center;}
+  .site-header .nav-wrap {min-height:70px!important;}
+  .site-header .mobile-menu.open {display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:12px max(14px,calc((100vw - 1100px)/2)) 18px;background:#06172f;max-height:min(75dvh,620px);overflow-y:auto;}
+  .site-header .mobile-menu a {min-height:48px;padding:10px 12px;color:#fff;border:1px solid rgba(255,255,255,.12);border-radius:12px;background:rgba(255,255,255,.045);font-weight:800;}
+}
+@media(max-width:760px) {
+  .site-header .nav-wrap {min-height:62px!important;width:calc(100% - 22px)!important;gap:7px!important;}
+  .site-header .brand {min-width:0;flex:1 1 auto;max-width:none;}
+  .site-header .nav-actions .cmbc-header-tool {min-width:40px;height:40px;min-height:40px;padding:7px;font-size:.9rem;}
+  .site-header .nav-actions .cmbc-music-launcher span {display:none;}
+  .site-header .nav-actions #cmbcToolsToggle {width:40px!important;height:40px!important;}
+  .site-header .mobile-menu.open {grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:12px 14px 18px;max-height:calc(100dvh - var(--cmbc-header-height) - 12px);}
+  .site-header .mobile-menu a {font-size:.88rem!important;overflow-wrap:anywhere;}
+  .cmbc-tools {top:calc(var(--cmbc-header-height) + 6px)!important;bottom:auto!important;left:12px!important;right:12px!important;width:auto!important;}
+}
+/* Keep the announcement and optional welcome inside their own space, never overlaying content. */
+.headline-bar {position:relative;z-index:5;}
+.headline-bar .headline-inner {display:flex!important;flex-wrap:wrap!important;min-height:0!important;gap:8px 18px!important;padding:10px 0!important;line-height:1.35;text-align:center;}
+.headline-bar .headline-inner b {font-size:clamp(.8rem,1.1vw,1rem)!important;min-width:0;overflow-wrap:anywhere;}
+.headline-bar .headline-inner span {font-size:clamp(.74rem,1vw,.94rem)!important;min-width:0;overflow-wrap:anywhere;}
+.headline-bar .headline-inner a {flex:0 0 auto;white-space:nowrap;}
+.cmbc-first-visit {z-index:10!important;padding:12px 0!important;position:relative!important;}
+.cmbc-first-visit .cmbc-first-inner {width:min(1400px,calc(100% - 40px))!important;grid-template-columns:minmax(185px,.7fr) 2fr!important;gap:18px!important;padding-right:42px!important;position:relative;}
+.cmbc-first-visit .cmbc-first-copy small {font-size:.75rem;}
+.cmbc-first-visit .cmbc-first-copy h2 {font-size:clamp(1.3rem,2.15vw,1.9rem)!important;line-height:1.2;margin:2px 0;}
+.cmbc-first-visit .cmbc-first-copy p {font-size:.91rem;line-height:1.35;}
+.cmbc-first-visit .cmbc-first-actions {grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:8px;}
+.cmbc-first-visit .cmbc-first-actions a {min-height:62px!important;padding:8px 10px!important;border-radius:13px;line-height:1.2;overflow-wrap:anywhere;}
+.cmbc-first-visit .cmbc-first-actions a b {font-size:.88rem;}
+.cmbc-first-visit .cmbc-first-actions a span {font-size:.74rem;}
+.cmbc-first-visit .cmbc-first-close {position:absolute!important;top:0!important;right:0!important;width:38px!important;height:38px!important;display:grid!important;place-items:center!important;border-radius:11px!important;cursor:pointer!important;z-index:2;}
+@media(max-width:960px) {
+  .cmbc-first-visit .cmbc-first-inner {grid-template-columns:1fr!important;gap:10px!important;}
+}
+@media(max-width:600px) {
+  .cmbc-first-visit .cmbc-first-actions {grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+  .cmbc-first-visit .cmbc-first-actions a {min-height:54px!important;}
+  .cmbc-first-visit .cmbc-first-copy p {font-size:.82rem;}
+}
+/* More balanced hero; no forced oversized lettering/overlays. */
+.hero {min-height:clamp(520px,60vh,700px)!important;}
+.hero .hero-copy {padding-top:64px!important;padding-bottom:78px!important;max-width:760px!important;}
+.hero h1 {font-size:clamp(2.9rem,6.2vw,5.6rem)!important;line-height:1.02!important;letter-spacing:-.035em!important;overflow-wrap:normal;}
+.hero p {line-height:1.5!important;}
+@media(max-width:760px) {
+  .hero {min-height:560px!important;}
+  .hero .hero-copy {padding:45px 0 68px!important;}
+  .hero h1 {font-size:clamp(2.4rem,10vw,3.5rem)!important;line-height:1.03!important;}
+}
+/* Move the Journey to a proper on-page entry rather than hovering over the welcome header. */
+body > .journey-launch {display:none!important;}
+.cmbc-journey-slot {display:flex;align-items:center;justify-content:center;padding:18px 12px;background:#f4f7fb;border-top:1px solid #dfe7f1;border-bottom:1px solid #dfe7f1;}
+.cmbc-journey-slot .journey-launch {position:static!important;inset:auto!important;display:inline-flex!important;margin:0 auto!important;width:auto!important;min-height:52px;max-width:min(300px,100%)!important;transform:none!important;}
+.journey-panel {top:auto!important;bottom:22px!important;right:18px!important;left:auto!important;max-height:min(72dvh,580px)!important;z-index:8300!important;}
+.journey-panel:not(.open) {visibility:hidden;pointer-events:none!important;}
+@media(max-width:760px) {.journey-panel {bottom:calc(88px + env(safe-area-inset-bottom))!important;right:10px!important;left:10px!important;width:auto!important;max-height:calc(100dvh - 164px)!important;}}
+/* A user-invoked, moveable player. No covering content by default; both controls remain visible. */
+#musicPlayer[hidden] {display:none!important;}
+#musicPlayer.ui-music-player {position:fixed!important;display:grid!important;left:12px!important;top:calc(var(--cmbc-header-height) + 18px)!important;right:auto!important;bottom:auto!important;width:min(430px,calc(100vw - 24px))!important;max-width:calc(100vw - 24px)!important;grid-template-columns:44px minmax(0,1fr) 42px 42px!important;grid-template-areas:"art info drag close" "play volume volume mini"!important;align-items:center!important;gap:8px 10px!important;padding:14px!important;background:#071b39!important;border:2px solid #ffca3a!important;box-shadow:0 20px 55px rgba(0,0,0,.3)!important;border-radius:20px!important;overflow:visible!important;z-index:8250!important;}
+#musicPlayer.ui-music-player .album-art {grid-area:art;display:grid!important;width:44px;height:44px;}
+#musicPlayer.ui-music-player .music-info {grid-area:info;display:flex!important;flex-direction:column!important;gap:4px!important;min-width:0!important;overflow:hidden!important;}
+#musicPlayer.ui-music-player .music-info b {font-size:.94rem!important;color:#fff!important;}
+#musicPlayer.ui-music-player .music-info span {white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;}
+#musicPlayer.ui-music-player #hymnSelect {display:block!important;position:static!important;width:100%!important;max-width:100%!important;min-height:35px!important;height:35px!important;padding:4px 8px!important;margin:0!important;background:#102d50!important;color:#fff!important;border:1px solid #d6ad35!important;border-radius:9px!important;font-size:.79rem!important;}
+#musicPlayer.ui-music-player #musicToggle {grid-area:play;}
+#musicPlayer.ui-music-player #musicVolume {grid-area:volume;display:block!important;width:100%!important;max-width:100%!important;height:24px!important;margin:0!important;cursor:pointer!important;}
+#musicPlayer.ui-music-player #musicMinimize {grid-area:mini;}
+#musicPlayer.ui-music-player #musicDragHandle {grid-area:drag;cursor:grab!important;touch-action:none;user-select:none;}
+#musicPlayer.ui-music-player #musicDragHandle:active {cursor:grabbing!important;}
+#musicPlayer.ui-music-player #musicClose {grid-area:close;}
+#musicPlayer.ui-music-player button {display:grid!important;place-items:center!important;width:40px!important;height:40px!important;min-height:40px!important;border-radius:12px!important;border:0!important;background:#f7f9fc!important;color:#071b39!important;font-size:1.12rem!important;font-weight:1000!important;cursor:pointer!important;}
+#musicPlayer.ui-music-player #musicClose {background:#b62828!important;color:#fff!important;}
+#musicPlayer.ui-music-player #musicDragHandle {background:#163453!important;color:#fff!important;font-size:1.1rem!important;}
+#musicPlayer.ui-music-player.minimized {grid-template-columns:46px!important;grid-template-areas:"mini"!important;width:66px!important;max-width:66px!important;padding:9px!important;gap:0!important;border-radius:17px!important;}
+#musicPlayer.ui-music-player.minimized > :not(#musicMinimize) {display:none!important;}
+#musicPlayer.ui-music-player.minimized #musicMinimize {display:grid!important;width:44px!important;height:44px!important;border-radius:12px!important;}
+@media(max-width:760px) {
+  #musicPlayer.ui-music-player {max-height:calc(100dvh - var(--cmbc-header-height) - 102px)!important;overflow-y:auto!important;width:min(420px,calc(100vw - 20px))!important;max-width:calc(100vw - 20px)!important;grid-template-columns:42px minmax(0,1fr) 38px 38px!important;padding:10px!important;gap:7px!important;}
+  #musicPlayer.ui-music-player button {width:38px!important;height:38px!important;min-height:38px!important;}
+  #musicPlayer.ui-music-player .album-art {width:42px;height:42px;}
+}
+/* Make small screen navigation/touch items genuinely readable. */
+@media(max-width:760px) {
+  .cmbc-phone-dock {display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;}
+  .cmbc-phone-dock a {min-width:0;overflow-wrap:anywhere;}
+  .cmbc-phone-dock span {font-size:.7rem!important;}
+  .section {padding-left:0!important;padding-right:0!important;}
+}
+/* Respect reduced motion, readable tap targets, and long sponsor names. */
+@media(prefers-reduced-motion:reduce) {html {scroll-behavior:auto!important;}}
+.support-card h3,.support-card p,.support-card small {overflow-wrap:anywhere;}
