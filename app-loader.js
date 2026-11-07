@@ -1,9 +1,9 @@
 /* Loader for the full CMBC interactive app. */
 (function(){
- const version='20261007octoberevents1';
+ const version='20261107ui1';
  if(!document.querySelector('script[data-tailwind-cmbc]')){const tw=document.createElement('script');tw.src='https://cdn.tailwindcss.com';tw.dataset.tailwindCmbc='1';document.head.appendChild(tw)}
- const css=[['church-app.css','cmbcApp'],['kids-corner.css','cmbcKids'],['connect.css','cmbcConnect'],['site-current.css','cmbcCurrent'],['ease-of-use.css','cmbcEase'],['desktop-revamp.css','cmbcDesktopRevamp'],['mobile-emergency.css','cmbcMobileEmergency']];
+ const css=[['church-app.css','cmbcApp'],['kids-corner.css','cmbcKids'],['connect.css','cmbcConnect'],['site-current.css','cmbcCurrent'],['ease-of-use.css','cmbcEase'],['desktop-revamp.css','cmbcDesktopRevamp'],['mobile-emergency.css','cmbcMobileEmergency'],['ui-refinement.css','cmbcUiRefinement']];
  css.forEach(([href,key])=>{if(!document.querySelector(`link[data-${key}]`)){const l=document.createElement('link');l.rel='stylesheet';l.href=href+'?v='+version;l.setAttribute(`data-${key}`,'1');document.head.appendChild(l)}});
- const start=()=>{const js=[['church-app.js','cmbcApp'],['kids-corner.js','cmbcKids'],['connect.js','cmbcConnect'],['gallery-rotation.js','cmbcGalleryRotation'],['site-controller.js','cmbcSiteController'],['ease-of-use.js','cmbcEase'],['journey-complete.js','cmbcJourneyComplete']];js.forEach(([src,key])=>{if(!document.querySelector(`script[data-${key}]`)){const s=document.createElement('script');s.src=src+'?v='+version;s.defer=true;s.setAttribute(`data-${key}`,'1');document.body.appendChild(s)}})};
+ const start=()=>{const js=[['church-app.js','cmbcApp'],['kids-corner.js','cmbcKids'],['connect.js','cmbcConnect'],['gallery-rotation.js','cmbcGalleryRotation'],['site-controller.js','cmbcSiteController'],['ease-of-use.js','cmbcEase'],['journey-complete.js','cmbcJourneyComplete'],['ui-refinement.js','cmbcUiRefinement']];js.forEach(([src,key])=>{if(!document.querySelector(`script[data-${key}]`)){const s=document.createElement('script');s.src=src+'?v='+version;s.defer=true;s.setAttribute(`data-${key}`,'1');document.body.appendChild(s)}})};
  document.readyState==='loading'?document.addEventListener('DOMContentLoaded',()=>setTimeout(start,80)):setTimeout(start,80)
 })();
