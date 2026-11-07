@@ -93,6 +93,9 @@ body > .journey-launch {display:none!important;}
 #musicPlayer.ui-music-player #musicMinimize {grid-area:mini;}
 #musicPlayer.ui-music-player #musicDragHandle {grid-area:drag;cursor:grab!important;touch-action:none;user-select:none;}
 #musicPlayer.ui-music-player #musicDragHandle:active {cursor:grabbing!important;}
+#musicPlayer.ui-music-player #musicDragHandle {display:flex!important;flex-direction:column;align-items:center;justify-content:center;line-height:1!important;gap:1px!important;}
+#musicPlayer.ui-music-player #musicDragHandle small {font-size:9px;color:#fff;font-weight:800;letter-spacing:.015em;}
+
 #musicPlayer.ui-music-player #musicClose {grid-area:close;}
 #musicPlayer.ui-music-player button {display:grid!important;place-items:center!important;width:40px!important;height:40px!important;min-height:40px!important;border-radius:12px!important;border:0!important;background:#f7f9fc!important;color:#071b39!important;font-size:1.12rem!important;font-weight:1000!important;cursor:pointer!important;}
 #musicPlayer.ui-music-player #musicClose {background:#b62828!important;color:#fff!important;}
