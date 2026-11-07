@@ -110,7 +110,7 @@
     const handle=document.createElement('button');
     handle.type='button';
     handle.id='musicDragHandle';
-    handle.textContent='⠿';
+    handle.innerHTML='<span aria-hidden="true">⠿</span><small>Move</small>';
     handle.title='Drag to move the music player';
     handle.setAttribute('aria-label','Drag to move music player');
     player.appendChild(handle);
