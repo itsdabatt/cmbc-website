@@ -15,8 +15,8 @@
 <link rel="icon" href="logo.png" type="image/png">
 <link rel="apple-touch-icon" href="logo.png">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="style.css?v=20260812pro">
-<link rel="stylesheet" href="mobile-hotfix.css?v=20260816a">
+<link rel="stylesheet" href="style.css?v=20261107ui1">
+<link rel="stylesheet" href="mobile-hotfix.css?v=20261107ui1">
 </head>
 <body>
 <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
@@ -71,8 +71,8 @@
 
 <nav class="mobile-dock"><a href="#times"><span>⛪</span>Services</a><a href="#next"><span>🔴</span>Next</a><a href="#prayer"><span>🙏</span>Prayer</a><a href="#visit"><span>📍</span>Visit</a><a href="#help-us-help-kids" aria-label="Donate or help CMBC youth"><span>❤️</span>Donate</a></nav>
 
-<div id="musicPlayer" class="music-player"><div class="album-art">✝️</div><div class="music-info"><b id="musicTitle">Christ Arose</b><span id="musicCredit">Public-domain historic recording</span><select id="hymnSelect" aria-label="Choose a hymn"><option value="christ-arose">Christ Arose</option><option value="blessed-assurance">Blessed Assurance</option><option value="to-god-be-glory">To God Be the Glory</option><option value="joyful-joyful">Joyful, Joyful / Ode to Joy</option></select></div><button id="musicToggle" type="button" aria-label="Play or pause music">▶</button><input id="musicVolume" type="range" min="0" max="1" step="0.05" value="0.28" aria-label="Music volume"><button id="musicMinimize" type="button" aria-label="Minimize music player">—</button></div>
-<audio id="hymnAudio" loop preload="auto" autoplay></audio>
+<div id="musicPlayer" class="music-player" hidden style="display:none"><div class="album-art">✝️</div><div class="music-info"><b id="musicTitle">Christ Arose</b><span id="musicCredit">Public-domain historic recording</span><select id="hymnSelect" aria-label="Choose a hymn"><option value="christ-arose">Christ Arose</option><option value="blessed-assurance">Blessed Assurance</option><option value="to-god-be-glory">To God Be the Glory</option><option value="joyful-joyful">Joyful, Joyful / Ode to Joy</option></select></div><button id="musicToggle" type="button" aria-label="Play or pause music">▶</button><input id="musicVolume" type="range" min="0" max="1" step="0.05" value="0.28" aria-label="Music volume"><button id="musicMinimize" type="button" aria-label="Minimize music player">—</button></div>
+<audio id="hymnAudio" loop preload="none"></audio>
 
 <footer><img src="logo.png" alt="CMBC logo"><p><strong>✝ Campbell Memorial Baptist Church</strong><br>115 Longacre Way, Smithers, WV 25186</p><p>Faith • Family • Fellowship • All Are Welcome ❤️</p><div class="footer-actions"><button id="installBtn2" class="footer-link" type="button">📲 Add CMBC to Your Phone</button><a class="footer-link" href="https://www.facebook.com/campbellmemorialbaptist" target="_blank" rel="noopener">Facebook</a><a class="footer-link" href="https://www.facebook.com/CMBCBYF" target="_blank" rel="noopener">BYF</a></div><small>© 2026 Campbell Memorial Baptist Church • Website designed by <b>Outside The Hollar</b><br>Hymn recordings used from public-domain or Creative Commons sources; credits available in the player.</small></footer>
 
@@ -80,6 +80,6 @@
 
 <div id="firstVisitModal" class="modal" aria-hidden="true"><div class="modal-card"><button id="modalClose" class="modal-close" aria-label="Close">×</button><span>👋 YOUR FIRST VISIT</span><h2>You Don’t Have to Know Everything Before You Come.</h2><div class="visitor-grid"><div><i>👕</i><b>What do I wear?</b><p>Come as you are. You do not need special clothes to worship with us.</p></div><div><i>🕙</i><b>When should I arrive?</b><p>Sunday School starts at 10:00 AM and Morning Worship at 11:00 AM. A few minutes early is plenty.</p></div><div><i>📍</i><b>Where do I go?</b><p>Come to 115 Longacre Way in Smithers. If you are unsure where to go when you arrive, just ask — we will gladly help.</p></div><div><i>🧒</i><b>What about kids?</b><p>Families and children are welcome. BYF meets Wednesday from 6:25–7:45 PM.</p></div><div><i>📖</i><b>Do I bring anything?</b><p>No. Bring yourself, your family, and a Bible if you have one. If not, you can still come.</p></div><div><i>❤️</i><b>Will I be welcome?</b><p>Yes. We would be honored to worship with you.</p></div></div><div class="modal-actions"><a class="btn gold" href="https://www.google.com/maps/search/?api=1&query=115+Longacre+Way+Smithers+WV+25186" target="_blank" rel="noopener">📍 Get Directions</a><a class="btn white" href="#times" id="modalTimes">See Service Times</a></div></div></div>
 
-<script src="script.js?v=20260812pro" defer></script>
+<script src="script.js?v=20261107ui1" defer></script>
 </body>
 </html>
