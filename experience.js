@@ -32,7 +32,7 @@
     if(matchMedia('(pointer:fine)').matches&&!reduce){const g=document.createElement('div');g.className='experience-glow';document.body.appendChild(g);addEventListener('pointermove',e=>{g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'},{passive:true})}
     const picnic=$('#picnic');if(picnic){const flyer=$('.picnic-flyer',picnic),a=$('a',flyer),img=$('img',flyer),fresh='images/8.16.26.png?v=202608162100';if(a)a.href=fresh;if(img){img.src=fresh;img.loading='eager'}const cards=$$('.event-card',picnic),stale=cards.find(c=>/1:30|Praise\s*&\s*Preaching/i.test(c.textContent));if(stale){const sm=$('small',stale),h=$('h3',stale),p=$('p',stale);if(sm)sm.textContent='11:00 AM';if(h)h.textContent='🎶 Kids Singing & Praise';if(p)p.textContent='We’ll begin with our kids singing and praising, followed by preaching and worship.'}const first=cards[0];if(first){const ps=$$('p',first);if(ps[1])ps[1].textContent='Bring your lawn chairs and join us for kids singing, praise, preaching, worship, fellowship, and time together.'}}
     $$('#tickerGroup span').forEach(s=>{if(/1:30|Praise\s*&\s*preaching/i.test(s.textContent))s.textContent='🎶 11:00 AM Kids Singing & Praise • Preaching & Worship'});
-    if(!document.querySelector('script[data-cmbc-app-loader]')){const s=document.createElement('script');s.src='app-loader.js?v=20260816app1';s.defer=true;s.dataset.cmbcAppLoader='1';document.body.appendChild(s)}
+    if(!document.querySelector('script[data-cmbc-app-loader]')){const s=document.createElement('script');s.src='app-loader.js?v=20261107ui1';s.defer=true;s.dataset.cmbcAppLoader='1';document.body.appendChild(s)}
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',build,{once:true});else build();
 })();
