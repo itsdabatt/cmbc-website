@@ -46,7 +46,7 @@ function confetti(count=24){if(matchMedia('(prefers-reduced-motion: reduce)').ma
 
 /* Activate the 2026 CMBC interactive experience without relying on index.html edits. */
 (function activateCMBCExperience(){
-  const version='20260816live2';
+  const version='20261107ui1';
   if(!document.querySelector('link[data-cmbc-experience]')){
     const link=document.createElement('link');
     link.rel='stylesheet';
