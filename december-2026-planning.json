@@ -1,0 +1,55 @@
+{
+  "status": "DRAFT — not yet displayed on the public website",
+  "month": "December 2026",
+  "lastUpdated": "2026-11-17",
+  "note": "Keep November 2026 live until the December calendar graphic and final times are supplied. Do not infer unconfirmed times or change Sunday worship schedule.",
+  "events": [
+    {
+      "date": "2026-12-04",
+      "title": "Montgomery Christmas Parade",
+      "time": "7:00 PM",
+      "details": "Lineup at 6:15 PM; CMBC/BYF float and outreach handouts",
+      "status": "planned"
+    },
+    {
+      "date": "2026-12-06",
+      "title": "CMBC Christmas Dinner",
+      "time": "6:00 PM",
+      "venue": "Glen Ferris Inn",
+      "format": "Buffet style",
+      "pricePerPersonUSD": 20,
+      "status": "confirmed by user",
+      "note": "Replaces older tentative plan for dinner after morning service"
+    },
+    {
+      "date": "2026-12-09",
+      "title": "Christmas Caroling",
+      "time": "6:00–8:00 PM",
+      "details": "Meet at church, walk through town",
+      "status": "planned"
+    },
+    {
+      "date": "2026-12-20",
+      "title": "CMBC / BYF Christmas Play",
+      "time": "7:00 PM",
+      "details": "Christmas family story and children's presentation at church",
+      "status": "planned"
+    },
+    {
+      "date": "2026-12-23",
+      "title": "Kids' Christmas Party",
+      "venue": "Campbell Memorial Baptist Church",
+      "time": null,
+      "status": "date and venue supplied by user; time pending"
+    },
+    {
+      "date": "2026-12-30",
+      "title": "BYF Combined Pizza Night and Movie Night",
+      "venue": "Campbell Memorial Baptist Church",
+      "time": null,
+      "status": "date and combined activities supplied by user; time pending"
+    }
+  ],
+  "noSeparateDecemberMovieNight": true,
+  "nextStep": "Attach the actual December church calendar graphic and verify outstanding details before publishing December content"
+}
